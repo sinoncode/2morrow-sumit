@@ -8,6 +8,11 @@ import { Menu, X, ChevronDown, Search, User, Heart, Bell } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { siteConfig } from '@/config/site';
 import { useLockBody } from '@/hooks/use-scroll';
+import Image from "next/image";
+
+import LogoIcon from '@/public/images/logo/image 140.png';
+import LogoText from '@/public/images/logo/image 141.png';
+
 
 
 // ============================================
@@ -165,46 +170,21 @@ const Logo = ({ isScrolled }: { isScrolled: boolean }) => (
             transition={{ type: 'spring', stiffness: 400, damping: 17 }}
         >
             {/* Logo Icon */}
-            <div className="relative w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center">
-                <svg
-                    viewBox="0 0 48 48"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-full h-full"
-                >
-                    <path
-                        d="M12 8h24v6l-14 14h14v6H12v-6l14-14H12V8z"
-                        fill="url(#logo-gradient)"
-                        className="transition-all duration-300"
-                    />
-                    <defs>
-                        <linearGradient id="logo-gradient" x1="12" y1="8" x2="36" y2="40">
-                            <stop offset="0%" stopColor="#2E86C1" />
-                            <stop offset="100%" stopColor="#5DADE2" />
-                        </linearGradient>
-                    </defs>
-                </svg>
+            <div className="relative  w-10 h-20 sm:h-20 flex items-center justify-center">
+                <Image src={LogoIcon} className="w-40 h-full" alt="2Morrow Icon" layout="fill" objectFit="contain" />
             </div>
         </motion.div>
 
         {/* Logo Text */}
         <motion.div
-            className="flex flex-col"
+            className=""
             initial={{ opacity: 0, x: -10 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2 }}
         >
-            <span
-                className={cn(
-                    'text-xl sm:text-2xl font-bold tracking-tight transition-colors duration-300',
-                    'bg-gradient-to-r from-[#2E86C1] to-[#5DADE2] bg-clip-text text-transparent'
-                )}
-            >
-                MORROW
-            </span>
-            <span className="text-[9px] sm:text-[10px] text-gray-500 uppercase tracking-[0.2em] font-medium -mt-1">
-                Real Estate
-            </span>
+             <div className="relative w-40 h-20 sm:w-40 sm:h-20 flex items-center justify-center">
+            <Image src={LogoText} className="w-40 h-20" alt="2Morrow Text" layout="fill" objectFit="contain" />
+            </div>
         </motion.div>
     </Link>
 );
@@ -453,7 +433,7 @@ export default function Navbar() {
                     'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
                     isScrolled
                         ? 'bg-white/90 backdrop-blur-xl shadow-lg shadow-gray-900/5 border-b border-gray-100'
-                        : 'bg-transparent'
+                        : 'bg-white'
                 )}
             >
                 <nav className="container-custom">
@@ -475,7 +455,7 @@ export default function Navbar() {
                         {/* Right Side Actions */}
                         <div className="flex items-center gap-2 sm:gap-3">
                             {/* Search Button */}
-                            <motion.button
+                            {/* <motion.button
                                 onClick={() => setIsSearchOpen(!isSearchOpen)}
                                 className="hidden md:flex items-center justify-center w-10 h-10 rounded-full text-gray-600 hover:text-[#2E86C1] hover:bg-[#2E86C1]/5 transition-colors"
                                 whileHover={{ scale: 1.05 }}
@@ -483,7 +463,7 @@ export default function Navbar() {
                                 aria-label="Search"
                             >
                                 <Search className="w-5 h-5" />
-                            </motion.button>
+                            </motion.button> */}
 
                             {/* Auth Buttons - Desktop */}
                             <div className="hidden lg:flex items-center gap-2.5">
@@ -494,7 +474,7 @@ export default function Navbar() {
                                     <Link
                                         href="/login"
                                         className={cn(
-                                            'px-5 py-5 text-sm font-semibold rounded-full border-2 transition-all duration-200',
+                                            'px-8 py-2.5 text-sm font-semibold rounded-full border-2 transition-all duration-200',
                                             'border-[#2E86C1] text-[#2E86C1] hover:bg-[#2E86C1] hover:text-white',
                                             'shadow-sm hover:shadow-md'
                                         )}
@@ -510,8 +490,9 @@ export default function Navbar() {
                                     <Link
                                         href="/start"
                                         className={cn(
-                                            'px-6 py-2.5 text-sm font-semibold rounded-full transition-all duration-200',
+                                            'px-8 py-3 text-sm font-semibold rounded-full transition-all duration-200',
                                             'bg-gradient-to-r from-[#2E86C1] to-[#2874A6] text-white',
+                                            'border-[#2E86C1]',
                                             'shadow-md shadow-[#2E86C1]/25 hover:shadow-lg hover:shadow-[#2E86C1]/30',
                                             'hover:from-[#2874A6] hover:to-[#21618C]'
                                         )}
@@ -644,7 +625,7 @@ export default function Navbar() {
                                 <Link
                                     href="/login"
                                     onClick={() => setIsMobileMenuOpen(false)}
-                                    className="flex items-center justify-center gap-2 w-full py-5.5 text-sm font-semibold text-[#2E86C1] border-2 border-[#2E86C1] rounded-full hover:bg-[#2E86C1] hover:text-white transition-all duration-200"
+                                    className="flex items-center justify-center gap-2 w-full py-5 text-sm font-semibold text-[#2E86C1] border-2 border-[#2E86C1] rounded-full hover:bg-[#2E86C1] hover:text-white transition-all duration-200"
                                 >
                                     <User className="w-4 h-4" />
                                     Login
