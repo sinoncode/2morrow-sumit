@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Fragment } from "react";
+import Image from "next/image";
 import {
   Search,
   Heart,
@@ -34,6 +36,14 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import XIcon from '@mui/icons-material/X';
+import HeroBanner  from "@/public/images/hero-banner.png"
+
+import personImage from "@/public/images/life-project/person1.png";
+import lifestyleImage from "@/public/images/life-project/person2.png";
+import destinationImage from "@/public/images/life-project/person3.png";
+import propertyImage from "@/public/images/life-project/person4.png";
+import ArrowRightIcon from "@/public/images/life-project/arrow.png";
+
 // Animation variants
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -212,12 +222,12 @@ export default function HomePage() {
     <div className="min-h-screen bg-white text-gray-900 overflow-x-hidden">
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center pt-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-sky-100 via-white to-blue-50" />
+        <div className="absolute inset-0 bg-gradient-to-br from-white-100 via-white to-white " />
         <div className="absolute right-0 top-0 w-1/2 h-full hidden lg:block">
           <div className="relative w-full h-full">
             <div className="absolute inset-0 bg-gradient-to-l from-transparent via-white/20 to-white z-10" />
             <img
-              src="/api/placeholder/800/600"
+              src={HeroBanner.src}
               alt="Hero"
               className="w-full h-full object-cover opacity-80"
             />
@@ -233,7 +243,7 @@ export default function HomePage() {
           >
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
               Your next Property Your
-              <span className="text-sky-500"> next Chapter.</span>
+              <span className="text-sky-500"> Next Chapter.</span>
             </h1>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
               Buying, selling or moving abroad? Connect your property decisions
@@ -260,56 +270,109 @@ export default function HomePage() {
       </section>
 
       {/* First Your Life Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-white py-20">
+  <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      className="mb-16 text-center"
+    >
+      <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
+        First, your life{" "}
+        <span className="text-sky-500">
+          Then, the right property.
+        </span>
+      </h2>
+
+      <p className="text-gray-600">
+        Your Priorities guide every next step.
+      </p>
+    </motion.div>
+
+    <motion.div
+      variants={staggerContainer}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true }}
+      className="grid grid-cols-2 gap-8 lg:grid-cols-7 lg:items-start"
+    >
+      {[
+         {
+    image: personImage,
+    num: "01",
+    label: "PERSON",
+    desc: "Your profiles and plans.",
+  },
+  {
+    image: lifestyleImage,
+    num: "02",
+    label: "LIFESTYLE",
+    desc: "The way you want to live.",
+  },
+  {
+    image: destinationImage,
+    num: "03",
+    label: "DESTINATION",
+    desc: "A place that fits your life.",
+  },
+  {
+    image: propertyImage,
+    num: "04",
+    label: "PROPERTY",
+    desc: "A property with purpose.",
+  },
+      ].map((item, idx) => (
+        <Fragment key={item.num}>
+          {/* Step */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            variants={fadeInUp}
+            className="group col-span-1 flex flex-col items-center text-center lg:col-span-1"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              First, your life <span className="text-sky-500">Then, the right property.</span>
-            </h2>
-            <p className="text-gray-600">Your Priorities guide every next step.</p>
+            <div className="mb-5 overflow-hidden ">
+             <Image
+  src={item.image}
+  alt={item.label}
+  width={96}
+  height={96}
+  className="h-40 w-40 object-contain transition-transform duration-500 group-hover:scale-110 sm:h-40 sm:w-40"
+/>
+            </div>
+
+            <span className="mb-1 text-sm font-semibold text-sky-500">
+              {item.num}
+            </span>
+
+            <h3 className="mb-2 font-bold text-gray-900">
+              {item.label}
+            </h3>
+
+            <p className="text-sm text-gray-600">
+              {item.desc}
+            </p>
           </motion.div>
 
-          <motion.div
-            variants={staggerContainer}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            className="grid grid-cols-2 lg:grid-cols-4 gap-8"
-          >
-            {[
-              { icon: Users, num: "01", label: "PERSON", desc: "Your profiles and plans." },
-              { icon: Heart, num: "02", label: "LIFESTYLE", desc: "The way you want to live." },
-              { icon: Globe, num: "03", label: "DESTINATION", desc: "A place that fits your life." },
-              { icon: Home, num: "04", label: "PROPERTY", desc: "A property with purpose." },
-            ].map((item, idx) => (
-              <motion.div
-                key={idx}
-                variants={fadeInUp}
-                className="flex flex-col items-center text-center group"
-              >
-                <div className="relative mb-4">
-                  <div className="w-20 h-20 rounded-full bg-sky-50 flex items-center justify-center group-hover:bg-sky-100 transition-colors">
-                    <item.icon className="w-10 h-10 text-sky-500" />
-                  </div>
-                  {idx < 3 && (
-                    <div className="hidden lg:block absolute top-1/2 -right-1/2 w-full h-0.5 bg-gradient-to-r from-sky-300 to-transparent transform -translate-y-1/2" />
-                  )}
-                </div>
-                <span className="text-sky-500 font-semibold text-sm mb-1">{item.num}</span>
-                <h3 className="font-bold text-gray-900 mb-2">{item.label}</h3>
-                <p className="text-sm text-gray-600">{item.desc}</p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
+          {/* Arrow */}
+          {idx < 3 && (
+            <motion.div
+              variants={fadeInUp}
+              className="hidden lg:flex lg:col-span-1 items-center justify-center pt-10"
+            >
+              <Image
+                src={ArrowRightIcon}
+                alt=""
+                width={64}
+                height={64}
+                className="w-16 object-contain"
+              />
+            </motion.div>
+          )}
+        </Fragment>
+      ))}
+    </motion.div>
+  </div>
+</section>
       {/* About 2Morrow Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -319,8 +382,9 @@ export default function HomePage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
+              className="border-r-1 border-[#C5C5C5] pl-[0.2rem]"
             >
-              <span className="text-sky-500 font-semibold text-sm uppercase tracking-wider">
+              <span className="text-[#21FA90] font-semibold text-sm uppercase tracking-wider">
                 ABOUT 2MORROW
               </span>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-4 mb-6">
@@ -331,7 +395,18 @@ export default function HomePage() {
               <p className="text-gray-600 mb-4 leading-relaxed">
                 Born in Switzerland. Built for the world.
               </p>
-              <p className="text-gray-600 mb-6 leading-relaxed">
+            
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="relative"
+            >
+              <div className="relative  overflow-hidden ">
+                 <p className="text-gray-600 mb-6 leading-relaxed">
                 2Morrow connects property decisions with your life, your assets and your future – in
                 Switzerland and internationally.
               </p>
@@ -346,22 +421,7 @@ export default function HomePage() {
               >
                 Discover your 2Morrow
               </motion.button>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="relative"
-            >
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <img
-                  src="/api/placeholder/600/400"
-                  alt="About 2Morrow"
-                  className="w-full h-auto"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-sky-500/20 to-transparent" />
+                {/* <div className="absolute inset-0 bg-gradient-to-t from-sky-500/20 to-transparent" /> */}
               </div>
             </motion.div>
           </div>

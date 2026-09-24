@@ -479,7 +479,7 @@ export default function Navbar() {
                                             'shadow-sm hover:shadow-md'
                                         )}
                                     >
-                                        Login
+                                        Client Login
                                     </Link>
                                 </motion.div>
 
@@ -497,7 +497,7 @@ export default function Navbar() {
                                             'hover:from-[#2874A6] hover:to-[#21618C]'
                                         )}
                                     >
-                                        Start
+                                        Start Your Life Project
                                     </Link>
                                 </motion.div>
                             </div>
