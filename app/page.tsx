@@ -44,6 +44,26 @@ import destinationImage from "@/public/images/life-project/person3.png";
 import propertyImage from "@/public/images/life-project/person4.png";
 import ArrowRightIcon from "@/public/images/life-project/arrow.png";
 
+import journey1 from "@/public/journey/discover.png";
+import journey2 from "@/public/journey/structure.png";
+import journey3 from "@/public/journey/assess.png";
+import journey4 from "@/public/journey/explore.png";
+import journey5 from "@/public/journey/verify.png";
+import swissdna from "@/public/images/swiss-dna.png";
+
+import qualityIcon from "@/public/images/swiss-dna/medel.png"
+import precisionIcon from "@/public/images/swiss-dna/target.png"
+import confidentialityIcon from "@/public/images/swiss-dna/lock.png"
+import reliabilityIcon from "@/public/images/swiss-dna/security.png"
+import responsibilityIcon from "@/public/images/swiss-dna/group.png"
+
+import property from "@/public/images/property.png";
+import proof from "@/public/images/proof.png"
+
+import heart from "@/public/images/image 621.png"
+
+import journeyPath from "@/public/journey/road.png";
+
 // Animation variants
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -100,27 +120,27 @@ export default function HomePage() {
 
   const journeySteps = [
     {
-      icon: Search,
+      image: journey1,
       title: "Discover",
       desc: "Lorem Ipsum is simply dummy text of the printing.",
     },
     {
-      icon: ClipboardList,
+     image: journey2,
       title: "Structure",
       desc: "Lorem Ipsum is simply dummy text of the printing.",
     },
     {
-      icon: Globe,
+     image: journey3,
       title: "Assess",
       desc: "Lorem Ipsum is simply dummy text of the printing.",
     },
     {
-      icon: Shield,
+      image: journey4,
       title: "Explore",
       desc: "Lorem Ipsum is simply dummy text of the printing.",
     },
     {
-      icon: Users,
+      image: journey5,
       title: "Verify",
       desc: "Lorem Ipsum is simply dummy text of the printing.",
     },
@@ -448,33 +468,104 @@ export default function HomePage() {
             </p>
           </motion.div>
 
-          <div className="relative">
-            <div className="hidden lg:block absolute top-12 left-0 w-full h-0.5 bg-sky-200" />
-            <motion.div
-              variants={staggerContainer}
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true }}
-              className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8"
-            >
-              {journeySteps.map((step, idx) => (
-                <motion.div
-                  key={idx}
-                  variants={fadeInUp}
-                  className="flex flex-col items-center text-center relative"
-                >
-                  <div className="relative z-10 w-24 h-24 rounded-full bg-white border-4 border-sky-100 flex items-center justify-center mb-4 shadow-lg">
-                    <step.icon className="w-10 h-10 text-sky-500" />
-                  </div>
-                  <span className="text-sky-500 font-bold text-lg mb-2">
-                    {String(idx + 1).padStart(2, "0")}
-                  </span>
-                  <h3 className="font-bold text-gray-900 mb-2">{step.title}</h3>
-                  <p className="text-sm text-gray-600 max-w-[200px]">{step.desc}</p>
-                </motion.div>
-              ))}
-            </motion.div>
-          </div>
+           <div className="relative">
+  {/* Journey background/path image */}
+  <div
+    className="
+      pointer-events-none absolute
+      left-1/2 top-[48px]
+      hidden h-[120px] w-[90%]
+      -translate-x-1/2
+      bg-contain bg-center bg-no-repeat
+      lg:block
+    "
+    style={{
+      backgroundImage: `url(${journeyPath.src})`,
+    }}
+  />
+
+  <motion.div
+    variants={staggerContainer}
+    initial="initial"
+    whileInView="animate"
+    viewport={{ once: true, amount: 0.2 }}
+    className="relative grid grid-cols-2 gap-12 md:grid-cols-3 lg:grid-cols-5"
+  >
+    {journeySteps.map((step, idx) => (
+      <motion.div
+        key={idx}
+        variants={fadeInUp}
+        className="relative flex flex-col items-center text-center"
+      >
+        {/* Image Circle */}
+        <motion.div
+          animate={{
+            y: [0, -4, 0],
+          }}
+          transition={{
+            duration: 3 + idx * 0.2,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: idx * 0.15,
+          }}
+          className="
+            relative z-10 mt-8 mx-8 mb-5
+            flex h-30 w-30
+            items-center justify-center
+            overflow-hidden rounded-full
+            border-4 border-sky-100
+            bg-white
+            shadow-lg
+          "
+        >
+          <img
+            src={step.image.src}
+            alt={step.title}
+            className="h-full w-full object-cover"
+          />
+
+          {/* Very subtle overlay */}
+          <motion.div
+            animate={{ opacity: [0, 0.15, 0] }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              delay: idx * 0.3,
+              ease: "easeInOut",
+            }}
+            className="pointer-events-none absolute inset-0 rounded-full bg-white"
+          />
+        </motion.div>
+
+        {/* Number */}
+        <motion.span
+          animate={{
+            opacity: [0.7, 1, 0.7],
+          }}
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+            delay: idx * 0.2,
+            ease: "easeInOut",
+          }}
+          className="mb-2 text-lg font-bold text-sky-500"
+        >
+          {String(idx + 1).padStart(2, "0")}
+        </motion.span>
+
+        {/* Title */}
+        <h3 className="mb-2 font-bold text-gray-900">
+          {step.title}
+        </h3>
+
+        {/* Description */}
+        <p className="max-w-[200px] text-sm text-gray-600">
+          {step.desc}
+        </p>
+      </motion.div>
+    ))}
+  </motion.div>
+</div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -508,7 +599,7 @@ export default function HomePage() {
               <div className="relative">
                 <div className="absolute -top-4 -left-4 w-full h-full border-4 border-sky-400 rounded-2xl" />
                 <img
-                  src="/api/placeholder/500/400"
+                  src={heart.src}
                   alt="Real Estate"
                   className="relative rounded-2xl shadow-xl w-full"
                 />
@@ -592,17 +683,22 @@ export default function HomePage() {
                   key={idx}
                   variants={fadeInUp}
                   whileHover={{ y: -5, boxShadow: "0 20px 40px rgba(0,0,0,0.1)" }}
-                  className="bg-gray-50 rounded-2xl p-6 cursor-pointer transition-shadow"
+                  className="bg-[#EDF7EE] rounded-2xl p-6 cursor-pointer transition-shadow"
                 >
-                  <div className="flex items-start justify-between mb-4">
+                  <div className="bg-sky-500/20 rounded-full w-10 h-10 flex items-center justify-center mb-4">
+                  <card.icon className="w-6 h-6 text-sky-500 my-4 flex-shrink-0" />
+                  </div>
+                  <div className="flex items-start justify-between mb-4 mt-2">
                     <div>
-                      <span className="text-xs text-gray-500 uppercase tracking-wider">{card.category}</span>
+                      <span className="text-xs my-3 text-gray-500 uppercase tracking-wider">{card.category}</span>
                       <h3 className="font-bold text-gray-900 mt-1">{card.title}</h3>
                     </div>
-                    <card.icon className="w-6 h-6 text-sky-500 flex-shrink-0" />
+                    
                   </div>
                   <p className="text-sm text-gray-600">{card.desc}</p>
-                  <ArrowRight className="w-5 h-5 text-sky-500 mt-4" />
+                  <div className="flex items-center justify-end mt-4 text-sky-500 font-semibold text-sm">
+                  <ArrowRight className="w-5 h-5 text-sky-500 mt-a" />
+                  </div>
                 </motion.div>
               ))}
             </motion.div>
@@ -627,14 +723,14 @@ export default function HomePage() {
             </p>
           </motion.div>
 
-          <div className="flex flex-wrap justify-center gap-2 mb-8">
+          <div className="flex flex-wrap justify-around mb-8 py-4 bg-[#878787] rounded-lg">
             {destinations.map((dest) => (
               <button
                 key={dest}
                 onClick={() => setActiveDestination(dest)}
-                className={`px-6 py-2 rounded-full font-semibold text-sm transition-all ${
+                className={`px-6 py-3 rounded-lg font-semibold text-sm transition-all ${
                   activeDestination === dest
-                    ? "bg-sky-500 text-white shadow-lg shadow-sky-200"
+                    ? "bg-sky-500 text-white shadow-lg shadow-gray-400"
                     : "bg-white text-gray-600 hover:bg-sky-50"
                 }`}
               >
@@ -726,7 +822,7 @@ export default function HomePage() {
               transition={{ duration: 0.6 }}
             >
               <img
-                src="/api/placeholder/600/400"
+                src={property.src}
                 alt="Property Finance"
                 className="rounded-2xl shadow-2xl w-full"
               />
@@ -736,59 +832,80 @@ export default function HomePage() {
       </section>
 
       {/* Proof Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src="/api/placeholder/1400/600"
-            alt="Proof Background"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-sky-500/90" />
+      <section className="relative overflow-hidden py-20">
+        {/* Right-side image */}
+        <div className="absolute right-0 top-0 hidden h-full w-1/2 lg:block">
+          <div className="relative h-full w-full">
+            <img
+              src={proof.src}
+              alt="Proof"
+              className="h-full w-full object-cover"
+            />
+
+            {/* Blue fade over image */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[#2780c3] via-[#2780c3]/90 to-transparent" />
+          </div>
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Content */}
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="mb-12"
+            className="mb-12 max-w-3xl"
           >
-            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">Proof</h2>
-            <p className="text-white/90 max-w-3xl leading-relaxed">
-              A vision is only valuable when it works in real life. Trust should never be built on slogans
-              alone. As 2Morrow develops, this section should become the evidence layer of the
-              homepage. It should progressively accommodate client stories, properties sold and
-              purchased, countries and destinations covered, verified professional partners, 2Morrow
-              Angels, client satisfaction and, eventually, Readiness outcomes.
+            <h2 className="mb-6 text-4xl font-bold text-white sm:text-5xl">
+              Proof
+            </h2>
+
+            <p className="leading-relaxed text-white/90">
+              A vision is only valuable when it works in real life. Trust should
+              never be built on slogans alone. As 2Morrow develops, this section
+              should become the evidence layer of the homepage. It should
+              progressively accommodate client stories, properties sold and
+              purchased, countries and destinations covered, verified professional
+              partners, 2Morrow Angels, client satisfaction and, eventually,
+              Readiness outcomes.
             </p>
           </motion.div>
+        </div>
+      </section>
 
-          <motion.div
+
+
+
+
+
+
+
+
+
+      {/* Swiss DNA Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                  <motion.div
             variants={staggerContainer}
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4"
+            className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 mb-20"
           >
             {proofStats.map((stat, idx) => (
               <motion.div
                 key={idx}
                 variants={scaleIn}
                 whileHover={{ y: -5 }}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center cursor-pointer hover:bg-white/20 transition-colors"
+                className="bg-gray-400 backdrop-blur-sm rounded-xl p-4 text-center cursor-pointer hover:bg-green transition-colors"
               >
                 <stat.icon className="w-8 h-8 text-white mx-auto mb-3" />
                 <p className="text-white text-sm font-medium">{stat.label}</p>
               </motion.div>
             ))}
           </motion.div>
-        </div>
-      </section>
 
-      {/* Swiss DNA Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -810,7 +927,7 @@ export default function HomePage() {
 
               <div className="flex justify-center lg:justify-start">
                 <img
-                  src="/api/placeholder/300/300"
+                  src={swissdna.src}
                   alt="Swiss DNA"
                   className="w-64 h-64 object-contain"
                 />
