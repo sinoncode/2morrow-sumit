@@ -430,9 +430,9 @@ export default function Navbar() {
                 initial="hidden"
                 animate={hidden ? 'hidden' : 'visible'}
                 className={cn(
-                    'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
+                    'fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b-2 border-blue-400',
                     isScrolled
-                        ? 'bg-white/90 backdrop-blur-xl shadow-lg shadow-gray-900/5 border-b border-gray-100'
+                        ? 'bg-white/90 backdrop-blur-xl shadow-lg shadow-gray-900/5 border-b border-blue-200'
                         : 'bg-white'
                 )}
             >

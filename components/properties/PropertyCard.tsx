@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import {
   Heart,
   MapPin,
@@ -12,6 +13,8 @@ import {
   ArrowRight,
   Shield,
 } from "lucide-react";
+
+import sampleimage from "@/public/images/property-sample.jpg"
 
 interface Property {
   id: number;
@@ -57,7 +60,8 @@ export default function PropertyCard({
       {/* Image */}
       <div className="relative h-48 overflow-hidden">
         <img
-          src={property.image}
+          // src={property.image}
+          src={sampleimage.src}
           alt={property.title}
           className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
         />
@@ -149,10 +153,10 @@ export default function PropertyCard({
             <FileText className="w-3 h-3" />
             {property.documents} of 5 documents available
           </span>
-          <button className="text-sky-500 text-sm font-semibold flex items-center gap-1 hover:gap-2 transition-all">
+          <Link href="/property-details" className="text-sky-500 text-sm font-semibold flex items-center gap-1 hover:gap-2 transition-all">
             View
             <ArrowRight className="w-4 h-4" />
-          </button>
+          </Link>
         </div>
       </div>
     </motion.div>

@@ -32,10 +32,7 @@ import {
   Download,
 } from "lucide-react";
 
-import InstagramIcon from '@mui/icons-material/Instagram';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import XIcon from '@mui/icons-material/X';
+
 import HeroBanner  from "@/public/images/hero-banner.png"
 
 import personImage from "@/public/images/life-project/person1.png";
@@ -50,6 +47,7 @@ import journey3 from "@/public/journey/assess.png";
 import journey4 from "@/public/journey/explore.png";
 import journey5 from "@/public/journey/verify.png";
 import swissdna from "@/public/images/swiss-dna.png";
+import InsightBg from "@/public/images/insight-bg.png";
 
 import qualityIcon from "@/public/images/swiss-dna/medel.png"
 import precisionIcon from "@/public/images/swiss-dna/target.png"
@@ -832,20 +830,18 @@ export default function HomePage() {
       </section>
 
       {/* Proof Section */}
-      <section className="relative overflow-hidden py-20">
+      <section className="relative overflow-hidden py-20" style={{ backgroundImage: `url(${proof.src})`, backgroundSize: 'cover', backgroundPosition: 'center'  }}>
         {/* Right-side image */}
-        <div className="absolute right-0 top-0 hidden h-full w-1/2 lg:block">
+        {/* <div className="absolute right-0 top-0 hidden h-full w-1/2 lg:block">
           <div className="relative h-full w-full">
             <img
               src={proof.src}
               alt="Proof"
               className="h-full w-full object-cover"
             />
-
-            {/* Blue fade over image */}
             <div className="absolute inset-0 bg-gradient-to-r from-[#2780c3] via-[#2780c3]/90 to-transparent" />
           </div>
-        </div>
+        </div> */}
 
         {/* Content */}
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -972,7 +968,7 @@ export default function HomePage() {
       {/* Insights Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-center border border-blue-500 p-5 rounded-xl" style={{ backgroundImage: `url(${InsightBg.src})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -1009,11 +1005,11 @@ export default function HomePage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <img
-                src="/api/placeholder/600/400"
+              {/* <img
+                src={InsightBg.src}
                 alt="Insights"
                 className="rounded-2xl shadow-2xl w-full"
-              />
+              /> */}
             </motion.div>
           </div>
         </div>
@@ -1089,95 +1085,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white pt-16 pb-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
-            <div className="lg:col-span-2">
-              <div className="flex items-center gap-2 mb-6">
-                <div className="w-10 h-10 bg-sky-500 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-xl">2</span>
-                </div>
-                <span className="text-2xl font-bold">MORROW</span>
-              </div>
-              <p className="text-gray-400 mb-6">
-                real estate
-                <br />
-                Your Life Project
-              </p>
-              <div className="space-y-3">
-                <div className="flex items-center gap-3 text-gray-400">
-                  <Phone className="w-5 h-5" />
-                  <span>+41 79 795 83 90</span>
-                </div>
-                <div className="flex items-center gap-3 text-gray-400">
-                  <Mail className="w-5 h-5" />
-                  <span>info@2morrow.ch</span>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <h4 className="font-bold text-lg mb-4">Real Estate</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-sky-400 transition-colors">Buy</a></li>
-                <li><a href="#" className="hover:text-sky-400 transition-colors">Sell</a></li>
-                <li><a href="#" className="hover:text-sky-400 transition-colors">Invest</a></li>
-                <li><a href="#" className="hover:text-sky-400 transition-colors">Properties</a></li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-bold text-lg mb-4">Community</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-sky-400 transition-colors">Safe Purchase</a></li>
-                <li><a href="#" className="hover:text-sky-400 transition-colors">Readiness</a></li>
-                <li><a href="#" className="hover:text-sky-400 transition-colors">Asset Strategy</a></li>
-                <li><a href="#" className="hover:text-sky-400 transition-colors">Destinations</a></li>
-                <li><a href="#" className="hover:text-sky-400 transition-colors">Your Life Project</a></li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-bold text-lg mb-4">Your Journey</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-sky-400 transition-colors">2Morrow Angels</a></li>
-                <li><a href="#" className="hover:text-sky-400 transition-colors">Become an Angel</a></li>
-                <li><a href="#" className="hover:text-sky-400 transition-colors">Partners</a></li>
-                <li><a href="#" className="hover:text-sky-400 transition-colors">Insights</a></li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-bold text-lg mb-4">2Morrow</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-sky-400 transition-colors">About</a></li>
-                <li><a href="#" className="hover:text-sky-400 transition-colors">Our Vision</a></li>
-                <li><a href="#" className="hover:text-sky-400 transition-colors">Swiss DNA</a></li>
-                <li><a href="#" className="hover:text-sky-400 transition-colors">Team</a></li>
-                <li><a href="#" className="hover:text-sky-400 transition-colors">Contact</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm mb-4 md:mb-0">
-              ©2026 2MORROW All Rights Reserved.
-            </p>
-              <div className="flex gap-4">
-                {[InstagramIcon, LinkedInIcon, FacebookIcon, XIcon].map((Icon, idx) => (
-                  <a
-                    key={idx}
-                    href="#"
-                    className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-sky-500 transition-colors"
-                  >
-                    <Icon className="w-5 h-5" />
-                  </a>
-                ))}
-              </div>
-          </div>
-        </div>
-      </footer>
+    
+     
     </div>
   );
 }

@@ -42,6 +42,10 @@ import PropertyStats from "@/components/properties/PropertyStats";
 import EmptyState from "@/components/properties/EmptyState";
 import MobileFilterSheet from "@/components/properties/MobileFilterSheet";
 
+import lower1 from "@/public/images/property-listing/lower1.jpg";
+import lower2 from "@/public/images/property-listing/lower-2.jpg";
+
+
 // Types
 interface Property {
   id: number;
@@ -483,7 +487,7 @@ export default function PropertyListingPage() {
               </select>
               <button
                 onClick={() => setShowMoreFilters(!showMoreFilters)}
-                className="px-4 py-3 border border-gray-300 rounded-xl hover:bg-gray-50 flex items-center gap-2 transition-colors"
+                className="px-4 py-3 border border-gray-300 text-gray-700 rounded-xl hover:bg-gray-50 flex items-center gap-2 transition-colors"
               >
                 <SlidersHorizontal className="w-4 h-4" />
                 More filters
@@ -869,7 +873,7 @@ export default function PropertyListingPage() {
             className="relative rounded-2xl overflow-hidden group cursor-pointer"
           >
             <img
-              src="/api/placeholder/600/400"
+              src={lower1.src}
               alt="Beach destination"
               className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
             />
@@ -897,7 +901,7 @@ export default function PropertyListingPage() {
             className="relative rounded-2xl overflow-hidden group cursor-pointer"
           >
             <img
-              src="/api/placeholder/600/400"
+              src={lower2.src}
               alt="Swiss property"
               className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
             />
