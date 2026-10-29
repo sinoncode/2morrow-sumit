@@ -33,7 +33,7 @@ import {
 } from "lucide-react";
 
 
-import HeroBanner  from "@/public/images/hero-banner.png"
+import HeroBanner from "@/public/images/hero-banner.png"
 
 import personImage from "@/public/images/life-project/person1.png";
 import lifestyleImage from "@/public/images/life-project/person2.png";
@@ -123,12 +123,12 @@ export default function HomePage() {
       desc: "Lorem Ipsum is simply dummy text of the printing.",
     },
     {
-     image: journey2,
+      image: journey2,
       title: "Structure",
       desc: "Lorem Ipsum is simply dummy text of the printing.",
     },
     {
-     image: journey3,
+      image: journey3,
       title: "Assess",
       desc: "Lorem Ipsum is simply dummy text of the printing.",
     },
@@ -289,108 +289,108 @@ export default function HomePage() {
 
       {/* First Your Life Section */}
       <section className="bg-white py-20">
-  <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6 }}
-      className="mb-16 text-center"
-    >
-      <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
-        First, your life{" "}
-        <span className="text-sky-500">
-          Then, the right property.
-        </span>
-      </h2>
-
-      <p className="text-gray-600">
-        Your Priorities guide every next step.
-      </p>
-    </motion.div>
-
-    <motion.div
-      variants={staggerContainer}
-      initial="initial"
-      whileInView="animate"
-      viewport={{ once: true }}
-      className="grid grid-cols-2 gap-8 lg:grid-cols-7 lg:items-start"
-    >
-      {[
-         {
-    image: personImage,
-    num: "01",
-    label: "PERSON",
-    desc: "Your profiles and plans.",
-  },
-  {
-    image: lifestyleImage,
-    num: "02",
-    label: "LIFESTYLE",
-    desc: "The way you want to live.",
-  },
-  {
-    image: destinationImage,
-    num: "03",
-    label: "DESTINATION",
-    desc: "A place that fits your life.",
-  },
-  {
-    image: propertyImage,
-    num: "04",
-    label: "PROPERTY",
-    desc: "A property with purpose.",
-  },
-      ].map((item, idx) => (
-        <Fragment key={item.num}>
-          {/* Step */}
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
-            variants={fadeInUp}
-            className="group col-span-1 flex flex-col items-center text-center lg:col-span-1"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-16 text-center"
           >
-            <div className="mb-5 overflow-hidden ">
-             <Image
-  src={item.image}
-  alt={item.label}
-  width={96}
-  height={96}
-  className="h-40 w-40 object-contain transition-transform duration-500 group-hover:scale-110 sm:h-40 sm:w-40"
-/>
-            </div>
+            <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
+              First, your life{" "}
+              <span className="text-sky-500">
+                Then, the right property.
+              </span>
+            </h2>
 
-            <span className="mb-1 text-sm font-semibold text-sky-500">
-              {item.num}
-            </span>
-
-            <h3 className="mb-2 font-bold text-gray-900">
-              {item.label}
-            </h3>
-
-            <p className="text-sm text-gray-600">
-              {item.desc}
+            <p className="text-gray-600">
+              Your Priorities guide every next step.
             </p>
           </motion.div>
 
-          {/* Arrow */}
-          {idx < 3 && (
-            <motion.div
-              variants={fadeInUp}
-              className="hidden lg:flex lg:col-span-1 items-center justify-center pt-10"
-            >
-              <Image
-                src={ArrowRightIcon}
-                alt=""
-                width={64}
-                height={64}
-                className="w-16 object-contain"
-              />
-            </motion.div>
-          )}
-        </Fragment>
-      ))}
-    </motion.div>
-  </div>
-</section>
+          <motion.div
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            className="grid grid-cols-2 gap-8 lg:grid-cols-7 lg:items-start"
+          >
+            {[
+              {
+                image: personImage,
+                num: "01",
+                label: "PERSON",
+                desc: "Your profiles and plans.",
+              },
+              {
+                image: lifestyleImage,
+                num: "02",
+                label: "LIFESTYLE",
+                desc: "The way you want to live.",
+              },
+              {
+                image: destinationImage,
+                num: "03",
+                label: "DESTINATION",
+                desc: "A place that fits your life.",
+              },
+              {
+                image: propertyImage,
+                num: "04",
+                label: "PROPERTY",
+                desc: "A property with purpose.",
+              },
+            ].map((item, idx) => (
+              <Fragment key={item.num}>
+                {/* Step */}
+                <motion.div
+                  variants={fadeInUp}
+                  className="group col-span-1 flex flex-col items-center text-center lg:col-span-1"
+                >
+                  <div className="mb-5 overflow-hidden ">
+                    <Image
+                      src={item.image}
+                      alt={item.label}
+                      width={96}
+                      height={96}
+                      className="h-40 w-40 object-contain transition-transform duration-500 group-hover:scale-110 sm:h-40 sm:w-40"
+                    />
+                  </div>
+
+                  <span className="mb-1 text-sm font-semibold text-sky-500">
+                    {item.num}
+                  </span>
+
+                  <h3 className="mb-2 font-bold text-gray-900">
+                    {item.label}
+                  </h3>
+
+                  <p className="text-sm text-gray-600">
+                    {item.desc}
+                  </p>
+                </motion.div>
+
+                {/* Arrow */}
+                {idx < 3 && (
+                  <motion.div
+                    variants={fadeInUp}
+                    className="hidden lg:flex lg:col-span-1 items-center justify-center pt-10"
+                  >
+                    <Image
+                      src={ArrowRightIcon}
+                      alt=""
+                      width={64}
+                      height={64}
+                      className="w-16 object-contain"
+                    />
+                  </motion.div>
+                )}
+              </Fragment>
+            ))}
+          </motion.div>
+        </div>
+      </section>
       {/* About 2Morrow Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -413,7 +413,7 @@ export default function HomePage() {
               <p className="text-gray-600 mb-4 leading-relaxed">
                 Born in Switzerland. Built for the world.
               </p>
-            
+
             </motion.div>
 
             <motion.div
@@ -424,21 +424,21 @@ export default function HomePage() {
               className="relative"
             >
               <div className="relative  overflow-hidden ">
-                 <p className="text-gray-600 mb-6 leading-relaxed">
-                2Morrow connects property decisions with your life, your assets and your future – in
-                Switzerland and internationally.
-              </p>
-              <p className="text-gray-600 mb-8 leading-relaxed">
-                Local insight, professional expertise and useful technology, brought together around your
-                project.
-              </p>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-3 bg-sky-500 text-white rounded-full font-semibold hover:bg-sky-600 transition-colors shadow-lg shadow-sky-200"
-              >
-                Discover your 2Morrow
-              </motion.button>
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  2Morrow connects property decisions with your life, your assets and your future – in
+                  Switzerland and internationally.
+                </p>
+                <p className="text-gray-600 mb-8 leading-relaxed">
+                  Local insight, professional expertise and useful technology, brought together around your
+                  project.
+                </p>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-3 bg-sky-500 text-white rounded-full font-semibold hover:bg-sky-600 transition-colors shadow-lg shadow-sky-200"
+                >
+                  Discover your 2Morrow
+                </motion.button>
                 {/* <div className="absolute inset-0 bg-gradient-to-t from-sky-500/20 to-transparent" /> */}
               </div>
             </motion.div>
@@ -466,10 +466,10 @@ export default function HomePage() {
             </p>
           </motion.div>
 
-           <div className="relative">
-  {/* Journey background/path image */}
-  <div
-    className="
+          <div className="relative">
+            {/* Journey background/path image */}
+            <div
+              className="
       pointer-events-none absolute
       left-1/2 top-[48px]
       hidden h-[120px] w-[90%]
@@ -477,36 +477,36 @@ export default function HomePage() {
       bg-contain bg-center bg-no-repeat
       lg:block
     "
-    style={{
-      backgroundImage: `url(${journeyPath.src})`,
-    }}
-  />
+              style={{
+                backgroundImage: `url(${journeyPath.src})`,
+              }}
+            />
 
-  <motion.div
-    variants={staggerContainer}
-    initial="initial"
-    whileInView="animate"
-    viewport={{ once: true, amount: 0.2 }}
-    className="relative grid grid-cols-2 gap-12 md:grid-cols-3 lg:grid-cols-5"
-  >
-    {journeySteps.map((step, idx) => (
-      <motion.div
-        key={idx}
-        variants={fadeInUp}
-        className="relative flex flex-col items-center text-center"
-      >
-        {/* Image Circle */}
-        <motion.div
-          animate={{
-            y: [0, -4, 0],
-          }}
-          transition={{
-            duration: 3 + idx * 0.2,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: idx * 0.15,
-          }}
-          className="
+            <motion.div
+              variants={staggerContainer}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true, amount: 0.2 }}
+              className="relative grid grid-cols-2 gap-12 md:grid-cols-3 lg:grid-cols-5"
+            >
+              {journeySteps.map((step, idx) => (
+                <motion.div
+                  key={idx}
+                  variants={fadeInUp}
+                  className="relative flex flex-col items-center text-center"
+                >
+                  {/* Image Circle */}
+                  <motion.div
+                    animate={{
+                      y: [0, -4, 0],
+                    }}
+                    transition={{
+                      duration: 3 + idx * 0.2,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay: idx * 0.15,
+                    }}
+                    className="
             relative z-10 mt-8 mx-8 mb-5
             flex h-30 w-30
             items-center justify-center
@@ -515,55 +515,55 @@ export default function HomePage() {
             bg-white
             shadow-lg
           "
-        >
-          <img
-            src={step.image.src}
-            alt={step.title}
-            className="h-full w-full object-cover"
-          />
+                  >
+                    <img
+                      src={step.image.src}
+                      alt={step.title}
+                      className="h-full w-full object-cover"
+                    />
 
-          {/* Very subtle overlay */}
-          <motion.div
-            animate={{ opacity: [0, 0.15, 0] }}
-            transition={{
-              duration: 3,
-              repeat: Infinity,
-              delay: idx * 0.3,
-              ease: "easeInOut",
-            }}
-            className="pointer-events-none absolute inset-0 rounded-full bg-white"
-          />
-        </motion.div>
+                    {/* Very subtle overlay */}
+                    <motion.div
+                      animate={{ opacity: [0, 0.15, 0] }}
+                      transition={{
+                        duration: 3,
+                        repeat: Infinity,
+                        delay: idx * 0.3,
+                        ease: "easeInOut",
+                      }}
+                      className="pointer-events-none absolute inset-0 rounded-full bg-white"
+                    />
+                  </motion.div>
 
-        {/* Number */}
-        <motion.span
-          animate={{
-            opacity: [0.7, 1, 0.7],
-          }}
-          transition={{
-            duration: 3,
-            repeat: Infinity,
-            delay: idx * 0.2,
-            ease: "easeInOut",
-          }}
-          className="mb-2 text-lg font-bold text-sky-500"
-        >
-          {String(idx + 1).padStart(2, "0")}
-        </motion.span>
+                  {/* Number */}
+                  <motion.span
+                    animate={{
+                      opacity: [0.7, 1, 0.7],
+                    }}
+                    transition={{
+                      duration: 3,
+                      repeat: Infinity,
+                      delay: idx * 0.2,
+                      ease: "easeInOut",
+                    }}
+                    className="mb-2 text-lg font-bold text-sky-500"
+                  >
+                    {String(idx + 1).padStart(2, "0")}
+                  </motion.span>
 
-        {/* Title */}
-        <h3 className="mb-2 font-bold text-gray-900">
-          {step.title}
-        </h3>
+                  {/* Title */}
+                  <h3 className="mb-2 font-bold text-gray-900">
+                    {step.title}
+                  </h3>
 
-        {/* Description */}
-        <p className="max-w-[200px] text-sm text-gray-600">
-          {step.desc}
-        </p>
-      </motion.div>
-    ))}
-  </motion.div>
-</div>
+                  {/* Description */}
+                  <p className="max-w-[200px] text-sm text-gray-600">
+                    {step.desc}
+                  </p>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -684,18 +684,18 @@ export default function HomePage() {
                   className="bg-[#EDF7EE] rounded-2xl p-6 cursor-pointer transition-shadow"
                 >
                   <div className="bg-sky-500/20 rounded-full w-10 h-10 flex items-center justify-center mb-4">
-                  <card.icon className="w-6 h-6 text-sky-500 my-4 flex-shrink-0" />
+                    <card.icon className="w-6 h-6 text-sky-500 my-4 flex-shrink-0" />
                   </div>
                   <div className="flex items-start justify-between mb-4 mt-2">
                     <div>
                       <span className="text-xs my-3 text-gray-500 uppercase tracking-wider">{card.category}</span>
                       <h3 className="font-bold text-gray-900 mt-1">{card.title}</h3>
                     </div>
-                    
+
                   </div>
                   <p className="text-sm text-gray-600">{card.desc}</p>
                   <div className="flex items-center justify-end mt-4 text-sky-500 font-semibold text-sm">
-                  <ArrowRight className="w-5 h-5 text-sky-500 mt-a" />
+                    <ArrowRight className="w-5 h-5 text-sky-500 mt-a" />
                   </div>
                 </motion.div>
               ))}
@@ -726,11 +726,10 @@ export default function HomePage() {
               <button
                 key={dest}
                 onClick={() => setActiveDestination(dest)}
-                className={`px-6 py-3 rounded-lg font-semibold text-sm transition-all ${
-                  activeDestination === dest
-                    ? "bg-sky-500 text-white shadow-lg shadow-gray-400"
-                    : "bg-white text-gray-600 hover:bg-sky-50"
-                }`}
+                className={`px-6 py-3 rounded-lg font-semibold text-sm transition-all ${activeDestination === dest
+                  ? "bg-sky-500 text-white shadow-lg shadow-gray-400"
+                  : "bg-white text-gray-600 hover:bg-sky-50"
+                  }`}
               >
                 {dest}
               </button>
@@ -793,11 +792,10 @@ export default function HomePage() {
                   <button
                     key={tab}
                     onClick={() => setActivePropertyTab(tab)}
-                    className={`px-6 py-2 rounded-full font-semibold text-sm transition-all ${
-                      activePropertyTab === tab
-                        ? "bg-sky-500 text-white shadow-lg shadow-sky-200"
-                        : "bg-gray-100 text-gray-600 hover:bg-sky-50"
-                    }`}
+                    className={`px-6 py-2 rounded-full font-semibold text-sm transition-all ${activePropertyTab === tab
+                      ? "bg-sky-500 text-white shadow-lg shadow-sky-200"
+                      : "bg-gray-100 text-gray-600 hover:bg-sky-50"
+                      }`}
                   >
                     {tab}
                   </button>
@@ -830,7 +828,7 @@ export default function HomePage() {
       </section>
 
       {/* Proof Section */}
-      <section className="relative overflow-hidden py-20" style={{ backgroundImage: `url(${proof.src})`, backgroundSize: 'cover', backgroundPosition: 'center'  }}>
+      <section className="relative overflow-hidden py-20" style={{ backgroundImage: `url(${proof.src})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
         {/* Right-side image */}
         {/* <div className="absolute right-0 top-0 hidden h-full w-1/2 lg:block">
           <div className="relative h-full w-full">
@@ -882,7 +880,7 @@ export default function HomePage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-                  <motion.div
+          <motion.div
             variants={staggerContainer}
             initial="initial"
             whileInView="animate"
@@ -1059,13 +1057,12 @@ export default function HomePage() {
                     {prop.tags.map((tag, tagIdx) => (
                       <span
                         key={tagIdx}
-                        className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                          tag === "Purchase"
-                            ? "bg-sky-500 text-white"
-                            : tag === "Sell"
+                        className={`px-3 py-1 rounded-full text-xs font-semibold ${tag === "Purchase"
+                          ? "bg-sky-500 text-white"
+                          : tag === "Sell"
                             ? "bg-green-500 text-white"
                             : "bg-orange-500 text-white"
-                        }`}
+                          }`}
                       >
                         {tag}
                       </span>
@@ -1085,9 +1082,8 @@ export default function HomePage() {
         </div>
       </section>
 
-    
-     
+
+
     </div>
   );
 }
- 
