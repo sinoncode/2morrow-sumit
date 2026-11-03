@@ -50,6 +50,7 @@ const footerColumns: FooterColumn[] = [
   {
     title: "Real Estate",
     links: [
+      { label: "Overview", href: "/real-estate" },
       { label: "Buy", href: "/buy" },
       { label: "Sell", href: "/sell" },
       { label: "Invest", href: "/invest" },

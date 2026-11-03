@@ -144,13 +144,13 @@
 
   html {
     scroll-behavior: smooth;
-     font-family: var(--font-inter), sans-serif;
+     font-family: system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
   body {
-  font-family: var(--font-inter), sans-serif;
+  font-family: system-ui, sans-serif;
   background-color: var(--bg-primary);
   color: var(--text-primary);
   line-height: 1.5;

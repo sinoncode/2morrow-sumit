@@ -26,7 +26,7 @@ const config: Config = {
                 },
             },
             fontFamily: {
-                sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
+                sans: ['system-ui', 'sans-serif'],
             },
             animation: {
                 'fade-in': 'fadeIn 0.3s ease-out',
