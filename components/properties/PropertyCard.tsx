@@ -14,7 +14,6 @@ import {
   Shield,
 } from "lucide-react";
 
-import sampleimage from "@/public/images/property-sample.jpg"
 
 interface Property {
   id: number;
@@ -27,6 +26,7 @@ interface Property {
   type: string;
   lifestyle: string[];
   image: string;
+  currency?: string;
   verified: boolean;
   available: boolean;
   matchScore: number;
@@ -60,8 +60,7 @@ export default function PropertyCard({
       {/* Image */}
       <div className="relative h-48 overflow-hidden">
         <img
-          // src={property.image}
-          src={sampleimage.src}
+          src={property.image || "/images/property-sample.jpg"}
           alt={property.title}
           className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
         />
@@ -118,7 +117,9 @@ export default function PropertyCard({
 
         {/* Price */}
         <p className="text-xl font-bold text-gray-900 mb-3">
-          €{property.price.toLocaleString()}
+          {property.currency && property.currency !== "EUR"
+            ? `${property.currency} ${property.price.toLocaleString()}`
+            : `€${property.price.toLocaleString()}`}
         </p>
 
         {/* Specs */}
@@ -153,7 +154,7 @@ export default function PropertyCard({
             <FileText className="w-3 h-3" />
             {property.documents} of 5 documents available
           </span>
-          <Link href="/property-details" className="text-sky-500 text-sm font-semibold flex items-center gap-1 hover:gap-2 transition-all">
+          <Link href={`/property-details?id=${property.id}`} className="text-sky-500 text-sm font-semibold flex items-center gap-1 hover:gap-2 transition-all">
             View
             <ArrowRight className="w-4 h-4" />
           </Link>

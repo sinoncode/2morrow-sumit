@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MapPin, Heart, Share2, Shield, CheckCircle2, Calendar } from "lucide-react";
+import { MapPin, Heart, Share2, Shield } from "lucide-react";
 
 interface Property {
   id: number;
@@ -11,6 +11,7 @@ interface Property {
   verified: boolean;
   available: boolean;
   verifiedDate: string;
+  currency: string;
 }
 
 interface PropertyHeaderProps {
@@ -73,7 +74,9 @@ export default function PropertyHeader({
         <div className="flex flex-col items-start lg:items-end gap-4">
           <div className="text-right">
             <p className="text-3xl font-bold text-sky-500">
-              €{property.price.toLocaleString()}
+              {property.currency && property.currency !== "EUR"
+                ? `${property.currency} ${property.price.toLocaleString()}`
+                : `€${property.price.toLocaleString()}`}
             </p>
           </div>
 

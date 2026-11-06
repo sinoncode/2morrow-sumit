@@ -1,44 +1,25 @@
 "use client";
 
-import { useState, useMemo, useCallback } from "react";
+import { useState, useMemo, useCallback, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Search,
-  MapPin,
-  Home,
-  Euro,
-  Bed,
-  Heart,
-  Bath,
-  Square,
   ChevronDown,
-  Grid,
-  Map,
   SlidersHorizontal,
   X,
   CheckCircle2,
-  Star,
-  TrendingUp,
-  Shield,
-  FileText,
   ArrowRight,
-  ArrowUpDown,
   Filter,
   Loader2,
   Sparkles,
   Target,
-  Clock,
-  Plus,
-  Minus,
 } from "lucide-react";
 
 // Import components
 import PropertyCard from "@/components/properties/PropertyCard";
-import FilterPanel from "@/components/properties/FilterPanel";
 import MapView from "@/components/properties/MapView";
 import SortDropdown from "@/components/properties/SortDropdown";
 import ViewToggle from "@/components/properties/ViewToggle";
-import PropertyStats from "@/components/properties/PropertyStats";
 import EmptyState from "@/components/properties/EmptyState";
 import MobileFilterSheet from "@/components/properties/MobileFilterSheet";
 
@@ -58,6 +39,7 @@ interface Property {
   type: string;
   lifestyle: string[];
   image: string;
+  currency?: string;
   verified: boolean;
   available: boolean;
   matchScore: number;
@@ -67,7 +49,94 @@ interface Property {
   coordinates: { lat: number; lng: number };
 }
 
+interface ApiProperty {
+  id: number;
+  classification?: {
+    sub_type?: string | null;
+    listing_status?: string | null;
+  };
+  title?: string | null;
+  description?: string | null;
+  pricing?: {
+    price?: number | string | null;
+    currency?: string | null;
+  };
+  location?: {
+    address_line_1?: string | null;
+    address_line_2?: string | null;
+    city?: string | null;
+    state?: string | null;
+    country?: string | null;
+    district?: string | null;
+    coordinates?: {
+      latitude?: number | string | null;
+      longitude?: number | string | null;
+    };
+  };
+  dimensions?: {
+    living_area?: number | string | null;
+    gross_floor_area?: number | string | null;
+    bedrooms?: number | string | null;
+    bathrooms?: number | string | null;
+  };
+  media?: {
+    main_photo?: string | null;
+  };
+  documents?: Record<string, string | null>;
+}
+
+const toNumber = (value: number | string | null | undefined, fallback = 0) => {
+  const parsed = typeof value === "number" ? value : Number(value);
+  return Number.isFinite(parsed) ? parsed : fallback;
+};
+
+const mapApiProperty = (property: ApiProperty): Property => {
+  const location = property.location;
+  const locationParts = [
+    location?.address_line_1,
+    location?.city,
+    location?.district,
+    location?.state,
+    location?.country,
+  ].filter(Boolean);
+  const documentCount = Object.values(property.documents || {}).filter(Boolean).length;
+
+  return {
+    id: property.id,
+    title: property.title?.trim() || `Property ${property.id}`,
+    location: locationParts.join(", ") || "Location not specified",
+    price: toNumber(property.pricing?.price),
+    area: toNumber(property.dimensions?.living_area) || toNumber(property.dimensions?.gross_floor_area),
+    bedrooms: toNumber(property.dimensions?.bedrooms),
+    bathrooms: toNumber(property.dimensions?.bathrooms),
+    type: property.classification?.sub_type?.trim() || "Property",
+    lifestyle: [
+      property.location?.city,
+      property.location?.district,
+      property.classification?.sub_type,
+    ].filter((item): item is string => Boolean(item)).slice(0, 3),
+    image: property.media?.main_photo || "",
+    currency: property.pricing?.currency || "EUR",
+    verified: documentCount > 0,
+    available: property.classification?.listing_status?.toLowerCase() === "published",
+    matchScore: 90,
+    matchLabel: "Available property",
+    features: property.description
+      ? property.description.split(/\n+/).filter(Boolean).slice(0, 3)
+      : [
+          property.location?.city ? `In ${property.location.city}` : "Great location",
+          property.classification?.sub_type || "Residential property",
+        ],
+    documents: documentCount,
+    coordinates: {
+      lat: toNumber(location?.coordinates?.latitude, 46.8182),
+      lng: toNumber(location?.coordinates?.longitude, 8.2275),
+    },
+  };
+};
+
 // Sample property data
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const sampleProperties: Property[] = [
   {
     id: 1,
@@ -258,15 +327,50 @@ const defaultFilters: Filters = {
 
 export default function PropertyListingPage() {
   // State
-  const [properties] = useState<Property[]>(sampleProperties);
+  const [properties, setProperties] = useState<Property[]>([]);
+  const [loadError, setLoadError] = useState("");
   const [filters, setFilters] = useState<Filters>(defaultFilters);
   const [sortBy, setSortBy] = useState("best-match");
   const [viewMode, setViewMode] = useState<"grid" | "map">("grid");
   const [showMobileFilters, setShowMobileFilters] = useState(false);
   const [showMoreFilters, setShowMoreFilters] = useState(false);
   const [favorites, setFavorites] = useState<number[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [displayCount, setDisplayCount] = useState(6);
+
+  useEffect(() => {
+    let active = true;
+
+    fetch("/api/properties", { cache: "no-store" })
+      .then(async (response) => {
+        const payload = await response.json();
+        if (!response.ok) {
+          throw new Error(payload.error || "Properties could not be loaded.");
+        }
+        if (!Array.isArray(payload)) {
+          throw new Error("The properties API returned an invalid response.");
+        }
+        return payload as ApiProperty[];
+      })
+      .then((items) => {
+        if (active) {
+          setProperties(items.map(mapApiProperty));
+          setLoadError("");
+        }
+      })
+      .catch((error: unknown) => {
+        if (active) {
+          setLoadError(error instanceof Error ? error.message : "Properties could not be loaded.");
+        }
+      })
+      .finally(() => {
+        if (active) setIsLoading(false);
+      });
+
+    return () => {
+      active = false;
+    };
+  }, []);
 
   // Filter properties
   const filteredProperties = useMemo(() => {
@@ -419,7 +523,7 @@ export default function PropertyListingPage() {
             >
               <div className="bg-gradient-to-br from-sky-100 to-blue-50 rounded-2xl p-6 text-center">
                 <p className="text-sky-600 font-medium italic">
-                  "A new chapter in a brighter place."
+                  &quot;A new chapter in a brighter place.&quot;
                 </p>
               </div>
             </motion.div>
@@ -809,7 +913,32 @@ export default function PropertyListingPage() {
                 : "lg:col-span-3"
             }
           >
-            {filteredProperties.length === 0 ? (
+            {isLoading ? (
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" aria-live="polite">
+                {[0, 1, 2, 3, 4, 5].map((item) => (
+                  <div key={item} className="h-[430px] rounded-2xl bg-white shadow-sm overflow-hidden">
+                    <div className="h-48 animate-pulse bg-gray-200" />
+                    <div className="p-4 space-y-4">
+                      <div className="h-5 w-3/4 animate-pulse rounded bg-gray-200" />
+                      <div className="h-4 w-1/2 animate-pulse rounded bg-gray-200" />
+                      <div className="h-8 w-1/3 animate-pulse rounded bg-gray-200" />
+                      <div className="h-4 w-full animate-pulse rounded bg-gray-200" />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : loadError ? (
+              <div className="rounded-2xl border border-red-100 bg-red-50 px-6 py-10 text-center">
+                <h3 className="font-bold text-red-900">We couldn&apos;t load the properties</h3>
+                <p className="mt-2 text-sm text-red-700">{loadError}</p>
+                <button
+                  onClick={() => window.location.reload()}
+                  className="mt-4 rounded-full bg-red-600 px-5 py-2 text-sm font-semibold text-white"
+                >
+                  Try again
+                </button>
+              </div>
+            ) : filteredProperties.length === 0 ? (
               <EmptyState onClearFilters={clearFilters} />
             ) : (
               <>
