@@ -28,15 +28,15 @@ const moduleRoutes: Record<string, ModuleRoute> = {
     title: "Explore destinations",
     description: "Get to know the places and local markets that could shape your next chapter.",
     links: [
-      { label: "New York", href: "/destinations/new-york" },
-      { label: "Los Angeles", href: "/destinations/los-angeles" },
+      { label: "New york", href: "/destinations/new-york" },
+      { label: "Los angeles", href: "/destinations/los-angeles" },
       { label: "Miami", href: "/destinations/miami" },
       { label: "London", href: "/destinations/london" },
       { label: "Dubai", href: "/destinations/dubai" },
     ],
   },
   "life-project": {
-    title: "Your Life Project",
+    title: "Your life project",
     description: "Bring your lifestyle, property, finances and family priorities together in one considered plan.",
     links: [{ label: "Start your project", href: "/start" }, { label: "Explore destinations", href: "/destinations" }],
   },
@@ -66,7 +66,7 @@ const moduleRoutes: Record<string, ModuleRoute> = {
     links: [{ label: "Contact our team", href: "/contact" }],
   },
   start: {
-    title: "Start your Life Project",
+    title: "Start your life project",
     description: "Tell us what you are planning and our team will help you take the next step.",
     links: [{ label: "Contact our team", href: "/contact" }, { label: "Learn about the process", href: "/life-project" }],
   },
@@ -78,7 +78,7 @@ const moduleRoutes: Record<string, ModuleRoute> = {
   network: {
     title: "More than a network",
     description: "Our trusted local professionals bring on-the-ground knowledge to every stage of your property journey.",
-    links: [{ label: "Meet our Angels", href: "/angels" }, { label: "Contact us", href: "/contact" }],
+    links: [{ label: "Meet our angels", href: "/angels" }, { label: "Contact us", href: "/contact" }],
   },
   services: {
     title: "Real estate services",
@@ -88,7 +88,7 @@ const moduleRoutes: Record<string, ModuleRoute> = {
   contact: {
     title: "Contact our team",
     description: "Talk with us about your property plans, destination questions or next steps.",
-    links: [{ label: "Start your Life Project", href: "/start" }, { label: "Explore services", href: "/services" }],
+    links: [{ label: "Start your life project", href: "/start" }, { label: "Explore services", href: "/services" }],
   },
   privacy: {
     title: "Privacy policy",
@@ -126,8 +126,8 @@ export default async function ModulePage({ params }: RouteProps) {
   return (
     <section className="container-custom py-12 sm:py-16 lg:py-20">
       <div className="max-w-4xl">
-        <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-[#2E86C1]">
-          2morrow Real Estate
+        <p className="mb-3 text-sm font-semibold tracking-wide text-[#2E86C1]">
+          2morrow real estate
         </p>
         <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl">{route.title}</h1>
         <p className="mt-4 max-w-2xl text-base leading-7 text-gray-600 sm:text-lg">

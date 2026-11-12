@@ -29,10 +29,10 @@ export default function SimilarProperties({ properties }: SimilarPropertiesProps
     >
       <div className="flex items-center justify-between mb-6">
         <h3 className="text-xl font-bold text-gray-900">
-          Similar verified properties near Santa Pola
+          Similar verified properties near santa pola
         </h3>
         <button className="text-sky-500 text-sm font-semibold flex items-center gap-1 hover:text-sky-600 transition-colors">
-          View all properties in Santa Pola
+          View all properties in santa pola
           <ArrowRight className="w-4 h-4" />
         </button>
       </div>
@@ -77,15 +77,15 @@ export default function SimilarProperties({ properties }: SimilarPropertiesProps
               <div className="flex items-center gap-4 text-sm text-gray-600">
                 <span className="flex items-center gap-1">
                   <Square className="w-4 h-4" />
-                  {property.area} m²
+                  {property.area} M²
                 </span>
                 <span className="flex items-center gap-1">
                   <Bed className="w-4 h-4" />
-                  {property.bedrooms} beds
+                  {property.bedrooms} Beds
                 </span>
                 <span className="flex items-center gap-1">
                   <Bath className="w-4 h-4" />
-                  {property.bathrooms} baths
+                  {property.bathrooms} Baths
                 </span>
               </div>
             </div>

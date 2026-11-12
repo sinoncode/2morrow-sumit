@@ -19,10 +19,10 @@ export default function HowItWorks() {
   return (
     <section className="section" id="how">
       <div className="container">
-        <Reveal><p className="eyebrow" style={{ textAlign: "center" }}>How the Angel connection works</p></Reveal>
+        <Reveal><p className="eyebrow" style={{ textAlign: "center" }}>How the angel connection works</p></Reveal>
         <Reveal delay={0.08}>
           <p className="lead" style={{ textAlign: "center", maxWidth: 640, margin: "0.5rem auto 0" }}>
-            The Journey shows when Angels support you. These four steps show how the connection begins.</p>
+            The journey shows when angels support you. These four steps show how the connection begins.</p>
         </Reveal>
         <div className="steps">
           {steps.map((s, i) => (

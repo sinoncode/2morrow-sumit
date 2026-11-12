@@ -85,7 +85,7 @@ export default function MobileFilterSheet({
               {/* Price Range */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-3">
-                  Price Range (€)
+                  Price range (€)
                 </label>
                 <div className="flex items-center gap-2">
                   <input
@@ -119,7 +119,7 @@ export default function MobileFilterSheet({
               {/* Property Type */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-3">
-                  Property Type
+                  Property type
                 </label>
                 <select
                   value={filters.propertyType}

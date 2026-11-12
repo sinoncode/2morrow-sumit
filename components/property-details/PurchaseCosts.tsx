@@ -66,7 +66,7 @@ export default function PurchaseCosts({ costs }: PurchaseCostsProps) {
       </button>
 
       <p className="mt-4 text-xs text-gray-500 leading-relaxed">
-        This is an estimate based on current rates in the Valencian Community (10% property transfer tax). Actual costs may vary.
+        This is an estimate based on current rates in the valencian community (10% property transfer tax). Actual costs may vary.
       </p>
     </motion.div>
   );

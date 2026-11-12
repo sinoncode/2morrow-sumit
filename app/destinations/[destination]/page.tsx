@@ -32,11 +32,11 @@ import CompareDestinationsModal from "@/components/modals/CompareDestinationsMod
 const priorityDestinations = [
   {
     name: "Switzerland",
-    badge: "Mountain Base",
+    badge: "Mountain base",
     image:
       "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=85",
     description:
-      "Stability, nature and quality of life in the heart of Europe.",
+      "Stability, nature and quality of life in the heart of europe.",
     tags: ["Alpine lifestyle", "Political stability"],
   },
   {
@@ -53,7 +53,7 @@ const priorityDestinations = [
     image:
       "https://images.unsplash.com/photo-1583422409516-2895a77efded?auto=format&fit=crop&w=900&q=85",
     description:
-      "Vibrant cities, rich culture and relaxed Mediterranean living.",
+      "Vibrant cities, rich culture and relaxed mediterranean living.",
     tags: ["Authentic culture", "Southern lifestyle"],
   },
   {
@@ -69,7 +69,7 @@ const priorityDestinations = [
     image:
       "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=900&q=85",
     description:
-      "Lakes, mountains and refined living close to Switzerland.",
+      "Lakes, mountains and refined living close to switzerland.",
     tags: ["Refined living", "Nature and heritage"],
   },
   {
@@ -80,7 +80,7 @@ const priorityDestinations = [
     tags: ["Art and culture", "La dolce vita"],
   },
   {
-    name: "Bali, Indonesia",
+    name: "Bali, indonesia",
     image:
       "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=900&q=85",
     description:
@@ -167,7 +167,7 @@ const comparisonCriteria = [
 
 const otherCountries = [
   {
-    title: "Middle East",
+    title: "Middle east",
     subtitle: "3 destinations",
     countries: ["Dubai", "Oman", "United Arab Emirates"],
     action: "View Middle East",
@@ -203,32 +203,32 @@ const postcardHighlights = [
 
 const faqItems = [
   {
-    question: "Who can become a 2Morrow Angel?",
+    question: "Who can become a 2morrow angel?",
     answer:
-      "People who live in the destination, understand everyday life there and can share honest, practical perspective. Every Angel is reviewed before joining the network.",
+      "People who live in the destination, understand everyday life there and can share honest, practical perspective. Every angel is reviewed before joining the network.",
   },
   {
-    question: "How are Angels selected and verified?",
+    question: "How are angels selected and verified?",
     answer:
       "We review identity, experience, local knowledge and references. Their role is advisory and independent, and they are never expected to sell a property.",
   },
   {
-    question: "Is there a cost to speak with an Angel?",
+    question: "Is there a cost to speak with an angel?",
     answer:
-      "The initial conversation is included in the 2Morrow journey. If a specialist or regulated professional is required, that is agreed transparently in advance.",
+      "The initial conversation is included in the 2morrow journey. If a specialist or regulated professional is required, that is agreed transparently in advance.",
   },
   {
-    question: "Can I speak with an Angel before I choose a destination?",
+    question: "Can i speak with an angel before i choose a destination?",
     answer:
       "Yes. Angels can help you compare realities, understand local nuances and avoid choosing a place only from its holiday image.",
   },
   {
-    question: "Do Angels provide legal or financial advice?",
+    question: "Do angels provide legal or financial advice?",
     answer:
       "No. Angels share human, local insight. Legal, tax and regulated financial matters are handled by qualified professionals.",
   },
   {
-    question: "How does 2Morrow ensure independence?",
+    question: "How does 2morrow ensure independence?",
     answer:
       "Our advisors are not paid to promote specific properties. Their brief is to help you understand the destination and make a sound decision.",
   },
@@ -261,7 +261,7 @@ function ComparisonSection() {
             onClick={() => setCompareOpen(true)}
             className="inline-flex h-11 w-full shrink-0 items-center justify-center gap-2 rounded-lg bg-sky-600 px-5 text-[11px] font-bold text-white shadow-[0_10px_25px_rgba(2,132,199,0.18)] transition hover:-translate-y-0.5 hover:bg-sky-700 sm:w-auto"
           >
-            Compare Destinations
+            Compare destinations
             <ArrowRight className="h-3.5 w-3.5" />
           </button>
         </div>
@@ -323,7 +323,7 @@ function SectionHeading({
       } ${className}`}
     >
       {eyebrow ? (
-        <p className="text-[9px] font-bold uppercase tracking-[0.24em] text-sky-600">
+        <p className="text-[9px] font-bold tracking-[0.24em] text-sky-600">
           {eyebrow}
         </p>
       ) : null}
@@ -355,9 +355,9 @@ function HeroSection() {
 
   return (
     <section className="bg-white pt-10 md:pt-14">
-      <div className="mx-auto grid  max-w-7xl  grid-cols-1 items-center gap-8 px-5 md:grid-cols-[1fr_0.92fr] md:gap-10 md:px-8">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 px-5 md:grid-cols-[1fr_0.92fr] md:gap-10 md:px-8">
         <div className="max-w-[560px]">
-          <p className="text-[9px] font-bold uppercase tracking-[0.22em] text-sky-600">
+          <p className="text-[9px] font-bold tracking-[0.22em] text-sky-600">
             Life first. Destination second.
           </p>
 
@@ -376,7 +376,7 @@ function HeroSection() {
               href="#priority-destinations"
               className="inline-flex h-10 items-center gap-2 rounded-full bg-sky-600 px-5 text-[11px] font-semibold text-white shadow-[0_10px_25px_rgba(2,132,199,0.18)] transition hover:bg-sky-700"
             >
-              Explore Destinations
+              Explore destinations
               <ArrowRight className="h-3.5 w-3.5" />
             </a>
 
@@ -384,7 +384,7 @@ function HeroSection() {
               href="#destination-guide"
               className="inline-flex h-10 items-center rounded-full border border-slate-200 bg-white px-5 text-[11px] font-semibold text-slate-600 transition hover:border-sky-200 hover:text-sky-700"
             >
-              Find My Destination
+              Find my destination
             </a>
           </div>
 
@@ -406,7 +406,7 @@ function HeroSection() {
                     <step.icon className="h-3 w-3" strokeWidth={1.8} />
                   </span>
 
-                  <span className="mt-1.5 text-[7px] font-semibold uppercase tracking-[0.1em] text-slate-400">
+                  <span className="mt-1.5 text-[7px] font-semibold tracking-[0.1em] text-slate-400">
                     {step.number}
                   </span>
 
@@ -423,7 +423,7 @@ function HeroSection() {
           <div className="absolute inset-0 overflow-hidden rounded-[14px] bg-slate-100 shadow-[0_20px_55px_rgba(11,29,51,0.12)]">
             <img
               src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1200&q=85"
-              alt="Colourful coastal village overlooking the Mediterranean"
+              alt="Colourful coastal village overlooking the mediterranean"
               className="h-full w-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/10 via-transparent to-white/5" />
@@ -486,7 +486,7 @@ function LookingAheadSection() {
 
   return (
     <section className="mt-14 bg-[#fbfaf7] py-14 md:py-20">
-      <div className="mx-auto  max-w-7xl  px-5 md:px-8">
+      <div className="mx-auto max-w-7xl px-5 md:px-8">
         <SectionHeading
           eyebrow="Start with your life project"
           title="What are you looking for next?"
@@ -494,7 +494,7 @@ function LookingAheadSection() {
             <>
               You may already have a country in mind. Or you may only know how
               you want your next life
-              <br className="hidden md:block" /> to feel. Both are enough to
+              <br className="hidden md:block" /> To feel. Both are enough to
               begin.
             </>
           }
@@ -545,7 +545,7 @@ function WorldMap() {
     { name: "London", x: "40%", y: "28%" },
     { name: "Frankfurt", x: "43%", y: "33%" },
     { name: "Madrid", x: "38%", y: "40%" },
-    { name: "New York", x: "18%", y: "40%" },
+    { name: "New york", x: "18%", y: "40%" },
     { name: "Dubai", x: "57%", y: "44%" },
     { name: "Bangalore", x: "69%", y: "55%" },
     { name: "Singapore", x: "74%", y: "64%" },
@@ -583,14 +583,14 @@ function WorldMap() {
           fontFamily="Arial, sans-serif"
           letterSpacing="1.2"
         >
-          <text x="38" y="194">PACIFIC</text>
-          <text x="38" y="205">OCEAN</text>
-          <text x="216" y="190">ATLANTIC</text>
-          <text x="216" y="201">OCEAN</text>
-          <text x="487" y="190">INDIAN</text>
-          <text x="487" y="201">OCEAN</text>
-          <text x="653" y="170">PACIFIC</text>
-          <text x="653" y="181">OCEAN</text>
+          <text x="38" y="194">Pacific</text>
+          <text x="38" y="205">Ocean</text>
+          <text x="216" y="190">Atlantic</text>
+          <text x="216" y="201">Ocean</text>
+          <text x="487" y="190">Indian</text>
+          <text x="487" y="201">Ocean</text>
+          <text x="653" y="170">Pacific</text>
+          <text x="653" y="181">Ocean</text>
         </g>
       </svg>
 
@@ -615,18 +615,18 @@ function WorldMap() {
 function DestinationIntelligence() {
   const filters = [
     "Region",
-    "Life Project",
+    "Life project",
     "Environment",
-    "Support Available",
+    "Support available",
     "Clear filters",
   ];
 
   return (
     <section className="bg-white py-14 md:py-20">
-      <div className="mx-auto  max-w-7xl  px-5 md:px-8">
+      <div className="mx-auto max-w-7xl px-5 md:px-8">
         <SectionHeading
           eyebrow="Destination intelligence"
-          title="Explore the places where 2Morrow can support your project"
+          title="Explore the places where 2morrow can support your project"
           description="Explore destinations by region, life project and the kind of support currently available."
         />
 
@@ -680,7 +680,7 @@ function DestinationIntelligence() {
                     className="h-full w-full object-cover"
                   />
                   <span className="absolute bottom-1.5 left-1.5 rounded bg-black/35 px-1.5 py-0.5 text-[7px] font-semibold text-white">
-                    Atlantic Coast
+                    Atlantic coast
                   </span>
                 </div>
 
@@ -702,12 +702,12 @@ function DestinationIntelligence() {
 
                 <div className="mt-4 grid grid-cols-2 gap-2">
                   <button className="h-8 rounded-md bg-sky-600 text-[8px] font-bold text-white transition hover:bg-sky-700">
-                    Explore Portugal
+                    Explore portugal
                   </button>
 
                   <button className="flex h-8 items-center justify-center gap-1 rounded-md bg-slate-100 text-[8px] font-semibold text-slate-600 transition hover:bg-slate-200">
                     <Building2 className="h-3 w-3" />
-                    View Properties
+                    View properties
                   </button>
                 </div>
 
@@ -721,15 +721,15 @@ function DestinationIntelligence() {
                         <span
                           className={
                             index === 0
-                              ? "font-bold text-sky-600"
-                              : "text-slate-500"
+                              ? "Font-bold text-sky-600"
+                              : "Text-slate-500"
                           }
                         >
                           {country}
                         </span>
 
                         {index === 0 ? (
-                          <span className="text-[7px] font-bold uppercase tracking-wider text-emerald-500">
+                          <span className="text-[7px] font-bold tracking-wider text-emerald-500">
                             Active
                           </span>
                         ) : null}
@@ -744,12 +744,12 @@ function DestinationIntelligence() {
           <div className="mt-4 flex flex-wrap items-center justify-center gap-6 text-[8px] font-medium text-slate-500">
             <span className="flex items-center gap-1.5">
               <span className="h-1.5 w-1.5 rounded-full bg-sky-600" />
-              2Morrow Country Hubs
+              2morrow country hubs
             </span>
 
             <span className="flex items-center gap-1.5">
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-              View Destination List
+              View destination list
             </span>
           </div>
         </div>
@@ -765,14 +765,14 @@ function DestinationIntelligence() {
 function PriorityDestinations() {
   return (
     <section id="priority-destinations" className="bg-white py-12 md:py-16">
-      <div className="mx-auto  max-w-7xl  px-5 md:px-8">
+      <div className="mx-auto max-w-7xl px-5 md:px-8">
         <div className="mb-8 flex items-start gap-3">
           <span className="mt-0.5 flex h-6 w-6 items-center justify-center rounded-full bg-sky-600 text-white">
             <Compass className="h-3 w-3" />
           </span>
 
           <div>
-            <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-sky-600">
+            <p className="text-[9px] font-bold tracking-[0.2em] text-sky-600">
               Explore
             </p>
 
@@ -843,7 +843,7 @@ function PriorityDestinations() {
                     </button>
 
                     <button className="text-[8px] font-semibold text-slate-400 transition hover:text-sky-600">
-                      View Properties
+                      View properties
                     </button>
                   </div>
                 </div>
@@ -878,7 +878,7 @@ function OtherCountries() {
 
   return (
     <section className="bg-white pb-14 pt-8 md:pb-20">
-      <div className="mx-auto  max-w-7xl  px-5 md:px-8">
+      <div className="mx-auto max-w-7xl px-5 md:px-8">
         <div className="mb-7 flex flex-wrap items-end justify-between gap-4">
           <div>
             <h2 className="text-[23px] font-semibold tracking-[-0.035em] text-slate-950 md:text-[27px]">
@@ -886,14 +886,14 @@ function OtherCountries() {
             </h2>
 
             <p className="mt-1.5 max-w-[620px] text-[10px] leading-[1.6] text-slate-500 md:text-[11px]">
-              Explore additional destinations where 2Morrow is developing
+              Explore additional destinations where 2morrow is developing
               information, local relationships or project support.
             </p>
           </div>
 
           <button className="inline-flex items-center gap-1 text-[9px] font-semibold text-sky-600 transition hover:text-sky-700">
             <ArrowUpRight className="h-3 w-3" />
-            Close Other Countries
+            Close other countries
           </button>
         </div>
 
@@ -985,7 +985,7 @@ function DestinationComparisonTable() {
           <table className="w-full min-w-[760px] border-collapse text-left">
             <thead>
               <tr className="border-b border-slate-100">
-                <th className="w-[220px] px-5 py-4 text-[8px] font-bold uppercase tracking-[0.16em] text-slate-400">
+                <th className="w-[220px] px-5 py-4 text-[8px] font-bold tracking-[0.16em] text-slate-400">
                   Criteria & insights
                 </th>
 
@@ -1072,10 +1072,10 @@ function NextChapterCTA() {
       id="destination-guide"
       className="bg-white pb-16 md:pb-20"
     >
-      <div className="mx-auto  max-w-7xl  px-5 md:px-8">
+      <div className="mx-auto max-w-7xl px-5 md:px-8">
         <div className="grid overflow-hidden rounded-[10px] bg-white shadow-[0_16px_50px_rgba(11,29,51,0.07)] md:grid-cols-[0.9fr_1.1fr]">
           <div className="flex flex-col justify-center p-7 md:p-10">
-            <p className="text-[8px] font-bold uppercase tracking-[0.22em] text-sky-600">
+            <p className="text-[8px] font-bold tracking-[0.22em] text-sky-600">
               Your next chapter
             </p>
 
@@ -1102,7 +1102,7 @@ function NextChapterCTA() {
 
             <div className="mt-6">
               <button className="inline-flex h-10 items-center gap-2 rounded-full bg-sky-600 px-5 text-[10px] font-bold text-white transition hover:bg-sky-700">
-                Find My Destination
+                Find my destination
                 <ArrowRight className="h-3.5 w-3.5" />
               </button>
 
@@ -1133,9 +1133,9 @@ function NextChapterCTA() {
 function BeyondPostcard() {
   return (
     <section className="bg-white pb-16 md:pb-20">
-      <div className="mx-auto  max-w-7xl  px-5 md:px-8">
+      <div className="mx-auto max-w-7xl px-5 md:px-8">
         <div className="text-center">
-          <p className="text-[8px] font-bold uppercase tracking-[0.24em] text-sky-600">
+          <p className="text-[8px] font-bold tracking-[0.24em] text-sky-600">
             A clearer perspective
           </p>
 
@@ -1145,7 +1145,7 @@ function BeyondPostcard() {
 
           <p className="mx-auto mt-3 max-w-[650px] text-[10.5px] leading-[1.65] text-slate-500 md:text-[12px]">
             A destination can be wonderful for a holiday and unsuitable for
-            everyday life. Destination Intelligence brings together structured
+            everyday life. Destination intelligence brings together structured
             information, professional expertise and lived local insight so that
             the attractive picture can be tested against reality.
           </p>
@@ -1212,20 +1212,20 @@ function ResourcesSection() {
 
   return (
     <section className="bg-white pb-16 md:pb-20">
-      <div className="mx-auto  max-w-7xl  px-5 md:px-8">
+      <div className="mx-auto max-w-7xl px-5 md:px-8">
         <SectionHeading
           eyebrow="Go deeper when it matters"
           title={
             <>
               Properties, guides and practical
-              <br className="hidden md:block" /> information
+              <br className="hidden md:block" /> Information
             </>
           }
           description={
             <>
               Once a destination feels relevant, move from inspiration to
               verified information and suitable
-              <br className="hidden md:block" /> opportunities.
+              <br className="hidden md:block" /> Opportunities.
             </>
           }
         />
@@ -1277,7 +1277,7 @@ function ExpertiseSection() {
     },
     {
       eyebrow: "Human local insight",
-      title: "2Morrow Angels",
+      title: "2morrow angels",
       text: "Trusted local people share lived experience, practical context and an honest view of everyday life in the destination.",
       bullets: [
         "Neighbourhood, everyday life, orientation, community",
@@ -1289,9 +1289,9 @@ function ExpertiseSection() {
 
   return (
     <section className="bg-white pb-16 md:pb-20">
-      <div className="mx-auto  max-w-7xl  px-5 md:px-8">
+      <div className="mx-auto max-w-7xl px-5 md:px-8">
         <div className="mb-8">
-          <p className="text-[8px] font-bold uppercase tracking-[0.24em] text-sky-600">
+          <p className="text-[8px] font-bold tracking-[0.24em] text-sky-600">
             Two distinct forms of support
           </p>
 
@@ -1306,7 +1306,7 @@ function ExpertiseSection() {
               key={panel.title}
               className={`rounded-[8px] p-6 shadow-[0_8px_28px_rgba(11,29,51,0.045)] md:p-7 ${panel.className}`}
             >
-              <p className="text-[8px] font-bold uppercase tracking-[0.18em] text-sky-600">
+              <p className="text-[8px] font-bold tracking-[0.18em] text-sky-600">
                 {panel.eyebrow}
               </p>
 
@@ -1360,15 +1360,15 @@ function JourneyTimeline() {
     { number: "05", label: "Verification" },
     { number: "06", label: "Purchase" },
     { number: "07", label: "Relocation" },
-    { number: "08", label: "New Life", active: true },
+    { number: "08", label: "New life", active: true },
   ];
 
   return (
     <section className="bg-sky-50/80 py-14 md:py-16">
-      <div className="mx-auto  max-w-7xl  px-5 md:px-8">
+      <div className="mx-auto max-w-7xl px-5 md:px-8">
         <SectionHeading
           eyebrow="One connected decision journey"
-          title="The destination within the 2Morrow Journey"
+          title="The destination within the 2morrow journey"
           description="Property remains part of the process, but it appears only after the person, lifestyle and destination have been understood."
         />
 
@@ -1390,7 +1390,7 @@ function JourneyTimeline() {
                   </span>
 
                   <span
-                    className={`mt-2 text-[7px] font-bold uppercase tracking-[0.08em] ${
+                    className={`mt-2 text-[7px] font-bold  tracking-[0.08em] ${
                       step.active ? "text-emerald-600" : "text-slate-500"
                     }`}
                   >
@@ -1408,8 +1408,8 @@ function JourneyTimeline() {
           </div>
         </div>
 
-        <p className="mt-6 text-center text-[8px] font-semibold uppercase tracking-[0.16em] text-slate-400">
-          Person · Lifestyle · Destination · Property
+        <p className="mt-6 text-center text-[8px] font-semibold tracking-[0.16em] text-slate-400">
+          Person · lifestyle · destination · property
         </p>
       </div>
     </section>
@@ -1446,10 +1446,10 @@ function AssetsSection() {
 
   return (
     <section className="bg-white py-14 md:py-20">
-      <div className="mx-auto grid  max-w-7xl  gap-10 px-5 md:grid-cols-[0.9fr_1.1fr] md:px-8">
+      <div className="mx-auto grid max-w-7xl gap-10 px-5 md:grid-cols-[0.9fr_1.1fr] md:px-8">
         <div>
-          <p className="text-[8px] font-bold uppercase tracking-[0.22em] text-sky-600">
-            Your Swiss starting point
+          <p className="text-[8px] font-bold tracking-[0.22em] text-sky-600">
+            Your swiss starting point
           </p>
 
           <h2 className="mt-3 max-w-[400px] text-[25px] font-semibold leading-[1.13] tracking-[-0.04em] text-slate-950 md:text-[32px]">
@@ -1457,13 +1457,13 @@ function AssetsSection() {
           </h2>
 
           <p className="mt-4 max-w-[400px] text-[10.5px] leading-[1.65] text-slate-500">
-            Many life moves begin with a home, income or capital in Switzerland.
+            Many life moves begin with a home, income or capital in switzerland.
             Clarify how that asset can support what comes next without closing
             the door on a future return.
           </p>
 
           <button className="mt-7 inline-flex h-10 items-center gap-2 rounded-full bg-sky-600 px-5 text-[10px] font-bold text-white transition hover:bg-sky-700">
-            Explore Asset & Financial Strategy
+            Explore asset & financial strategy
             <ArrowRight className="h-3.5 w-3.5" />
           </button>
         </div>
@@ -1497,7 +1497,7 @@ function FAQSection() {
 
   return (
     <section className="bg-white pb-16 md:pb-20">
-      <div className="mx-auto  max-w-7xl  px-5 md:px-8">
+      <div className="mx-auto max-w-7xl px-5 md:px-8">
         <h2 className="text-[22px] font-semibold tracking-[-0.035em] text-sky-700 md:text-[26px]">
           Frequently asked questions
         </h2>
@@ -1559,7 +1559,7 @@ function FinalCTA() {
       <div className="absolute inset-0 bg-sky-950/55" />
 
       <div className="relative z-10 mx-auto flex min-h-[500px] max-w-3xl flex-col items-center justify-center px-5 py-20 text-center">
-        <p className="text-[8px] font-bold uppercase tracking-[0.24em] text-sky-200">
+        <p className="text-[8px] font-bold tracking-[0.24em] text-sky-200">
           Perhaps you already know where
         </p>
 
@@ -1574,12 +1574,12 @@ function FinalCTA() {
 
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           <button className="inline-flex h-10 items-center gap-2 rounded-full bg-sky-500 px-5 text-[10px] font-bold text-white transition hover:bg-sky-400">
-            Find My Destination
+            Find my destination
             <ArrowRight className="h-3.5 w-3.5" />
           </button>
 
           <button className="inline-flex h-10 items-center rounded-full border border-white/30 px-5 text-[10px] font-semibold text-white transition hover:bg-white/10">
-            Explore Destinations
+            Explore destinations
           </button>
         </div>
       </div>

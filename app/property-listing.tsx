@@ -141,7 +141,7 @@ const sampleProperties: Property[] = [
   {
     id: 1,
     title: "Bright 3-bedroom apartment near the beach",
-    location: "Santa Pola, Alicante, Spain",
+    location: "Santa pola, alicante, spain",
     price: 165000,
     area: 82,
     bedrooms: 3,
@@ -160,7 +160,7 @@ const sampleProperties: Property[] = [
   {
     id: 2,
     title: "Modern villa with private pool",
-    location: "Gran Alacant, Santa Pola",
+    location: "Gran alacant, santa pola",
     price: 325000,
     area: 120,
     bedrooms: 3,
@@ -179,7 +179,7 @@ const sampleProperties: Property[] = [
   {
     id: 3,
     title: "2-bedroom penthouse with sea views",
-    location: "Santa Pola, Alicante",
+    location: "Santa pola, alicante",
     price: 198000,
     area: 98,
     bedrooms: 2,
@@ -198,7 +198,7 @@ const sampleProperties: Property[] = [
   {
     id: 4,
     title: "Charming townhouse near the marina",
-    location: "Santa Pola, Alicante",
+    location: "Santa pola, alicante",
     price: 210000,
     area: 110,
     bedrooms: 2,
@@ -217,7 +217,7 @@ const sampleProperties: Property[] = [
   {
     id: 5,
     title: "Cozy studio in the heart of town",
-    location: "Santa Pola Center",
+    location: "Santa pola center",
     price: 95000,
     area: 45,
     bedrooms: 1,
@@ -236,7 +236,7 @@ const sampleProperties: Property[] = [
   {
     id: 6,
     title: "Luxury 4-bedroom villa with garden",
-    location: "Gran Alacant Hills",
+    location: "Gran alacant hills",
     price: 450000,
     area: 180,
     bedrooms: 4,
@@ -255,7 +255,7 @@ const sampleProperties: Property[] = [
   {
     id: 7,
     title: "Beachfront apartment with terrace",
-    location: "Santa Pola Beach",
+    location: "Santa pola beach",
     price: 275000,
     area: 95,
     bedrooms: 2,
@@ -274,7 +274,7 @@ const sampleProperties: Property[] = [
   {
     id: 8,
     title: "Renovated village house with character",
-    location: "Santa Pola Old Town",
+    location: "Santa pola old town",
     price: 145000,
     area: 130,
     bedrooms: 3,
@@ -512,7 +512,7 @@ export default function PropertyListingPage() {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 className="text-gray-600 text-lg"
               >
-                Verified properties. Local insight. A smoother path to your next chapter in Spain.
+                Verified properties. Local insight. A smoother path to your next chapter in spain.
               </motion.p>
             </div>
             <motion.div
@@ -557,8 +557,8 @@ export default function PropertyListingPage() {
                 className="px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500 bg-white"
               >
                 <option value="">Destination</option>
-                <option value="santa-pola">Santa Pola</option>
-                <option value="gran-alacant">Gran Alacant</option>
+                <option value="santa-pola">Santa pola</option>
+                <option value="gran-alacant">Gran alacant</option>
                 <option value="alicante">Alicante</option>
               </select>
               <select
@@ -624,7 +624,7 @@ export default function PropertyListingPage() {
                     {/* Price Range */}
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Price Range (€)
+                        Price range (€)
                       </label>
                       <div className="flex items-center gap-2">
                         <input
@@ -831,7 +831,7 @@ export default function PropertyListingPage() {
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
           <div>
             <h2 className="text-2xl font-bold text-gray-900">
-              {filteredProperties.length} verified properties in Santa Pola
+              {filteredProperties.length} Verified properties in santa pola
             </h2>
             <p className="text-gray-600 text-sm mt-1">
               Homes, apartments and villas near the beach
@@ -891,7 +891,7 @@ export default function PropertyListingPage() {
         )}
 
         {/* Content Grid */}
-        <div className="grid lg:grid-cols-3 gap-6">
+        <div className="">
           {/* Map View - Left Side */}
           {viewMode === "map" && (
             <motion.div
@@ -909,8 +909,8 @@ export default function PropertyListingPage() {
           <div
             className={
               viewMode === "map"
-                ? "lg:col-span-2 order-1 lg:order-2"
-                : "lg:col-span-3"
+                ? "Lg:col-span-2 order-1 lg:order-2"
+                : "Lg:col-span-3"
             }
           >
             {isLoading ? (
@@ -1037,7 +1037,7 @@ export default function PropertyListingPage() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
             <div className="absolute bottom-0 left-0 p-6">
               <h3 className="text-white text-xl font-bold mb-2">
-                Your Swiss property can help finance your next chapter.
+                Your swiss property can help finance your next chapter.
               </h3>
               <p className="text-white/80 text-sm mb-4">
                 Explore your options with independent advice.
@@ -1053,7 +1053,7 @@ export default function PropertyListingPage() {
                 ))}
               </div>
               <button className="px-6 py-2 bg-white text-gray-900 rounded-full font-semibold text-sm hover:bg-gray-100 transition-colors flex items-center gap-2">
-                Explore Asset & Financial Strategy
+                Explore asset & financial strategy
                 <ArrowRight className="w-4 h-4" />
               </button>
             </div>

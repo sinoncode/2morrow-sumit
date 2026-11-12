@@ -126,15 +126,15 @@ export default function PropertyCard({
         <div className="flex items-center gap-4 text-sm text-gray-600 mb-3">
           <span className="flex items-center gap-1">
             <Square className="w-4 h-4" />
-            {property.area} m²
+            {property.area} M²
           </span>
           <span className="flex items-center gap-1">
             <Bed className="w-4 h-4" />
-            {property.bedrooms} beds
+            {property.bedrooms} Beds
           </span>
           <span className="flex items-center gap-1">
             <Bath className="w-4 h-4" />
-            {property.bathrooms} baths
+            {property.bathrooms} Baths
           </span>
         </div>
 
@@ -152,7 +152,7 @@ export default function PropertyCard({
         <div className="flex items-center justify-between pt-3 border-t border-gray-100">
           <span className="text-xs text-gray-500 flex items-center gap-1">
             <FileText className="w-3 h-3" />
-            {property.documents} of 5 documents available
+            {property.documents} Of 5 documents available
           </span>
           <Link href={`/property-details?id=${property.id}`} className="text-sky-500 text-sm font-semibold flex items-center gap-1 hover:gap-2 transition-all">
             View

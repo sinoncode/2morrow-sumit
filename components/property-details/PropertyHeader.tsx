@@ -36,8 +36,8 @@ export default function PropertyHeader({
         <div className="flex-1">
           {/* Badges */}
           <div className="flex flex-wrap items-center gap-2 mb-3">
-            <span className="px-3 py-1 bg-sky-100 text-sky-700 text-xs font-semibold rounded-full uppercase tracking-wider">
-              APARTMENT FOR SALE
+            <span className="px-3 py-1 bg-sky-100 text-sky-700 text-xs font-semibold rounded-full tracking-wider">
+              Apartment for sale
             </span>
             {property.verified && (
               <span className="px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded-full flex items-center gap-1">

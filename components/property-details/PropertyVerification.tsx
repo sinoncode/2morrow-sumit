@@ -25,7 +25,7 @@ export default function PropertyVerification({
   verifiedDate,
 }: PropertyVerificationProps) {
   const checks = [
-    { key: "notaSimple", label: "Nota Simple", icon: FileText },
+    { key: "notaSimple", label: "Nota simple", icon: FileText },
     { key: "energyCertificate", label: "Energy certificate", icon: Zap },
     { key: "communityFees", label: "Community fees", icon: Building },
     { key: "occupancyStatus", label: "Occupancy status", icon: Home },

@@ -79,7 +79,7 @@ const sections: DestinationSection[] = [
     number: "04",
     title: "Regions and areas",
     description:
-      "Cards for regions, cities or islands using consistent CMS fields and availability states.",
+      "Cards for regions, cities or islands using consistent cms fields and availability states.",
     links: [
       "Region filters",
       "Area comparison",
@@ -91,7 +91,7 @@ const sections: DestinationSection[] = [
     number: "05",
     title: "Available support",
     description:
-      "Present licensed professionals and Angels as distinct support types with clear roles.",
+      "Present licensed professionals and angels as distinct support types with clear roles.",
     links: [
       "Professional request",
       "Angel conversation",
@@ -314,7 +314,7 @@ export default function DestinationIntelligenceModal({
                 </div>
 
                 <div>
-                  <p className="text-[10px] font-bold uppercase tracking-[0.17em] text-[#2780c3]">
+                  <p className="text-[10px] font-bold tracking-[0.17em] text-[#2780c3]">
                     2morrow
                   </p>
                   <p className="text-[11px] text-[#75859a]">
@@ -382,7 +382,7 @@ export default function DestinationIntelligenceModal({
                     <div className="mb-5 flex items-center gap-2">
                       <span className="h-px w-7 bg-[#2780c3]" />
 
-                      <span className="text-[10px] font-bold uppercase tracking-[0.13em] text-[#2780c3] sm:text-[11px]">
+                      <span className="text-[10px] font-bold tracking-[0.13em] text-[#2780c3] sm:text-[11px]">
                         Destination intelligence. Country by country.
                       </span>
                     </div>
@@ -395,10 +395,10 @@ export default function DestinationIntelligenceModal({
                     </h2>
 
                     <p className="mt-5 max-w-[550px] text-[13px] leading-[1.9] text-[#73849a] sm:text-[14px]">
-                      A reusable CMS template that progresses from
+                      A reusable cms template that progresses from
                       country to region to area to property while
                       separating verified facts, professional advice
-                      and Angel insight.
+                      and angel insight.
                     </p>
 
                     <div className="mt-7 flex flex-col gap-3 min-[420px]:flex-row">
@@ -421,7 +421,7 @@ export default function DestinationIntelligenceModal({
                         }
                         className="group inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl bg-[#2780c3] px-5 py-3 text-[13px] font-semibold text-white shadow-[0_5px_14px_rgba(39,128,195,0.12)] transition-colors hover:bg-[#176ba9]"
                       >
-                        Start Your Life Project
+                        Start your life project
                         <ArrowRight
                           size={15}
                           className="transition-transform duration-300 group-hover:translate-x-1"
@@ -446,7 +446,7 @@ export default function DestinationIntelligenceModal({
                         }
                         className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl border border-[#2780c3] bg-white px-5 py-3 text-[13px] font-semibold text-[#2780c3] transition-colors hover:bg-[#edf7fd]"
                       >
-                        Talk to 2Morrow
+                        Talk to 2morrow
                         <ArrowUpRight size={15} />
                       </motion.button>
                     </div>
@@ -506,7 +506,7 @@ export default function DestinationIntelligenceModal({
                             className="text-[#16a779]"
                           />
 
-                          <span className="text-[10px] font-bold uppercase tracking-[0.12em] text-[#16a779]">
+                          <span className="text-[10px] font-bold tracking-[0.12em] text-[#16a779]">
                             Your decision journey
                           </span>
                         </div>
@@ -519,7 +519,7 @@ export default function DestinationIntelligenceModal({
 
                         <div className="my-7 h-px bg-gradient-to-r from-transparent via-[#c9e1f0] to-transparent" />
 
-                        <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-2 text-[9px] font-bold uppercase tracking-[0.07em] text-[#2780c3] sm:text-[10px]">
+                        <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-2 text-[9px] font-bold tracking-[0.07em] text-[#2780c3] sm:text-[10px]">
                           <span>Person</span>
                           <ArrowRight size={11} />
                           <span>Lifestyle</span>
@@ -556,7 +556,7 @@ export default function DestinationIntelligenceModal({
                   initial={{ opacity: 0, y: 8 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.6 }}
-                  className="mt-9 hidden items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.1em] text-[#6e8298] transition-colors hover:text-[#2780c3] sm:flex"
+                  className="mt-9 hidden items-center gap-2 text-[10px] font-semibold tracking-[0.1em] text-[#6e8298] transition-colors hover:text-[#2780c3] sm:flex"
                 >
                   Explore the journey
                   <ArrowDownRight size={14} />

@@ -58,7 +58,7 @@ const roleCards: RoleCard[] = [
   },
   {
     title: "Security",
-    text: "Could keeping it preserve stability or a possible return to Switzerland?",
+    text: "Could keeping it preserve stability or a possible return to switzerland?",
     image:
       "https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=800&q=85",
     alt: "Alpine chalet with mountains behind",
@@ -292,7 +292,7 @@ export default function PropertyRolePage() {
           {/* -------------------------------------------------------------- */}
           <div ref={intro.ref} className="max-w-[520px]">
             <Reveal inView={intro.inView}>
-              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-sky-700">
+              <p className="text-[10px] font-bold tracking-[0.2em] text-sky-700">
                 Start with what you already have
               </p>
             </Reveal>
@@ -316,7 +316,7 @@ export default function PropertyRolePage() {
             <Reveal inView={intro.inView} delay={300}>
               <p className="mt-3 max-w-[470px] text-[14px] leading-[1.65] text-slate-600">
                 It may become available capital for a purchase abroad. It may
-                provide rental income. It may remain your Swiss base. It may
+                provide rental income. It may remain your swiss base. It may
                 offer renovation, development or densification potential. In
                 some situations, refinancing may also create greater financial
                 flexibility.

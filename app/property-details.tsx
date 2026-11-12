@@ -171,7 +171,7 @@ const textValue = (value: unknown, fallback = "To be confirmed") =>
 const propertyData: Property = {
   id: 1,
   title: "Bright 3-bedroom apartment near the beach",
-  location: "Santa Pola, Alicante, Spain",
+  location: "Santa pola, alicante, spain",
   price: 165000,
   currency: "EUR",
   area: 82,
@@ -188,9 +188,9 @@ const propertyData: Property = {
   ],
   verified: true,
   available: true,
-  verifiedDate: "12 September 2025",
+  verifiedDate: "12 september 2025",
   features: ["82 m²", "3 bedrooms", "1 bathroom", "Balcony", "Lift", "Near the beach"],
-  description: `Set close to the coast in Santa Pola, this bright three-bedroom apartment offers a comfortable setting for holidays, longer stays or year-round living. The layout is designed for easy everyday use, combining private living spaces with an outdoor area and convenient access to the town, the coastline and essential services. A viewing and document review will help determine whether it is the right property for your project.`,
+  description: `Set close to the coast in santa pola, this bright three-bedroom apartment offers a comfortable setting for holidays, longer stays or year-round living. The layout is designed for easy everyday use, combining private living spaces with an outdoor area and convenient access to the town, the coastline and essential services. A viewing and document review will help determine whether it is the right property for your project.`,
   technicalDetails: {
     propertyType: "Apartment",
     propertyReference: "ES-SP-001",
@@ -238,12 +238,12 @@ const propertyData: Property = {
   },
   localInsight: {
     advisor: {
-      name: "María López",
+      name: "María lópez",
       role: "Local Property Advisor",
-      location: "Santa Pola & Alicante area",
+      location: "Santa pola & alicante area",
       languages: ["Spanish", "English", "French"],
-      bio: "I help international buyers find not just a property, but a place to feel at home. I live in Santa Pola and am happy to share my local knowledge with you.",
-      quote: "Santa Pola offers an authentic Mediterranean lifestyle, with a welcoming international community and everything you need close by.",
+      bio: "I help international buyers find not just a property, but a place to feel at home. I live in santa pola and am happy to share my local knowledge with you.",
+      quote: "Santa pola offers an authentic mediterranean lifestyle, with a welcoming international community and everything you need close by.",
       image: "/api/placeholder/150/150",
     },
   },
@@ -251,8 +251,8 @@ const propertyData: Property = {
     {
       category: "Beaches",
       places: [
-        { name: "Playa de Levante", distance: "3 min", icon: Waves },
-        { name: "Playa de Tamarit", distance: "5 min", icon: Waves },
+        { name: "Playa de levante", distance: "3 min", icon: Waves },
+        { name: "Playa de tamarit", distance: "5 min", icon: Waves },
       ],
     },
     {
@@ -260,22 +260,22 @@ const propertyData: Property = {
       places: [
         { name: "Supermarket", distance: "5 min", icon: ShoppingBag },
         { name: "Pharmacy", distance: "8 min", icon: Stethoscope },
-        { name: "Medical Center", distance: "12 min", icon: Stethoscope },
+        { name: "Medical center", distance: "12 min", icon: Stethoscope },
       ],
     },
     {
       category: "Transport",
       places: [
-        { name: "Bus Station", distance: "8 min", icon: Train },
-        { name: "Alicante Airport", distance: "15 min", icon: Plane },
+        { name: "Bus station", distance: "8 min", icon: Train },
+        { name: "Alicante airport", distance: "15 min", icon: Plane },
       ],
     },
     {
       category: "Lifestyle",
       places: [
-        { name: "Restaurants & Cafés", distance: "5 min", icon: Coffee },
-        { name: "Marina & Port", distance: "10 min", icon: Anchor },
-        { name: "Castle of Santa Pola", distance: "12 min", icon: Building },
+        { name: "Restaurants & cafés", distance: "5 min", icon: Coffee },
+        { name: "Marina & port", distance: "10 min", icon: Anchor },
+        { name: "Castle of santa pola", distance: "12 min", icon: Building },
       ],
     },
   ],
@@ -287,7 +287,7 @@ const similarProperties = [
   {
     id: 2,
     title: "2-bedroom apartment with sea views",
-    location: "Santa Pola, Alicante, Spain",
+    location: "Santa pola, alicante, spain",
     price: 142000,
     area: 74,
     bedrooms: 2,
@@ -298,7 +298,7 @@ const similarProperties = [
   {
     id: 3,
     title: "Modern villa with private pool",
-    location: "Gran Alacant, Santa Pola",
+    location: "Gran alacant, santa pola",
     price: 325000,
     area: 120,
     bedrooms: 3,
@@ -309,7 +309,7 @@ const similarProperties = [
   {
     id: 4,
     title: "3-bedroom penthouse with large terrace",
-    location: "Santa Pola, Alicante, Spain",
+    location: "Santa pola, alicante, spain",
     price: 198000,
     area: 98,
     bedrooms: 3,
@@ -371,7 +371,7 @@ const mapApiProperty = (apiProperty: ApiProperty): Property => {
     images: images.length ? images : ["/images/property-sample.jpg"],
     verified: documentCount > 0,
     available: classification.listing_status === "published",
-    verifiedDate: "from live API data",
+    verifiedDate: "From live api data",
     features: features.length ? features : ["Property details available on request"],
     description: textValue(apiProperty.description, "Contact us for more information about this property."),
     technicalDetails: {
@@ -505,7 +505,7 @@ export default function PropertyDetailsPage() {
             <ChevronRight className="w-4 h-4 text-gray-400" />
             <a href="#" className="hover:text-sky-500 transition-colors">Alicante</a>
             <ChevronRight className="w-4 h-4 text-gray-400" />
-            <a href="#" className="hover:text-sky-500 transition-colors">Santa Pola</a>
+            <a href="#" className="hover:text-sky-500 transition-colors">Santa pola</a>
             <ChevronRight className="w-4 h-4 text-gray-400" />
             <span className="text-gray-900 font-medium truncate max-w-[200px] sm:max-w-none">
               {property.title}
@@ -583,7 +583,7 @@ export default function PropertyDetailsPage() {
                   Interested in this property?
                 </h3>
                 <p className="text-gray-600 text-sm mb-6">
-                  Take the next step towards your life in Spain.
+                  Take the next step towards your life in spain.
                 </p>
 
                 <div className="space-y-3">
@@ -638,7 +638,7 @@ export default function PropertyDetailsPage() {
                 transition={{ duration: 0.5, delay: 0.3 }}
                 className="bg-gradient-to-br from-sky-500 to-blue-600 rounded-2xl p-6 text-white"
               >
-                <h4 className="font-semibold mb-4">Property Highlights</h4>
+                <h4 className="font-semibold mb-4">Property highlights</h4>
                 <div className="space-y-3">
                   {[
                     { icon: Euro, label: "Price", value: `€${property.price.toLocaleString()}` },
@@ -667,7 +667,7 @@ export default function PropertyDetailsPage() {
                   {[
                     { icon: Share2, label: "Share", color: "bg-gray-100 hover:bg-gray-200 text-gray-700" },
                     { icon: Heart, label: "Save", color: isFavorite ? "bg-red-100 text-red-600" : "bg-gray-100 hover:bg-gray-200 text-gray-700" },
-                    { icon: Download, label: "PDF", color: "bg-gray-100 hover:bg-gray-200 text-gray-700" },
+                    { icon: Download, label: "Pdf", color: "bg-gray-100 hover:bg-gray-200 text-gray-700" },
                   ].map((btn, idx) => (
                     <motion.button
                       key={idx}

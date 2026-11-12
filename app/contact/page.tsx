@@ -71,15 +71,15 @@ const requestTypes = helpCards.map((c) => c.value);
 
 const countries = [
   "Switzerland", "Italy", "France", "Spain", "Portugal", "Greece", "Germany",
-  "United Kingdom", "United States", "United Arab Emirates", "Other",
+  "United kingdom", "United states", "United arab emirates", "Other",
 ];
 const languages = ["English", "French", "German", "Italian", "Spanish", "Portuguese"];
-const contactMethods = ["Email", "Phone", "WhatsApp", "Video call"];
+const contactMethods = ["Email", "Phone", "Whatsapp", "Video call"];
 const contactTimes = ["Morning", "Afternoon", "Evening", "No preference"];
 
 const formSteps = [
   { title: "You send your request", text: "Tell us where you are today and what you are considering." },
-  { title: "We route it to the right specialist", text: "Your request is carefully matched with the most relevant 2Morrow expert." },
+  { title: "We route it to the right specialist", text: "Your request is carefully matched with the most relevant 2morrow expert." },
   { title: "You receive a personal response", text: "We get back to you, usually within one business day." },
 ];
 
@@ -112,19 +112,19 @@ const directContacts: {
   cta: string;
   href: string;
 }[] = [
-  { icon: MessageCircle, tint: "bg-emerald-100 text-emerald-600", title: "WhatsApp", text: "Chat with our team directly on WhatsApp.", cta: "Open WhatsApp", href: "https://wa.me/" },
-  { icon: Mail, tint: "bg-rose-100 text-rose-600", title: "Email", text: "Send us an email and we'll get back to you.", cta: "Send an Email", href: "mailto:hello@2morrow.com" },
-  { icon: Phone, tint: "bg-green-100 text-green-600", title: "Telephone", text: "Speak with our team during business hours.", cta: "View Number", href: "tel:+41000000000" },
-  { icon: CalendarDays, tint: "bg-sky-100 text-sky-700", title: "Book a conversation", text: "Schedule a first conversation with our team.", cta: "Book a Call", href: "#contact-form" },
+  { icon: MessageCircle, tint: "bg-emerald-100 text-emerald-600", title: "Whatsapp", text: "Chat with our team directly on whatsapp.", cta: "Open whatsapp", href: "https://wa.me/" },
+  { icon: Mail, tint: "bg-rose-100 text-rose-600", title: "Email", text: "Send us an email and we'll get back to you.", cta: "Send an email", href: "mailto:hello@2morrow.com" },
+  { icon: Phone, tint: "bg-green-100 text-green-600", title: "Telephone", text: "Speak with our team during business hours.", cta: "View number", href: "tel:+41000000000" },
+  { icon: CalendarDays, tint: "bg-sky-100 text-sky-700", title: "Book a conversation", text: "Schedule a first conversation with our team.", cta: "Book a call", href: "#contact-form" },
 ];
 
 const faqs = [
-  { q: "Who can become a 2Morrow Angel?", a: "Angels are experienced local professionals who share our standards of service, independence and market knowledge. Each one is introduced to us through a careful selection process." },
-  { q: "How are Angels selected and verified?", a: "We review each Angel's background, credentials, references and local track record before they join the network, and we continue to review their work over time." },
-  { q: "Is there a cost to speak with an Angel?", a: "Your first conversation is an introduction to understand your goals. Any later services are explained clearly, with costs agreed before work begins." },
-  { q: "Can I speak with an Angel before I choose a destination?", a: "Yes. Many people start with questions rather than a decision. An Angel can help you compare destinations and understand what matters locally." },
-  { q: "Do Angels provide legal or financial advice?", a: "Angels provide practical guidance and coordination. Where legal, tax or financial advice is needed, we connect you with qualified independent professionals." },
-  { q: "How does 2Morrow ensure independence?", a: "We are clear about how we work, disclose how professionals are involved, and keep your interests at the centre of every recommendation." },
+  { q: "Who can become a 2morrow angel?", a: "Angels are experienced local professionals who share our standards of service, independence and market knowledge. Each one is introduced to us through a careful selection process." },
+  { q: "How are angels selected and verified?", a: "We review each angel's background, credentials, references and local track record before they join the network, and we continue to review their work over time." },
+  { q: "Is there a cost to speak with an angel?", a: "Your first conversation is an introduction to understand your goals. Any later services are explained clearly, with costs agreed before work begins." },
+  { q: "Can i speak with an angel before i choose a destination?", a: "Yes. Many people start with questions rather than a decision. An angel can help you compare destinations and understand what matters locally." },
+  { q: "Do angels provide legal or financial advice?", a: "Angels provide practical guidance and coordination. Where legal, tax or financial advice is needed, we connect you with qualified independent professionals." },
+  { q: "How does 2morrow ensure independence?", a: "We are clear about how we work, disclose how professionals are involved, and keep your interests at the centre of every recommendation." },
 ];
 
 /* -------------------------------------------------------------------------- */
@@ -260,8 +260,8 @@ function Hero() {
         <div className="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-[#06294f]/50 to-transparent" />
 
         <div className="mx-auto max-w-6xl px-5 pb-16 pt-20 sm:px-8 md:pb-24 md:pt-28">
-          <p className="ct-rise text-[9.5px] font-bold uppercase tracking-[0.22em] text-sky-200" style={{ animationDelay: "0ms" }}>
-            Contact 2Morrow
+          <p className="ct-rise text-[9.5px] font-bold tracking-[0.22em] text-sky-200" style={{ animationDelay: "0ms" }}>
+            Contact 2morrow
           </p>
           <h1
             className="ct-rise mt-4 max-w-[480px] text-[38px] font-bold leading-[1.05] tracking-[-0.045em] text-white sm:text-[48px] md:text-[54px]"
@@ -275,7 +275,7 @@ function Hero() {
           >
             Tell us where you are today, where you may want to go and what you
             are considering. We will connect your request with the right
-            2Morrow specialist.
+            2morrow specialist.
           </p>
 
           <div className="ct-rise mt-7 flex flex-wrap gap-3" style={{ animationDelay: "360ms" }}>
@@ -284,14 +284,14 @@ function Hero() {
               onClick={scrollToForm}
               className="inline-flex h-11 items-center justify-center rounded-full bg-sky-500 px-6 text-[12.5px] font-semibold text-white shadow-[0_12px_30px_rgba(14,165,233,0.4)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-sky-400"
             >
-              Tell Us About Your Project
+              Tell us about your project
             </button>
             <button
               type="button"
               onClick={scrollToForm}
               className="inline-flex h-11 items-center justify-center rounded-full border border-white/70 px-6 text-[12.5px] font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:text-[#06294f]"
             >
-              Book a First Conversation
+              Book a first conversation
             </button>
           </div>
         </div>
@@ -572,7 +572,7 @@ function FormSection({
                     {i + 1}
                   </span>
                   <span>
-                    <span className="block text-[10px] font-bold uppercase tracking-[0.06em] text-slate-800">
+                    <span className="block text-[10px] font-bold tracking-[0.06em] text-slate-800">
                       {step.title}
                     </span>
                     <span className="mt-0.5 block text-[10.5px] leading-[1.55] text-slate-500">
@@ -611,7 +611,7 @@ function FormSection({
                 </h3>
                 <p className="mt-2 max-w-sm text-[12.5px] leading-[1.7] text-slate-500">
                   Your request has been recorded and routed to the right
-                  2Morrow specialist. You will usually hear from us within one
+                  2morrow specialist. You will usually hear from us within one
                   business day.
                 </p>
                 <button
@@ -664,7 +664,7 @@ function FormSection({
                       I agree to the processing of my personal data as described
                       in the{" "}
                       <a href="#" className="font-semibold text-sky-600 underline-offset-2 hover:underline">
-                        Privacy Policy
+                        privacy policy
                       </a>
                       . <span className="text-rose-500">*</span>
                     </span>
@@ -687,7 +687,7 @@ function FormSection({
                     </>
                   ) : (
                     <>
-                      Send My Request
+                      Send my request
                       <Send className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
                     </>
                   )}
@@ -696,7 +696,7 @@ function FormSection({
                 <p className="flex items-center justify-center gap-1.5 text-[9.5px] text-slate-400">
                   <Lock className="h-3 w-3" />
                   Your request will be securely recorded and routed to the
-                  right 2Morrow specialist.
+                  right 2morrow specialist.
                 </p>
               </form>
             )}
@@ -716,7 +716,7 @@ function ExpertiseSection() {
     <section className="bg-white py-14 md:py-20">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <p className="text-[9.5px] font-bold uppercase tracking-[0.22em] text-slate-400">
+          <p className="text-[9.5px] font-bold tracking-[0.22em] text-slate-400">
             Our expertise
           </p>
           <h2 className="mt-3 text-[26px] font-bold leading-[1.15] tracking-[-0.035em] text-slate-900 sm:text-[32px]">
@@ -763,7 +763,7 @@ function NextSection() {
 
         <div>
           <Reveal>
-            <p className="text-[9px] font-bold uppercase tracking-[0.22em] text-slate-400">
+            <p className="text-[9px] font-bold tracking-[0.22em] text-slate-400">
               What happens next?
             </p>
             <h2
@@ -775,7 +775,7 @@ function NextSection() {
             </h2>
             <p className="mt-4 max-w-[460px] text-[12.5px] leading-[1.7] text-slate-500">
               We take the time to understand your goals and connect you with
-              the right 2Morrow specialist, combining local knowledge with a
+              the right 2morrow specialist, combining local knowledge with a
               truly international perspective.
             </p>
           </Reveal>
@@ -939,7 +939,7 @@ function FinalCTA() {
 
       <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 md:py-28">
         <Reveal>
-          <p className="text-[9.5px] font-bold uppercase tracking-[0.22em] text-sky-300">
+          <p className="text-[9.5px] font-bold tracking-[0.22em] text-sky-300">
             Ready to take the next step?
           </p>
           <h2 className="mt-4 max-w-xl text-[32px] font-bold leading-[1.1] tracking-[-0.04em] text-white sm:text-[42px]">

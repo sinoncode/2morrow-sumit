@@ -3,14 +3,14 @@ import { useEffect, useRef, useState } from "react";
 import Reveal from "./Reveal";
 
 const stages = [
-  { id: "dream", x: 60, y: 92, label: "DREAM", top: true, d: "Explore possibilities and refine the dream/wish." },
-  { id: "discovery", x: 200, y: 205, label: "DISCOVERY", top: false, d: "Understand needs, priorities and local questions." },
-  { id: "destination", x: 340, y: 80, label: "DESTINATION", top: true, d: "Share honest insight into housing and daily life." },
-  { id: "property", x: 480, y: 200, label: "PROPERTY", top: false, d: "Add neighbourhood context and collaborate with the agency." },
-  { id: "verification", x: 620, y: 88, label: "VERIFICATION", top: true, d: "Add practical points and connect qualified experts." },
-  { id: "purchase", x: 760, y: 198, label: "PURCHASE", top: false, d: "Factor in communication with experts as the client manages the transaction." },
-  { id: "relocation", x: 900, y: 82, label: "RELOCATION", top: true, d: "Holistic services and support the move and first steps." },
-  { id: "newlife", x: 1010, y: 190, label: "NEW LIFE", top: false, d: "Remain the local connection and support your integration." },
+  { id: "dream", x: 60, y: 92, label: "Dream", top: true, d: "Explore possibilities and refine the dream/wish." },
+  { id: "discovery", x: 200, y: 205, label: "Discovery", top: false, d: "Understand needs, priorities and local questions." },
+  { id: "destination", x: 340, y: 80, label: "Destination", top: true, d: "Share honest insight into housing and daily life." },
+  { id: "property", x: 480, y: 200, label: "Property", top: false, d: "Add neighbourhood context and collaborate with the agency." },
+  { id: "verification", x: 620, y: 88, label: "Verification", top: true, d: "Add practical points and connect qualified experts." },
+  { id: "purchase", x: 760, y: 198, label: "Purchase", top: false, d: "Factor in communication with experts as the client manages the transaction." },
+  { id: "relocation", x: 900, y: 82, label: "Relocation", top: true, d: "Holistic services and support the move and first steps." },
+  { id: "newlife", x: 1010, y: 190, label: "New life", top: false, d: "Remain the local connection and support your integration." },
 ];
 
 export default function JourneyGraph() {
@@ -35,7 +35,7 @@ export default function JourneyGraph() {
   return (
     <section className="section journey" id="journey">
       <div className="container">
-        <Reveal><h2 className="h2" style={{ textAlign: "center" }}>Where Angels support the 2Morrow Journey</h2></Reveal>
+        <Reveal><h2 className="h2" style={{ textAlign: "center" }}>Where angels support the 2morrow journey</h2></Reveal>
         <Reveal delay={0.1}>
           <p className="eyebrow" style={{ textAlign: "center", marginTop: "0.5rem", color: "#7d95a8" }}>
             Human local support across the journey</p>
@@ -70,7 +70,7 @@ export default function JourneyGraph() {
         </div>
 
         <div className="j-legend">
-          <span><i className="lg-dot" style={{ background: "#17b890" }} />Key Angel support</span>
+          <span><i className="lg-dot" style={{ background: "#17b890" }} />Key angel support</span>
           <span><i className="lg-dot" style={{ background: "#5b8def" }} />Angel support</span>
           <span><i className="lg-dot" style={{ background: "#0b2a4a" }} />Led by licensed professionals</span>
           <span><i className="lg-dot" style={{ background: "#fff", border: "2px dashed #7d95a8" }} />Collaboration hand-off</span>

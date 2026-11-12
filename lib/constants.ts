@@ -24,6 +24,6 @@ export const CANTONS = [
   "Zug",
   "Grisons",
   "Ticino",
-  "Basel-City",
+  "Basel-city",
   "Lucerne",
 ];

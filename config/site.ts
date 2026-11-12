@@ -1,6 +1,6 @@
 export const siteConfig = {
-  name: "2morrow Real Estate",
-  description: "Premium Swiss Real Estate, offering luxury properties, exclusive projects, and comprehensive real estate services across Switzerland.",
+  name: "2morrow real estate",
+  description: "Premium swiss real estate, offering luxury properties, exclusive projects, and comprehensive real estate services across switzerland.",
   url: "https://2morrow.ch",
   ogImage: "https://2morrow.ch/og.jpg",
   contact: {
@@ -32,7 +32,7 @@ export const siteConfig = {
       href: "/projects",
     },
     {
-      title: "More Than a Network",
+      title: "More than a network",
       href: "/network",
     },
     {
@@ -54,13 +54,13 @@ export const siteConfig = {
       items: [
         { title: "Buy", href: "/properties?transaction=buy" },
         { title: "Rent", href: "/properties?transaction=rent" },
-        { title: "New Projects", href: "/projects" },
+        { title: "New projects", href: "/projects" },
       ],
     },
     {
       title: "Services",
       items: [
-        { title: "Property Search", href: "/services" },
+        { title: "Property search", href: "/services" },
         { title: "Selling", href: "/services" },
         { title: "Advisory", href: "/services" },
       ],
@@ -68,7 +68,7 @@ export const siteConfig = {
     {
       title: "Company",
       items: [
-        { title: "About Us", href: "/about" },
+        { title: "About us", href: "/about" },
         { title: "Network", href: "/network" },
         { title: "Contact", href: "/contact" },
       ],
@@ -76,8 +76,8 @@ export const siteConfig = {
     {
       title: "Legal",
       items: [
-        { title: "Privacy Policy", href: "/privacy" },
-        { title: "Terms of Service", href: "/terms" },
+        { title: "Privacy policy", href: "/privacy" },
+        { title: "Terms of service", href: "/terms" },
         { title: "Imprint", href: "/imprint" },
       ],
     },

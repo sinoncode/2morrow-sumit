@@ -8,7 +8,7 @@ export default function QuoteBand() {
           <figure>
             <blockquote>&ldquo;I love living here — but this may not be the right place for you.&rdquo;</blockquote>
             <figcaption>Different perspectives. Brighter decisions.</figcaption>
-            <p className="lead">Our Angels give honest, balanced perspectives — including the challenges. Their
+            <p className="lead">Our angels give honest, balanced perspectives — including the challenges. Their
             goal is not to sell you a dream, but to help you find a place that truly fits your life.</p>
           </figure>
         </Reveal>

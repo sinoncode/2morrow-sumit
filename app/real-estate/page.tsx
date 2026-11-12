@@ -70,60 +70,60 @@ type Option = {
 
 const options: Option[] = [
   {
-    tag: "Option 01 · Sell",
+    tag: "Option 01 · sell",
     title: "Sell your property. Unlock what comes next.",
     text: "Selling may release capital, simplify your situation in your current country and help finance a purchase, rental or relocation abroad.",
     note: "A sale should still be assessed in relation to timing, market conditions, mortgage arrangements and the amount of capital you actually need.",
     points: ["Current market value", "Property positioning and sale strategy", "Mortgage repayment or early-termination conditions", "Indicative sale costs", "Tax and legal questions", "Timing of the sale", "Temporary accommodation requirements", "Coordination with a purchase or rental abroad"],
-    primary: "Request a Property Valuation",
-    secondary: "Sell or Rent? Compare My Options",
+    primary: "Request a property valuation",
+    secondary: "Sell or rent? Compare my options",
     image: IMG.terrace,
   },
   {
-    tag: "Option 02 · Keep",
+    tag: "Option 02 · keep",
     title: "Keep a home-country base while your life evolves.",
     text: "Keeping the property may preserve long-term security, exposure to your current property market and the possibility of returning.",
     note: "However, retaining a property also means maintaining the financial, administrative and practical responsibilities attached to it.",
     points: ["Ongoing mortgage affordability", "Maintenance and renovation costs", "Vacancy and security", "Property management", "Tax and residency implications", "Insurance requirements", "Use by family members", "Compatibility with financing abroad"],
-    primary: "Assess My Keep Option",
+    primary: "Assess my keep option",
     image: IMG.garden,
   },
   {
-    tag: "Option 03 · Rent",
+    tag: "Option 03 · rent",
     title: "Turn your property into a source of income.",
     text: "Renting may help you retain your current property while generating income that supports your next stage of life.",
     note: "Depending on the property, regulations and your plans, the review may consider long-term, medium-term or short-term rental where appropriate and legally permitted.",
     points: ["Realistic rental value", "Long, medium or short-term suitability", "Applicable local regulations", "Tenant law and contractual obligations", "Property management responsibilities", "Vacancy assumptions", "Maintenance and tenant costs", "Tax and insurance considerations"],
-    primary: "Explore the Rental Option",
-    secondary: "Request a Rental Assessment",
+    primary: "Explore the rental option",
+    secondary: "Request a rental assessment",
     image: IMG.interior,
   },
   {
-    tag: "Option 04 · Renovate",
+    tag: "Option 04 · renovate",
     title: "Improve the property before deciding what comes next.",
     text: "Renovation may improve comfort, energy performance, rental potential or market positioning, and can also prepare a property for a future return to your home country.",
     note: "Not every renovation creates equivalent value. The scope, budget and purpose should be clear before work begins.",
     points: ["Technical condition", "Energy performance", "Necessary versus optional work", "Estimated budget", "Planning and authorisation requirements", "Impact on rental potential", "Impact on market positioning", "Expected value in relation to cost"],
-    primary: "Review My Renovation Potential",
+    primary: "Review my renovation potential",
     image: IMG.living,
   },
   {
-    tag: "Option 05 · Develop or densify",
+    tag: "Option 05 · develop or densify",
     title: "Look beyond the property as it stands today.",
     text: "Some properties and plots may contain unused development potential. This potential must be verified through planning, technical and legal analysis.",
     note: "An extension, conversion, additional unit, redevelopment or densification project may create value, but it is not automatically available or appropriate.",
     points: ["Land and zoning rules", "Construction rights", "Extension or conversion potential", "Additional housing units", "Mortgage or environmental restrictions", "Access and infrastructure", "Technical feasibility", "Project cost and financing"],
-    primary: "Explore the Potential",
-    secondary: "Request a Potential Review",
+    primary: "Explore the potential",
+    secondary: "Request a potential review",
     image: IMG.modern,
   },
   {
-    tag: "Option 06 · Refinance",
+    tag: "Option 06 · refinance",
     title: "Consider whether your property can create financial flexibility.",
     text: "Refinancing may help restructure existing debt, release part of the available equity or adapt the property's financing to a new stage of life.",
     note: "It is not automatically available or appropriate. Affordability, valuation, lender criteria, residency, income and the wider financial structure must be reviewed.",
     points: ["Current mortgage structure", "Renewal and termination dates", "Indicative property value", "Available equity", "Affordability", "Interest rate exposure", "Planned financing for a new stage of life", "Lender requirements"],
-    primary: "Explore the Refinance Option",
+    primary: "Explore the refinance option",
     image: IMG.calc,
   },
 ];
@@ -321,7 +321,7 @@ function Photo({
 function Eyebrow({ children, light = false }: { children: ReactNode; light?: boolean }) {
   return (
     <p
-      className={`text-[10px] font-bold uppercase tracking-[0.22em] ${
+      className={`text-[10px] font-bold  tracking-[0.22em] ${
         light ? "text-sky-200" : "text-sky-600"
       }`}
     >
@@ -425,13 +425,13 @@ function Hero() {
               and the life you want to build next.
             </p>
             <p className="mt-3 max-w-[460px] text-[13.5px] leading-[1.7] text-slate-500">
-              2Morrow helps you compare the options before committing to one.
+              2morrow helps you compare the options before committing to one.
             </p>
           </Reveal>
 
           <Reveal delay={240} className="mt-7 flex flex-wrap gap-3">
-            <PrimaryButton>Understand My Property Options</PrimaryButton>
-            <GhostButton>Request a Property Review</GhostButton>
+            <PrimaryButton>Understand my property options</PrimaryButton>
+            <GhostButton>Request a property review</GhostButton>
           </Reveal>
 
           <Reveal delay={300}>
@@ -459,8 +459,8 @@ function Hero() {
               <Photo src={IMG.hero} alt="Mediterranean house" className="aspect-[4/4.4] w-full" />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/30 via-transparent to-transparent" />
               <div className="absolute bottom-5 left-5 rounded-xl bg-white/90 px-4 py-2.5 shadow-lg backdrop-blur">
-                <p className="text-[9px] font-bold uppercase tracking-[0.18em] text-sky-600">
-                  2Morrow
+                <p className="text-[9px] font-bold tracking-[0.18em] text-sky-600">
+                  2morrow
                 </p>
                 <p className="text-[12px] font-semibold text-slate-900">
                   Your property, your options
@@ -515,7 +515,7 @@ function StartSection() {
               </p>
             </div>
             <div className="mt-6">
-              <PrimaryButton>Explore My Options</PrimaryButton>
+              <PrimaryButton>Explore my options</PrimaryButton>
             </div>
           </Reveal>
         </div>
@@ -525,7 +525,7 @@ function StartSection() {
             <Reveal
               key={card.title}
               delay={i * 110}
-              className={i % 2 === 1 ? "lg:mt-6" : ""}
+              className={i % 2 === 1 ? "Lg:mt-6" : ""}
             >
               <article className="group h-full cursor-pointer overflow-hidden rounded-2xl bg-white shadow-[0_12px_30px_rgba(11,29,51,0.09)] ring-1 ring-slate-900/[0.04] transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-3 hover:shadow-[0_28px_55px_rgba(11,29,51,0.18)]">
                 <Photo src={card.image} className="h-[110px] w-full lg:h-[130px]" />
@@ -560,7 +560,7 @@ function PositionSection() {
         <Reveal from="scale">
           <div className="grid overflow-hidden rounded-[28px] bg-white shadow-[0_24px_60px_rgba(11,29,51,0.08)] lg:grid-cols-[0.9fr_1fr_1fr]">
             <div className="p-7 sm:p-9">
-              <Eyebrow>01 — Your starting point</Eyebrow>
+              <Eyebrow>01 — your starting point</Eyebrow>
               <Heading className="mt-3 text-[28px] md:text-[34px]">
                 Understand your current position
               </Heading>
@@ -576,8 +576,8 @@ function PositionSection() {
               </div>
 
               <div className="mt-6 flex flex-wrap gap-3">
-                <PrimaryButton>Start My Property Review</PrimaryButton>
-                <GhostButton>Talk to 2Morrow</GhostButton>
+                <PrimaryButton>Start my property review</PrimaryButton>
+                <GhostButton>Talk to 2morrow</GhostButton>
               </div>
               <p className="mt-4 text-[10px] leading-[1.6] text-slate-400">
                 The review helps identify the questions that require valuation,
@@ -596,7 +596,7 @@ function PositionSection() {
               <div className="mt-4 space-y-4">
                 {considerGroups.map((group, gi) => (
                   <Reveal key={group.title} delay={gi * 90}>
-                    <p className="text-[9px] font-bold uppercase tracking-[0.16em] text-sky-600">
+                    <p className="text-[9px] font-bold tracking-[0.16em] text-sky-600">
                       {group.title}
                     </p>
                     <ul className="mt-1.5 space-y-1">
@@ -632,7 +632,7 @@ function OptionCard({ option, index }: { option: Option; index: number }) {
         <Photo src={option.image} className="h-[190px] w-full sm:h-[230px]" />
 
         <div className="flex flex-1 flex-col p-6 sm:p-8">
-          <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-sky-600">
+          <p className="text-[9px] font-bold tracking-[0.2em] text-sky-600">
             {option.tag}
           </p>
           <h3 className="mt-2 text-[21px] font-semibold leading-[1.2] tracking-[-0.03em] text-slate-950 sm:text-[24px]">
@@ -641,7 +641,7 @@ function OptionCard({ option, index }: { option: Option; index: number }) {
           <p className="mt-3 text-[12.5px] leading-[1.7] text-slate-500">{option.text}</p>
           <p className="mt-2 text-[12px] leading-[1.7] text-slate-400">{option.note}</p>
 
-          <p className="mt-5 text-[9px] font-bold uppercase tracking-[0.18em] text-slate-400">
+          <p className="mt-5 text-[9px] font-bold tracking-[0.18em] text-slate-400">
             Points to review
           </p>
           <ul className="mt-3 grid gap-x-6 gap-y-2 sm:grid-cols-2">
@@ -672,7 +672,7 @@ function OptionsSection() {
     <section className="bg-white py-14 md:py-20">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <Eyebrow>02 — One property. Several possible roles.</Eyebrow>
+          <Eyebrow>02 — one property. Several possible roles.</Eyebrow>
           <Heading center className="mt-3 text-[28px] md:text-[38px]">
             Compare the options before choosing a direction
           </Heading>
@@ -723,7 +723,7 @@ function FinanceSection() {
     <section className="bg-sky-50/70 py-14 md:py-20">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <Eyebrow>03 — From your current property to your life project</Eyebrow>
+          <Eyebrow>03 — from your current property to your life project</Eyebrow>
           <Heading center className="mt-3 text-[28px] md:text-[38px]">
             Finance your next chapter
           </Heading>
@@ -740,7 +740,7 @@ function FinanceSection() {
 
           <Reveal from="scale" delay={150} className="flex items-center justify-center">
             <div className="flex flex-row items-center gap-4 lg:flex-col">
-              <span className="max-w-[110px] text-center text-[9px] font-bold uppercase tracking-[0.16em] text-sky-600">
+              <span className="max-w-[110px] text-center text-[9px] font-bold tracking-[0.16em] text-sky-600">
                 One coordinated strategy
               </span>
               {flow.map(({ label, icon: Icon }) => (
@@ -778,11 +778,11 @@ function FinanceSection() {
 
         <Reveal className="mt-8 text-center">
           <p className="text-[12.5px] text-slate-600">
-            2Morrow connects these decisions within one coordinated journey.
+            2morrow connects these decisions within one coordinated journey.
           </p>
           <div className="mt-4 flex flex-wrap justify-center gap-3">
-            <PrimaryButton>Build My Project Scenario</PrimaryButton>
-            <GhostButton>Explore Destinations</GhostButton>
+            <PrimaryButton>Build my project scenario</PrimaryButton>
+            <GhostButton>Explore destinations</GhostButton>
           </div>
         </Reveal>
       </div>
@@ -847,7 +847,7 @@ function ReturnSection() {
 
         <div>
           <Reveal>
-            <Eyebrow>04 — Keep the option open</Eyebrow>
+            <Eyebrow>04 — keep the option open</Eyebrow>
             <Heading className="mt-3 text-[28px] md:text-[38px]">
               Prepare for a possible return to your home country
             </Heading>
@@ -884,8 +884,8 @@ function ReturnSection() {
               means protecting your ability to adapt.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <PrimaryButton>Include a Return Scenario</PrimaryButton>
-              <GhostButton>Talk to 2Morrow</GhostButton>
+              <PrimaryButton>Include a return scenario</PrimaryButton>
+              <GhostButton>Talk to 2morrow</GhostButton>
             </div>
           </Reveal>
         </div>
@@ -907,7 +907,7 @@ function ProcessSection() {
         <Reveal className="mx-auto max-w-2xl text-center">
           <Eyebrow>A clear and controlled process</Eyebrow>
           <Heading center className="mt-3 text-[28px] md:text-[38px]">
-            How the Property and Asset Review works
+            How the property and asset review works
           </Heading>
         </Reveal>
 
@@ -942,7 +942,7 @@ function ProcessSection() {
         </div>
 
         <Reveal className="mt-10 text-center">
-          <PrimaryButton>Request My Property and Asset Review</PrimaryButton>
+          <PrimaryButton>Request my property and asset review</PrimaryButton>
           <p className="mt-4 text-[11px] text-slate-400">
             One coordinated process. Relevant expertise. No obligation to
             choose a specific property strategy.
@@ -1018,7 +1018,7 @@ function PrioritiesSection() {
 
           <Reveal from="right">
             <aside className="sticky top-6 rounded-[22px] bg-white p-6 shadow-[0_20px_55px_rgba(11,29,51,0.1)] ring-1 ring-slate-900/[0.05] sm:p-7">
-              <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-sky-600">
+              <p className="text-[9px] font-bold tracking-[0.2em] text-sky-600">
                 Your selected priority
               </p>
 
@@ -1055,7 +1055,7 @@ function PrioritiesSection() {
                   type="button"
                   className="group inline-flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-sky-600 text-[13px] font-semibold text-white shadow-[0_12px_28px_rgba(2,132,199,0.28)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-sky-700"
                 >
-                  Compare My Property Scenarios
+                  Compare my property scenarios
                   <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                 </button>
               </div>
@@ -1092,8 +1092,8 @@ function FinalCTA() {
           </Reveal>
 
           <Reveal delay={150} className="flex flex-col gap-3 sm:flex-row lg:justify-end">
-            <PrimaryButton tone="green">Request My Property Review</PrimaryButton>
-            <GhostButton light>Start My Life Project</GhostButton>
+            <PrimaryButton tone="green">Request my property review</PrimaryButton>
+            <GhostButton light>Start my life project</GhostButton>
           </Reveal>
         </div>
       </div>

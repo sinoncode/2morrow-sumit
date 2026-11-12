@@ -5,15 +5,15 @@ export default function Hero() {
     <section className="hero" id="top">
       <div className="container">
         <div className="hero__content">
-          <Reveal><p className="hero__tag">2Morrow Angels</p></Reveal>
+          <Reveal><p className="hero__tag">2morrow angels</p></Reveal>
           <Reveal delay={0.1}><h1 className="h1">Local knowledge for the life you are considering.</h1></Reveal>
           <Reveal delay={0.2}>
             <p>Trusted local insight. Real conversations. A smoother path to your new life.</p>
           </Reveal>
           <Reveal delay={0.3}>
             <div className="hero__cta">
-              <a href="#start" className="btn btn-primary">Start Your Life Project</a>
-              <a href="#destinations" className="btn btn-outline">Find Support in Your Destination</a>
+              <a href="#start" className="btn btn-primary">Start your life project</a>
+              <a href="#destinations" className="btn btn-outline">Find support in your destination</a>
             </div>
           </Reveal>
         </div>

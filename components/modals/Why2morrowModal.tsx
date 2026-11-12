@@ -53,9 +53,9 @@ const companySections: CompanySection[] = [
     },
     {
         number: "02",
-        title: "What 2Morrow coordinates",
+        title: "What 2morrow coordinates",
         description:
-            "Destination intelligence, real estate, current assets, professionals, Angels and relocation within one journey.",
+            "Destination intelligence, real estate, current assets, professionals, angels and relocation within one journey.",
         links: [
             "Discovery",
             "Strategy",
@@ -67,7 +67,7 @@ const companySections: CompanySection[] = [
         number: "03",
         title: "How support is organised",
         description:
-            "2Morrow coordinates; regulated or specialist work remains with qualified local professionals.",
+            "2morrow coordinates; regulated or specialist work remains with qualified local professionals.",
         links: [
             "Clear roles",
             "No invented expertise",
@@ -89,7 +89,7 @@ const companySections: CompanySection[] = [
     },
     {
         number: "05",
-        title: "Who is behind 2Morrow",
+        title: "Who is behind 2morrow",
         description:
             "Founder and leadership content with real biographies, responsibilities and verified credentials only.",
         links: [
@@ -103,7 +103,7 @@ const companySections: CompanySection[] = [
         number: "06",
         title: "Begin your project",
         description:
-            "Invite the visitor into the Life Project rather than a generic sales call.",
+            "Invite the visitor into the life project rather than a generic sales call.",
         links: [
             "Start project",
             "Contact",
@@ -338,8 +338,8 @@ export default function Why2morrowModal({
                                 </div>
 
                                 <div>
-                                    <p className="text-[11px] font-bold uppercase tracking-[0.17em] text-[#2780c3]">
-                                        2Morrow
+                                    <p className="text-[11px] font-bold tracking-[0.17em] text-[#2780c3]">
+                                        2morrow
                                     </p>
 
                                     <p className="mt-0.5 text-[10px] text-[#7b8ca1]">
@@ -407,7 +407,7 @@ export default function Why2morrowModal({
                                         <div className="mb-5 flex items-center gap-2.5">
                                             <span className="h-px w-7 bg-[#2780c3]" />
 
-                                            <span className="text-[10px] font-bold uppercase tracking-[0.1em] text-[#2780c3] sm:text-[11px]">
+                                            <span className="text-[10px] font-bold tracking-[0.1em] text-[#2780c3] sm:text-[11px]">
                                                 One coordinated view of what comes next.
                                             </span>
                                         </div>
@@ -416,7 +416,7 @@ export default function Why2morrowModal({
                                             id="why-2morrow-title"
                                             className="max-w-[580px] font-serif text-[36px] font-bold leading-[1.1] tracking-[-0.035em] text-[#0c2854] sm:text-[45px] lg:text-[49px]"
                                         >
-                                            Why 2Morrow exists
+                                            Why 2morrow exists
                                         </h2>
 
                                         <p className="mt-5 max-w-[550px] text-[13px] leading-[1.9] text-[#70839b] sm:text-[14px]">
@@ -445,7 +445,7 @@ export default function Why2morrowModal({
                                                 }
                                                 className="group inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl bg-[#2780c3] px-5 py-3 text-[13px] font-semibold text-white transition-colors hover:bg-[#176ba9]"
                                             >
-                                                Start Your Life Project
+                                                Start your life project
 
                                                 <ArrowRight
                                                     size={15}
@@ -471,7 +471,7 @@ export default function Why2morrowModal({
                                                 }
                                                 className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl border border-[#2780c3] bg-white px-5 py-3 text-[13px] font-semibold text-[#2780c3] transition-colors hover:bg-[#edf7fc]"
                                             >
-                                                Talk to 2Morrow
+                                                Talk to 2morrow
                                                 <ArrowUpRight size={15} />
                                             </motion.button>
                                         </div>
@@ -529,7 +529,7 @@ export default function Why2morrowModal({
                                                         className="text-[#12a879]"
                                                     />
 
-                                                    <span className="text-[10px] font-bold uppercase tracking-[0.1em] text-[#12a879]">
+                                                    <span className="text-[10px] font-bold tracking-[0.1em] text-[#12a879]">
                                                         Your decision journey
                                                     </span>
                                                 </div>
@@ -542,7 +542,7 @@ export default function Why2morrowModal({
 
                                                 <div className="my-7 h-px bg-gradient-to-r from-transparent via-[#c9e1f0] to-transparent" />
 
-                                                <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-2 text-[9px] font-bold uppercase tracking-[0.06em] text-[#2780c3] sm:text-[10px]">
+                                                <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-2 text-[9px] font-bold tracking-[0.06em] text-[#2780c3] sm:text-[10px]">
                                                     <span>Person</span>
                                                     <ArrowRight size={11} />
 

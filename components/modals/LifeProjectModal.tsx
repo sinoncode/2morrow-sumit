@@ -65,7 +65,7 @@ const journeySections: JourneySection[] = [
         number: "03",
         title: "Explore destinations with purpose",
         description:
-            "Compare places through Destination Intelligence, professional knowledge and lived local insight.",
+            "Compare places through destination intelligence, professional knowledge and lived local insight.",
         links: [
             "Reality Check",
             "Country guides",
@@ -266,12 +266,12 @@ export default function LifeProjectModal({
                                 </div>
 
                                 <div>
-                                    <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#2780c3]">
-                                        2Morrow
+                                    <p className="text-[11px] font-bold tracking-[0.16em] text-[#2780c3]">
+                                        2morrow
                                     </p>
 
                                     <p className="mt-0.5 text-[10px] text-[#71839a]">
-                                        Your Life Project
+                                        Your life project
                                     </p>
                                 </div>
                             </div>
@@ -280,7 +280,7 @@ export default function LifeProjectModal({
                                 ref={closeButtonRef}
                                 type="button"
                                 onClick={onClose}
-                                aria-label="Close Life Project modal"
+                                aria-label="Close life project modal"
                                 whileHover={
                                     reduceMotion
                                         ? undefined
@@ -355,7 +355,7 @@ export default function LifeProjectModal({
                                         <div className="mb-5 flex items-center gap-2.5">
                                             <span className="h-px w-7 bg-[#2780c3]" />
 
-                                            <span className="text-[10px] font-bold uppercase tracking-[0.1em] text-[#2780c3] sm:text-[11px]">
+                                            <span className="text-[10px] font-bold tracking-[0.1em] text-[#2780c3] sm:text-[11px]">
                                                 Life first. Decisions in context.
                                             </span>
                                         </div>
@@ -369,8 +369,8 @@ export default function LifeProjectModal({
 
                                         <p className="mt-5 max-w-[570px] text-[13px] leading-[1.9] text-[#70839b] sm:text-[14px]">
                                             A central public page that connects the home page,
-                                            destinations, real estate, Angels, professional
-                                            expertise, the intelligent intake and the CRM.
+                                            destinations, real estate, angels, professional
+                                            expertise, the intelligent intake and the crm.
                                         </p>
 
                                         <div className="mt-7 flex flex-col gap-3 min-[420px]:flex-row">
@@ -393,7 +393,7 @@ export default function LifeProjectModal({
                                                 }
                                                 className="group inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl bg-[#2780c3] px-5 py-3 text-[13px] font-semibold text-white transition-colors hover:bg-[#176ba9]"
                                             >
-                                                Start Your Life Project
+                                                Start your life project
 
                                                 <ArrowRight
                                                     size={15}
@@ -419,7 +419,7 @@ export default function LifeProjectModal({
                                                 }
                                                 className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl border border-[#2780c3] bg-white px-5 py-3 text-[13px] font-semibold text-[#2780c3] transition-colors hover:bg-[#edf7fc]"
                                             >
-                                                Talk to 2Morrow
+                                                Talk to 2morrow
 
                                                 <ArrowUpRight size={15} />
                                             </motion.button>
@@ -488,7 +488,7 @@ export default function LifeProjectModal({
                                                         className="text-[#12a879]"
                                                     />
 
-                                                    <span className="text-[10px] font-bold uppercase tracking-[0.1em] text-[#12a879]">
+                                                    <span className="text-[10px] font-bold tracking-[0.1em] text-[#12a879]">
                                                         Your decision journey
                                                     </span>
                                                 </div>
@@ -501,7 +501,7 @@ export default function LifeProjectModal({
 
                                                 <div className="my-7 h-px bg-gradient-to-r from-transparent via-[#c9e1f0] to-transparent" />
 
-                                                <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-2 text-[9px] font-bold uppercase tracking-[0.06em] text-[#2780c3] sm:text-[10px]">
+                                                <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-2 text-[9px] font-bold tracking-[0.06em] text-[#2780c3] sm:text-[10px]">
                                                     <span>Person</span>
                                                     <ArrowRight size={11} />
 

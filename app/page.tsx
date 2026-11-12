@@ -104,14 +104,14 @@ export default function HomePage() {
   }, []);
 
   const destinations = [
-    "SWITZERLAND",
-    "SPAIN",
-    "PORTUGAL",
-    "GREECE",
-    "FRANCE",
-    "ITALY",
-    "BALI",
-    "THAILAND",
+    "Switzerland",
+    "Spain",
+    "Portugal",
+    "Greece",
+    "France",
+    "Italy",
+    "Bali",
+    "Thailand",
   ];
 
   const propertyTabs = ["Sell", "Rent", "Keep", "Optimize"];
@@ -120,27 +120,27 @@ export default function HomePage() {
     {
       image: journey1,
       title: "Discover",
-      desc: "Lorem Ipsum is simply dummy text of the printing.",
+      desc: "Lorem ipsum is simply dummy text of the printing.",
     },
     {
       image: journey2,
       title: "Structure",
-      desc: "Lorem Ipsum is simply dummy text of the printing.",
+      desc: "Lorem ipsum is simply dummy text of the printing.",
     },
     {
       image: journey3,
       title: "Assess",
-      desc: "Lorem Ipsum is simply dummy text of the printing.",
+      desc: "Lorem ipsum is simply dummy text of the printing.",
     },
     {
       image: journey4,
       title: "Explore",
-      desc: "Lorem Ipsum is simply dummy text of the printing.",
+      desc: "Lorem ipsum is simply dummy text of the printing.",
     },
     {
       image: journey5,
       title: "Verify",
-      desc: "Lorem Ipsum is simply dummy text of the printing.",
+      desc: "Lorem ipsum is simply dummy text of the printing.",
     },
   ];
 
@@ -195,7 +195,7 @@ export default function HomePage() {
     {
       icon: Lock,
       title: "Confidentiality",
-      desc: "Property Treating personal, financial information with the discretion it deserves.",
+      desc: "Property treating personal, financial information with the discretion it deserves.",
     },
     {
       icon: Clock,
@@ -213,26 +213,26 @@ export default function HomePage() {
     {
       image: "/api/placeholder/400/300",
       tags: ["Purchase", "Sell", "Relocation"],
-      title: "Swiss Property sold Retirement property acquired.",
-      subtitle: "Relocation Coordinated",
+      title: "Swiss property sold retirement property acquired.",
+      subtitle: "Relocation coordinated",
     },
     {
       image: "/api/placeholder/400/300",
       tags: ["Purchase", "Sell", "Relocation"],
-      title: "Swiss Property sold Retirement property acquired.",
-      subtitle: "Relocation Coordinated",
+      title: "Swiss property sold retirement property acquired.",
+      subtitle: "Relocation coordinated",
     },
     {
       image: "/api/placeholder/400/300",
       tags: ["Purchase", "Sell", "Relocation"],
-      title: "Swiss Property sold Retirement property acquired.",
-      subtitle: "Relocation Coordinated",
+      title: "Swiss property sold retirement property acquired.",
+      subtitle: "Relocation coordinated",
     },
     {
       image: "/api/placeholder/400/300",
       tags: ["Purchase", "Sell", "Relocation"],
-      title: "Swiss Property sold Retirement property acquired.",
-      subtitle: "Relocation Coordinated",
+      title: "Swiss property sold retirement property acquired.",
+      subtitle: "Relocation coordinated",
     },
   ];
 
@@ -260,8 +260,8 @@ export default function HomePage() {
             className="max-w-2xl"
           >
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
-              Your next Property Your
-              <span className="text-sky-500"> Next Chapter.</span>
+              Your next property your
+              <span className="text-sky-500"> next chapter.</span>
             </h1>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
               Buying, selling or moving abroad? Connect your property decisions
@@ -273,14 +273,14 @@ export default function HomePage() {
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-3 bg-sky-500 text-white rounded-full font-semibold hover:bg-sky-600 transition-colors shadow-lg shadow-sky-200"
               >
-                Discover your 2Morrow
+                Discover your 2morrow
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-3 border-2 border-gray-300 text-gray-700 rounded-full font-semibold hover:border-sky-500 hover:text-sky-500 transition-colors"
               >
-                Explore Properties
+                Explore properties
               </motion.button>
             </div>
           </motion.div>
@@ -300,12 +300,12 @@ export default function HomePage() {
             <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
               First, your life{" "}
               <span className="text-sky-500">
-                Then, the right property.
+                then, the right property.
               </span>
             </h2>
 
             <p className="text-gray-600">
-              Your Priorities guide every next step.
+              Your priorities guide every next step.
             </p>
           </motion.div>
 
@@ -320,25 +320,25 @@ export default function HomePage() {
               {
                 image: personImage,
                 num: "01",
-                label: "PERSON",
+                label: "Person",
                 desc: "Your profiles and plans.",
               },
               {
                 image: lifestyleImage,
                 num: "02",
-                label: "LIFESTYLE",
+                label: "Lifestyle",
                 desc: "The way you want to live.",
               },
               {
                 image: destinationImage,
                 num: "03",
-                label: "DESTINATION",
+                label: "Destination",
                 desc: "A place that fits your life.",
               },
               {
                 image: propertyImage,
                 num: "04",
-                label: "PROPERTY",
+                label: "Property",
                 desc: "A property with purpose.",
               },
             ].map((item, idx) => (
@@ -402,16 +402,16 @@ export default function HomePage() {
               transition={{ duration: 0.6 }}
               className="border-r-1 border-[#C5C5C5] pl-[0.2rem]"
             >
-              <span className="text-[#21FA90] font-semibold text-sm uppercase tracking-wider">
-                ABOUT 2MORROW
+              <span className="text-[#21FA90] font-semibold text-sm tracking-wider">
+                About 2morrow
               </span>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-4 mb-6">
-                More than Real Estate
+                More than real estate
                 <br />
-                <span className="text-sky-500">A Project for your next Life</span>
+                <span className="text-sky-500">a project for your next life</span>
               </h2>
               <p className="text-gray-600 mb-4 leading-relaxed">
-                Born in Switzerland. Built for the world.
+                Born in switzerland. Built for the world.
               </p>
 
             </motion.div>
@@ -423,10 +423,10 @@ export default function HomePage() {
               transition={{ duration: 0.6 }}
               className="relative"
             >
-              <div className="relative  overflow-hidden ">
+              <div className="relative overflow-hidden ">
                 <p className="text-gray-600 mb-6 leading-relaxed">
-                  2Morrow connects property decisions with your life, your assets and your future – in
-                  Switzerland and internationally.
+                  2morrow connects property decisions with your life, your assets and your future – in
+                  switzerland and internationally.
                 </p>
                 <p className="text-gray-600 mb-8 leading-relaxed">
                   Local insight, professional expertise and useful technology, brought together around your
@@ -437,7 +437,7 @@ export default function HomePage() {
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-3 bg-sky-500 text-white rounded-full font-semibold hover:bg-sky-600 transition-colors shadow-lg shadow-sky-200"
                 >
-                  Discover your 2Morrow
+                  Discover your 2morrow
                 </motion.button>
                 {/* <div className="absolute inset-0 bg-gradient-to-t from-sky-500/20 to-transparent" /> */}
               </div>
@@ -457,7 +457,7 @@ export default function HomePage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              The 2Morrow Journey
+              The 2morrow journey
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               One person. One strategy. One connected journey.
@@ -469,14 +469,7 @@ export default function HomePage() {
           <div className="relative">
             {/* Journey background/path image */}
             <div
-              className="
-      pointer-events-none absolute
-      left-1/2 top-[48px]
-      hidden h-[120px] w-[90%]
-      -translate-x-1/2
-      bg-contain bg-center bg-no-repeat
-      lg:block
-    "
+              className=" pointer-events-none absolute left-1/2 top-[48px] hidden h-[120px] w-[90%] -translate-x-1/2 bg-contain bg-center bg-no-repeat lg:block "
               style={{
                 backgroundImage: `url(${journeyPath.src})`,
               }}
@@ -506,15 +499,7 @@ export default function HomePage() {
                       ease: "easeInOut",
                       delay: idx * 0.15,
                     }}
-                    className="
-            relative z-10 mt-8 mx-8 mb-5
-            flex h-30 w-30
-            items-center justify-center
-            overflow-hidden rounded-full
-            border-4 border-sky-100
-            bg-white
-            shadow-lg
-          "
+                    className=" relative z-10 mt-8 mx-8 mb-5 flex h-30 w-30 items-center justify-center overflow-hidden rounded-full border-4 border-sky-100 bg-white shadow-lg "
                   >
                     <img
                       src={step.image.src}
@@ -577,7 +562,7 @@ export default function HomePage() {
               whileTap={{ scale: 0.95 }}
               className="px-8 py-3 bg-sky-500 text-white rounded-full font-semibold hover:bg-sky-600 transition-colors shadow-lg shadow-sky-200"
             >
-              Start Your Life Projects
+              Start your life projects
             </motion.button>
           </motion.div>
         </div>
@@ -598,7 +583,7 @@ export default function HomePage() {
                 <div className="absolute -top-4 -left-4 w-full h-full border-4 border-sky-400 rounded-2xl" />
                 <img
                   src={heart.src}
-                  alt="Real Estate"
+                  alt="Real estate"
                   className="relative rounded-2xl shadow-xl w-full"
                 />
               </div>
@@ -611,18 +596,18 @@ export default function HomePage() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-                Real Estate Remains at the <span className="text-sky-500">Heart of 2Morrow</span>
+                Real estate remains at the <span className="text-sky-500">heart of 2morrow</span>
               </h2>
               <p className="text-gray-600 mb-4 leading-relaxed">
-                Every Life Project eventually meets a real property decision.
+                Every life project eventually meets a real property decision.
               </p>
               <p className="text-gray-600 mb-4 leading-relaxed">
-                Whether you are buying, selling, investing or optimising an existing asset, 2Morrow provides the market
+                Whether you are buying, selling, investing or optimising an existing asset, 2morrow provides the market
                 knowledge, local expertise and professional coordination needed to move forward with confidence.
               </p>
               <p className="text-gray-600 mb-4 leading-relaxed">
                 We carefully connect each client with solutions that reflect their objectives, financial situation and
-                desired way of life — in Switzerland or internationally.
+                desired way of life — in switzerland or internationally.
               </p>
               <p className="text-gray-600 mb-8 leading-relaxed">
                 Because we do more than present properties. We help right property supports the right project.
@@ -632,7 +617,7 @@ export default function HomePage() {
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-3 bg-sky-500 text-white rounded-full font-semibold hover:bg-sky-600 transition-colors shadow-lg shadow-sky-200"
               >
-                Explore Properties
+                Explore properties
               </motion.button>
             </motion.div>
           </div>
@@ -650,13 +635,13 @@ export default function HomePage() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-                How Ready is your <span className="text-sky-500">Life Project?</span>
+                How ready is your <span className="text-sky-500">life project?</span>
               </h2>
               <p className="text-gray-600 mb-4 leading-relaxed">
                 A successful property decision depends on more than finding the right home.
               </p>
               <p className="text-gray-600 mb-8 leading-relaxed">
-                The 2Morrow Life Transition Readiness approach helps you understand whether the life project is where
+                The 2morrow life transition readiness approach helps you understand whether the life project is where
                 greater clarity or professional support may be useful. It is not about passing or failing. It is about
                 moving forward with better preparation, fewer uncertainties and greater confidence.
               </p>
@@ -688,7 +673,7 @@ export default function HomePage() {
                   </div>
                   <div className="flex items-start justify-between mb-4 mt-2">
                     <div>
-                      <span className="text-xs my-3 text-gray-500 uppercase tracking-wider">{card.category}</span>
+                      <span className="text-xs my-3 text-gray-500 tracking-wider">{card.category}</span>
                       <h3 className="font-bold text-gray-900 mt-1">{card.title}</h3>
                     </div>
 
@@ -714,9 +699,9 @@ export default function HomePage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Your Destination Map</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Your destination map</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+              Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has
               been the industry&apos;s standard dummy text ever since 1966, when designers
             </p>
           </motion.div>
@@ -746,7 +731,7 @@ export default function HomePage() {
             <div className="relative h-[400px] bg-gradient-to-br from-sky-100 to-blue-50">
               <img
                 src="/api/placeholder/1200/400"
-                alt="Destination Map"
+                alt="Destination map"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-white/80 via-white/40 to-transparent" />
@@ -760,7 +745,7 @@ export default function HomePage() {
                   className="px-6 py-2 bg-white text-gray-800 rounded-full font-semibold shadow-lg flex items-center gap-2"
                 >
                   <Download className="w-4 h-4" />
-                  Download E-Book
+                  Download e-book
                 </motion.button>
               </div>
             </div>
@@ -779,11 +764,11 @@ export default function HomePage() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-                Your Property today Can Help <span className="text-sky-500">Finance your life Tomorrow</span>
+                Your property today can help <span className="text-sky-500">finance your life tomorrow</span>
               </h2>
               <p className="text-gray-600 mb-8 leading-relaxed">
                 Before deciding what to buy next, consider what you already own. Selling, renting,
-                keeping or improving your property can support different goals. 2Morrow helps
+                keeping or improving your property can support different goals. 2morrow helps
                 connect these choices with your timing, resources and future plans.
               </p>
 
@@ -807,7 +792,7 @@ export default function HomePage() {
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-3 border-2 border-sky-500 text-sky-500 rounded-full font-semibold hover:bg-sky-500 hover:text-white transition-colors"
               >
-                Discover Asset & Financial Strategy
+                Discover asset & financial strategy
               </motion.button>
             </motion.div>
 
@@ -819,7 +804,7 @@ export default function HomePage() {
             >
               <img
                 src={property.src}
-                alt="Property Finance"
+                alt="Property finance"
                 className="rounded-2xl shadow-2xl w-full"
               />
             </motion.div>
@@ -856,12 +841,12 @@ export default function HomePage() {
 
             <p className="leading-relaxed text-white/90">
               A vision is only valuable when it works in real life. Trust should
-              never be built on slogans alone. As 2Morrow develops, this section
+              never be built on slogans alone. As 2morrow develops, this section
               should become the evidence layer of the homepage. It should
               progressively accommodate client stories, properties sold and
               purchased, countries and destinations covered, verified professional
-              partners, 2Morrow Angels, client satisfaction and, eventually,
-              Readiness outcomes.
+              partners, 2morrow angels, client satisfaction and, eventually,
+              readiness outcomes.
             </p>
           </motion.div>
         </div>
@@ -907,22 +892,22 @@ export default function HomePage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">SWISS DNA</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Swiss dna</h2>
               <p className="text-gray-600 mb-4 leading-relaxed">
                 Swiss by origin. International by nature.
               </p>
               <p className="text-gray-600 mb-4 leading-relaxed">
-                2Morrow was born in Switzerland, and this naturally shapes the way we work.
+                2morrow was born in switzerland, and this naturally shapes the way we work.
               </p>
               <p className="text-gray-600 mb-8 leading-relaxed">
-                Our Swiss DNA is not a slogan. It is reflected in the standards we set for ourselves and in
+                Our swiss dna is not a slogan. It is reflected in the standards we set for ourselves and in
                 the way we want to build relationships with our clients, partners and communities.
               </p>
 
               <div className="flex justify-center lg:justify-start">
                 <img
                   src={swissdna.src}
-                  alt="Swiss DNA"
+                  alt="Swiss dna"
                   className="w-64 h-64 object-contain"
                 />
               </div>
@@ -956,7 +941,7 @@ export default function HomePage() {
                 whileTap={{ scale: 0.95 }}
                 className="mt-8 px-8 py-3 bg-sky-500 text-white rounded-full font-semibold hover:bg-sky-600 transition-colors shadow-lg shadow-sky-200"
               >
-                Discover 2Morrow
+                Discover 2morrow
               </motion.button>
             </motion.div>
           </div>
@@ -973,8 +958,8 @@ export default function HomePage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <span className="text-sky-500 font-semibold text-sm uppercase tracking-wider">
-                INSIGHTS
+              <span className="text-sky-500 font-semibold text-sm tracking-wider">
+                Insights
               </span>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-4 mb-6">
                 Knowledge before decisions.
@@ -984,16 +969,16 @@ export default function HomePage() {
                 creates a transaction.
               </p>
               <p className="text-gray-600 mb-8 leading-relaxed">
-                The 2Morrow Insights platform should become a trusted source of practical intelligence around international
-                real estate, retirement abroad, relocation, Silver Economy, property investment, asset strategy, destinations,
-                technology, AI, legal and tax considerations, living internationally and the changing meaning of home.
+                The 2morrow insights platform should become a trusted source of practical intelligence around international
+                real estate, retirement abroad, relocation, silver economy, property investment, asset strategy, destinations,
+                technology, ai, legal and tax considerations, living internationally and the changing meaning of home.
               </p>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-3 bg-sky-500 text-white rounded-full font-semibold hover:bg-sky-600 transition-colors shadow-lg shadow-sky-200"
               >
-                Explore 2Morrow Insights
+                Explore 2morrow insights
               </motion.button>
             </motion.div>
 
@@ -1024,7 +1009,7 @@ export default function HomePage() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Last <span className="text-sky-500">Properties</span>
+              Last <span className="text-sky-500">properties</span>
             </h2>
             <p className="text-gray-600">
               A vision is only valuable when it works in real life.
@@ -1073,7 +1058,7 @@ export default function HomePage() {
                   <p className="text-sm text-gray-600 mb-1">{prop.title}</p>
                   <p className="text-xs text-gray-500 mb-3">{prop.subtitle}</p>
                   <button className="text-sky-500 text-sm font-semibold flex items-center gap-1 hover:gap-2 transition-all">
-                    More Details <ArrowRight className="w-4 h-4" />
+                    More details <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
               </motion.div>

@@ -43,14 +43,14 @@ const navItems: NavItem[] = [
         label: 'Destinations',
         href: '/destinations',
         dropdown: [
-            { label: 'New York', href: '/destinations/new-york', description: 'Luxury apartments & penthouses' },
-            { label: 'Los Angeles', href: '/destinations/los-angeles', description: 'Modern villas & beach houses' },
+            { label: 'New york', href: '/destinations/new-york', description: 'Luxury apartments & penthouses' },
+            { label: 'Los angeles', href: '/destinations/los-angeles', description: 'Modern villas & beach houses' },
             { label: 'Miami', href: '/destinations/miami', description: 'Waterfront properties' },
             { label: 'London', href: '/destinations/london', description: 'Historic & contemporary homes' },
             { label: 'Dubai', href: '/destinations/dubai', description: 'Ultra-luxury residences' },
         ],
     },
-    { label: 'Your Life Project', href: '/life-project' },
+    { label: 'Your life project', href: '/life-project' },
     { label: 'Invest', href: '/invest' },
     { label: 'Angels', href: '/angels' },
     { label: 'Insights', href: '/insights' },
@@ -170,8 +170,8 @@ const Logo = ({ isScrolled }: { isScrolled: boolean }) => (
             transition={{ type: 'spring', stiffness: 400, damping: 17 }}
         >
             {/* Logo Icon */}
-            <div className="relative  w-10 h-20 sm:h-20 flex items-center justify-center">
-                <Image src={LogoIcon} className="w-40 h-full" alt="2Morrow Icon" layout="fill" objectFit="contain" />
+            <div className="relative w-10 h-20 sm:h-20 flex items-center justify-center">
+                <Image src={LogoIcon} className="w-40 h-full" alt="2morrow icon" layout="fill" objectFit="contain" />
             </div>
         </motion.div>
 
@@ -183,7 +183,7 @@ const Logo = ({ isScrolled }: { isScrolled: boolean }) => (
             transition={{ delay: 0.2 }}
         >
              <div className="relative w-40 h-20 sm:w-40 sm:h-20 flex items-center justify-center">
-            <Image src={LogoText} className="w-40 h-20" alt="2Morrow Text" layout="fill" objectFit="contain" />
+            <Image src={LogoText} className="w-40 h-20" alt="2morrow text" layout="fill" objectFit="contain" />
             </div>
         </motion.div>
     </Link>
@@ -479,7 +479,7 @@ export default function Navbar() {
                                             'shadow-sm hover:shadow-md'
                                         )}
                                     >
-                                        Client Login
+                                        Client login
                                     </Link>
                                 </motion.div>
 
@@ -497,7 +497,7 @@ export default function Navbar() {
                                             'hover:from-[#2874A6] hover:to-[#21618C]'
                                         )}
                                     >
-                                        Start Your Life Project
+                                        Start your life project
                                     </Link>
                                 </motion.div>
                             </div>
@@ -635,7 +635,7 @@ export default function Navbar() {
                                     onClick={() => setIsMobileMenuOpen(false)}
                                     className="flex items-center justify-center gap-2 w-full py-3.5 text-sm font-semibold text-white bg-gradient-to-r from-[#2E86C1] to-[#2874A6] rounded-full shadow-lg shadow-[#2E86C1]/25 hover:shadow-xl transition-all duration-200"
                                 >
-                                    Start Your Journey
+                                    Start your journey
                                 </Link>
                             </div>
                         </motion.div>

@@ -4,8 +4,8 @@ export const mockProperties: Property[] = [
   {
     id: "prop-1",
     slug: "luxury-penthouse-zurich",
-    title: "Luxury Penthouse with Lake View",
-    description: "Exceptional penthouse located in the heart of Zurich offering breathtaking views of Lake Zurich and the Alps. This premium property features high-end finishes, a private rooftop terrace, and state-of-the-art smart home technology.",
+    title: "Luxury penthouse with lake view",
+    description: "Exceptional penthouse located in the heart of zurich offering breathtaking views of lake zurich and the alps. This premium property features high-end finishes, a private rooftop terrace, and state-of-the-art smart home technology.",
     propertyType: "penthouse",
     transactionType: "buy",
     status: "available",
@@ -44,11 +44,11 @@ export const mockProperties: Property[] = [
       }
     ],
     amenities: [
-      { id: "am-1", name: "Lake View" },
-      { id: "am-2", name: "Rooftop Terrace" },
-      { id: "am-3", name: "Smart Home" },
-      { id: "am-4", name: "Wine Cellar" },
-      { id: "am-5", name: "2 Parking Spaces" }
+      { id: "am-1", name: "Lake view" },
+      { id: "am-2", name: "Rooftop terrace" },
+      { id: "am-3", name: "Smart home" },
+      { id: "am-4", name: "Wine cellar" },
+      { id: "am-5", name: "2 parking spaces" }
     ],
     agentId: "agent-1",
     featured: true,
@@ -58,8 +58,8 @@ export const mockProperties: Property[] = [
   {
     id: "prop-2",
     slug: "modern-villa-geneva",
-    title: "Contemporary Villa in Cologny",
-    description: "Stunning contemporary villa situated in the prestigious municipality of Cologny. Designed by an award-winning architect, this home blends seamless indoor-outdoor living with panoramic views of Lake Geneva.",
+    title: "Contemporary villa in cologny",
+    description: "Stunning contemporary villa situated in the prestigious municipality of cologny. Designed by an award-winning architect, this home blends seamless indoor-outdoor living with panoramic views of lake geneva.",
     propertyType: "villa",
     transactionType: "buy",
     status: "available",
@@ -67,7 +67,7 @@ export const mockProperties: Property[] = [
     priceOnRequest: true,
     currency: "CHF",
     location: {
-      address: "Route de la Capite 50",
+      address: "Route de la capite 50",
       city: "Cologny",
       zip: "1223",
       canton: "Geneva",
@@ -90,10 +90,10 @@ export const mockProperties: Property[] = [
       }
     ],
     amenities: [
-      { id: "am-6", name: "Infinity Pool" },
-      { id: "am-7", name: "Spa & Wellness" },
-      { id: "am-8", name: "Home Cinema" },
-      { id: "am-9", name: "Guest House" }
+      { id: "am-6", name: "Infinity pool" },
+      { id: "am-7", name: "Spa & wellness" },
+      { id: "am-8", name: "Home cinema" },
+      { id: "am-9", name: "Guest house" }
     ],
     agentId: "agent-2",
     featured: true,
@@ -103,8 +103,8 @@ export const mockProperties: Property[] = [
   {
     id: "prop-3",
     slug: "historic-chalet-zermatt",
-    title: "Authentic Alpine Chalet",
-    description: "Beautifully restored historic chalet offering unobstructed views of the Matterhorn. Combines traditional Swiss craftsmanship with modern luxury amenities.",
+    title: "Authentic alpine chalet",
+    description: "Beautifully restored historic chalet offering unobstructed views of the matterhorn. Combines traditional swiss craftsmanship with modern luxury amenities.",
     propertyType: "chalet",
     transactionType: "buy",
     status: "available",
@@ -135,8 +135,8 @@ export const mockProperties: Property[] = [
       }
     ],
     amenities: [
-      { id: "am-10", name: "Matterhorn View" },
-      { id: "am-11", name: "Ski-in/Ski-out" },
+      { id: "am-10", name: "Matterhorn view" },
+      { id: "am-11", name: "Ski-in/ski-out" },
       { id: "am-12", name: "Sauna" },
       { id: "am-13", name: "Fireplace" }
     ],

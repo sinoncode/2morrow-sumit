@@ -9,7 +9,7 @@ const destinations: { name: string; desc: string; status: Status; img: string; p
   { name: "Greece", desc: "Island culture and a unique way of life.", status: "request", img: "photo-1533105079780-92b9be482077", pin: [53, 30] },
   { name: "France", desc: "Iconic locations and diverse lifestyles.", status: "available", img: "photo-1502602898657-3e91760cbb34", pin: [47, 18] },
   { name: "Italy", desc: "History, culinary and a strong sense of belonging.", status: "request", img: "photo-1514890547357-a9ee288728e0", pin: [50, 24] },
-  { name: "Other destinations", desc: "Our network is expanding across Europe. New destinations joining soon.", status: "development", img: "" },
+  { name: "Other destinations", desc: "Our network is expanding across europe. New destinations joining soon.", status: "development", img: "" },
 ];
 const filters: { key: Status | "all"; label: string }[] = [
   { key: "all", label: "All" },
@@ -86,7 +86,7 @@ function Map({ pins, onPick, active }: { pins: any[]; onPick: (n: string) => voi
         <path d="M195 110 Q250 100 275 140 Q290 190 255 240 Q215 260 195 215 Q180 160 195 110Z" />
         <path d="M300 150 Q360 140 385 180 Q395 225 350 245 Q305 235 300 195 Q295 170 300 150Z" />
       </g>
-      <text x="200" y="285" textAnchor="middle" fontSize="10" fill="#7d95a8" letterSpacing="3">ATLANTIC OCEAN</text>
+      <text x="200" y="285" textAnchor="middle" fontSize="10" fill="#7d95a8" letterSpacing="3">Atlantic ocean</text>
       {pins.map((d) => {
         const sel = active.toLowerCase() === d.name.toLowerCase();
         return (

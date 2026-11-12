@@ -91,7 +91,7 @@ export default function LifeAroundProperty({ nearbyPlaces }: LifeAroundPropertyP
           <div className="absolute bottom-1/4 left-1/3 w-3 h-3 bg-purple-500 rounded-full" />
         </div>
         <button className="absolute bottom-4 right-4 px-4 py-2 bg-white rounded-lg shadow-lg text-sm font-medium text-gray-700 hover:bg-gray-50 flex items-center gap-2 transition-colors">
-          View on Google Maps
+          View on google maps
           <ArrowRight className="w-4 h-4" />
         </button>
       </div>

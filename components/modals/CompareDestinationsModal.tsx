@@ -81,7 +81,7 @@ export const DESTINATIONS: Destination[] = [
       climate: "Mild year-round climate",
       access: "Direct flights, good connections",
       regions: "Coast, cities and countryside",
-      buyers: "Straightforward for EU citizens",
+      buyers: "Straightforward for eu citizens",
       acquisition: "Generally reasonable",
       ownership: "Moderate annual property taxes",
       support: "Local team and trusted partners",
@@ -91,7 +91,7 @@ export const DESTINATIONS: Destination[] = [
     id: "spain",
     name: "Spain",
     region: "Europe",
-    tagline: "Vibrant cities, Mediterranean living",
+    tagline: "Vibrant cities, mediterranean living",
     image: img("photo-1583422409516-2895a77efded"),
     scores: { lifestyle: 4, value: 3, access: 5, climate: 5, buying: 4 },
     details: {
@@ -100,7 +100,7 @@ export const DESTINATIONS: Destination[] = [
       climate: "Warm summers, mild winters",
       access: "Direct flights, excellent connections",
       regions: "Beaches, cities and inland regions",
-      buyers: "Straightforward for EU citizens",
+      buyers: "Straightforward for eu citizens",
       acquisition: "Generally reasonable",
       ownership: "Community and local property taxes",
       support: "Local team and trusted partners",
@@ -135,9 +135,9 @@ export const DESTINATIONS: Destination[] = [
     details: {
       lifestyle: "Refined, rich in food and culture",
       healthcare: "Very good, widely accessible",
-      climate: "Varies from alpine to Mediterranean",
+      climate: "Varies from alpine to mediterranean",
       access: "Excellent rail and air links",
-      regions: "Alps, Riviera, Paris and countryside",
+      regions: "Alps, riviera, paris and countryside",
       buyers: "Open to foreign buyers",
       acquisition: "Notary fees are significant",
       ownership: "Local property and residence taxes",
@@ -165,7 +165,7 @@ export const DESTINATIONS: Destination[] = [
   },
   {
     id: "indonesia",
-    name: "Bali, Indonesia",
+    name: "Bali, indonesia",
     region: "Asia",
     tagline: "Tropical lifestyle, creative community",
     image: img("photo-1537996194471-e657df975ab4"),
@@ -211,9 +211,9 @@ export const DESTINATIONS: Destination[] = [
     details: {
       lifestyle: "Rich culture, riads and coastal towns",
       healthcare: "Good private care in major cities",
-      climate: "Warm, dry, Atlantic and desert variety",
-      access: "Short flights from Europe",
-      regions: "Marrakech, coast and Atlas foothills",
+      climate: "Warm, dry, atlantic and desert variety",
+      access: "Short flights from europe",
+      regions: "Marrakech, coast and atlas foothills",
       buyers: "Generally open to foreign buyers",
       acquisition: "Registration fees and legal costs",
       ownership: "Generally low running costs",
@@ -222,8 +222,8 @@ export const DESTINATIONS: Destination[] = [
   },
   {
     id: "uae",
-    name: "United Arab Emirates",
-    region: "Middle East",
+    name: "United arab emirates",
+    region: "Middle east",
     tagline: "Modern cities, tax-friendly setting",
     image: img("photo-1512453979798-5ea266f8880c"),
     scores: { lifestyle: 4, value: 2, access: 3, climate: 3, buying: 4 },
@@ -232,7 +232,7 @@ export const DESTINATIONS: Destination[] = [
       healthcare: "High-quality private system",
       climate: "Very hot summers, mild winters",
       access: "Direct flights from major hubs",
-      regions: "Dubai, Abu Dhabi and coastal zones",
+      regions: "Dubai, abu dhabi and coastal zones",
       buyers: "Freehold available in designated zones",
       acquisition: "Registration fees apply",
       ownership: "Service charges, no annual property tax in most cases",
@@ -244,7 +244,7 @@ export const DESTINATIONS: Destination[] = [
 const METRICS: { key: keyof Scores; label: string }[] = [
   { key: "lifestyle", label: "Lifestyle fit" },
   { key: "value", label: "Value for money" },
-  { key: "access", label: "Access from Switzerland" },
+  { key: "access", label: "Access from switzerland" },
   { key: "climate", label: "Climate" },
   { key: "buying", label: "Buyer conditions" },
 ];
@@ -270,7 +270,7 @@ const GROUPS: {
     title: "Practical access",
     description: "How easily you can get there.",
     rows: [
-      { key: "access", label: "Access from Switzerland" },
+      { key: "access", label: "Access from switzerland" },
       { key: "regions", label: "Regional variety" },
     ],
   },
@@ -323,18 +323,18 @@ const accentStyles: Record<
   { badge: string; ring: string; bar: string; barSoft: string; text: string }
 > = {
   sky: {
-    badge: "bg-sky-600 text-white",
+    badge: "Bg-sky-600 text-white",
     ring: "ring-sky-200 border-sky-300",
     bar: "bg-sky-600",
     barSoft: "bg-sky-200",
-    text: "text-sky-700",
+    text: "Text-sky-700",
   },
   emerald: {
-    badge: "bg-emerald-500 text-white",
+    badge: "Bg-emerald-500 text-white",
     ring: "ring-emerald-200 border-emerald-300",
     bar: "bg-emerald-500",
     barSoft: "bg-emerald-200",
-    text: "text-emerald-700",
+    text: "Text-emerald-700",
   },
 };
 
@@ -443,7 +443,7 @@ function CountryPicker({
   return (
     <div ref={wrapRef} className="relative">
       <label className="block">
-        <span className="mb-1.5 flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-[0.16em] text-slate-400">
+        <span className="mb-1.5 flex items-center gap-1.5 text-[10px] font-bold tracking-[0.16em] text-slate-400">
           <span
             className={`inline-flex h-4 w-4 items-center justify-center rounded text-[9px] ${style.badge}`}
           >
@@ -483,7 +483,7 @@ function CountryPicker({
                 No destinations found
               </span>
               <span className="text-[11px] text-slate-400">
-                Try another country or region.
+                try another country or region.
               </span>
             </li>
           ) : (
@@ -591,7 +591,7 @@ function Results({ a, b }: { a: Destination; b: Destination }) {
     <div className="cm-rise">
       {/* At a glance */}
       <section className="rounded-2xl bg-gradient-to-br from-sky-50 to-white p-4 ring-1 ring-sky-100 sm:p-5">
-        <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-sky-600">
+        <p className="text-[10px] font-bold tracking-[0.18em] text-sky-600">
           At a glance
         </p>
         <div className="mt-4 space-y-4">
@@ -647,7 +647,7 @@ function Results({ a, b }: { a: Destination; b: Destination }) {
                   style={{ animationDelay: `${i * 70}ms` }}
                   className="cm-rise grid grid-cols-2 gap-x-4 gap-y-2 px-4 py-3.5 transition-colors hover:bg-slate-50/70 md:grid-cols-[170px_1fr_1fr] md:items-start"
                 >
-                  <p className="col-span-2 text-[11px] font-bold uppercase tracking-[0.08em] text-slate-400 md:col-span-1 md:pt-0.5 md:text-[12px] md:normal-case md:tracking-normal md:text-slate-700 md:font-semibold">
+                  <p className="col-span-2 text-[11px] font-bold tracking-[0.08em] text-slate-400 md:col-span-1 md:pt-0.5 md:text-[12px] md:normal-case md:tracking-normal md:text-slate-700 md:font-semibold">
                     {row.label}
                   </p>
                   <p className="text-[12px] leading-[1.55] text-slate-600">{a.details[row.key]}</p>
@@ -820,7 +820,7 @@ export default function CompareDestinationsModal({
         {/* Header */}
         <header className="flex items-start justify-between gap-4 px-5 pb-4 pt-5 sm:px-7 sm:pt-6">
           <div>
-            <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-sky-600">
+            <p className="text-[10px] font-bold tracking-[0.2em] text-sky-600">
               Destination comparison
             </p>
             <h2 className="mt-1 text-[22px] font-semibold tracking-[-0.035em] text-slate-950 sm:text-[26px]">

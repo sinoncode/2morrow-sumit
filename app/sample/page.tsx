@@ -7,18 +7,20 @@ import DestinationIntelligenceModal from "@/components/modals/DestinationIntelli
 import Why2morrowModal from "@/components/modals/Why2morrowModal";
 import LifeProjectModal from "@/components/modals/LifeProjectModal";
 import Why2MorrowModals from "@/components/modals/Why-2MorrowModal";
+import PropertyOptionsDecisionModal from "@/components/modals/PropertyOptionsDecisionModal";
 export default function HomePage() {
   const [isDestinationOpen, setIsDestinationOpen] =
     useState(false);
   const [showCompanyModal, setShowCompanyModal] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isPropertyOptionsOpen, setIsPropertyOptionsOpen] = useState(false);
 
   const [isLifeProjectOpen, setIsLifeProjectOpen] =
     useState(false);
   return (
     <main className="min-h-screen bg-[#f6fbfe]">
       <section className="mx-auto flex min-h-[70vh] max-w-6xl flex-col items-start justify-center px-6 py-20">
-        <div className="mb-5 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.15em] text-[#2780c3]">
+        <div className="mb-5 flex items-center gap-2 text-xs font-bold tracking-[0.15em] text-[#2780c3]">
           <Globe2 size={16} />
           Discover your next destination
         </div>
@@ -32,7 +34,7 @@ export default function HomePage() {
           regions, and discover properties that fit your plans.
         </p>
 
-        <button
+        {/* <button
           type="button"
           onClick={() => setIsDestinationOpen(true)}
           className="mt-8 inline-flex items-center gap-3 rounded-xl bg-[#2780c3] px-6 py-4 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#176ba9] hover:shadow-xl"
@@ -46,7 +48,7 @@ export default function HomePage() {
           onClick={() => setShowCompanyModal(true)}
           className="group mt-8 inline-flex items-center gap-3 rounded-xl bg-[#2780c3] px-6 py-4 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#176ba9] hover:shadow-xl"
         >
-          Why 2Morrow exists
+          Why 2morrow exists
 
           <ArrowUpRight
             size={17}
@@ -59,7 +61,7 @@ export default function HomePage() {
           onClick={() => setIsLifeProjectOpen(true)}
           className="group mt-8 inline-flex items-center gap-3 rounded-xl bg-[#2780c3] px-6 py-4 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#176ba9] hover:shadow-xl"
         >
-          Explore Your Life Project
+          Explore your life project
 
           <ArrowUpRight
             size={17}
@@ -72,13 +74,27 @@ export default function HomePage() {
           onClick={() => setIsModalOpen(true)}
           className="group mt-8 inline-flex items-center gap-3 rounded-xl bg-[#2780c3] px-6 py-4 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#176ba9] hover:shadow-xl"
         >
-          Discover Why 2Morrow
+          Discover why 2morrow
+
+          <ArrowUpRight
+            size={17}
+            className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+          />
+        </button> */}
+
+        <button
+          type="button"
+          onClick={() => setIsPropertyOptionsOpen(true)}
+          className="group mt-8 inline-flex items-center gap-3 rounded-xl bg-[#2780c3] px-6 py-4 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#176ba9] hover:shadow-xl"
+        >
+          Explore your property options
 
           <ArrowUpRight
             size={17}
             className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
           />
         </button>
+
       </section>
 
       <DestinationIntelligenceModal
@@ -95,6 +111,16 @@ export default function HomePage() {
 
           // Replace with your actual contact route.
           window.location.href = "/contact";
+        }}
+      />
+
+
+      <PropertyOptionsDecisionModal
+        key={isPropertyOptionsOpen ? "open" : "closed"}
+        open={isPropertyOptionsOpen}
+        onClose={() => setIsPropertyOptionsOpen(false)}
+        onSubmit={async (answers) => {
+          console.log("Property decision answers:", answers);
         }}
       />
 

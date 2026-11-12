@@ -48,7 +48,7 @@ interface FooterColumn {
 
 const footerColumns: FooterColumn[] = [
   {
-    title: "Real Estate",
+    title: "Real estate",
     links: [
       { label: "Overview", href: "/real-estate" },
       { label: "Buy", href: "/buy" },
@@ -60,28 +60,28 @@ const footerColumns: FooterColumn[] = [
   {
     title: "Community",
     links: [
-      { label: "Safe Purchase", href: "/safe-purchase" },
+      { label: "Safe purchase", href: "/safe-purchase" },
       { label: "Readiness", href: "/readiness" },
-      { label: "Asset Strategy", href: "/asset-strategy" },
+      { label: "Asset strategy", href: "/asset-strategy" },
       { label: "Destinations", href: "/destinations" },
-      { label: "Your Life Project", href: "/life-project" },
+      { label: "Your life project", href: "/life-project" },
     ],
   },
   {
-    title: "Your Journey",
+    title: "Your journey",
     links: [
-      { label: "2Morrow Angels", href: "/angels" },
-      { label: "Become an Angel", href: "/become-an-angel" },
+      { label: "2morrow angels", href: "/angels" },
+      { label: "Become an angel", href: "/become-an-angel" },
       { label: "Partners", href: "/partners" },
       { label: "Insights", href: "/insights" },
     ],
   },
   {
-    title: "2Morrow",
+    title: "2morrow",
     links: [
       { label: "About", href: "/about" },
-      { label: "Our Vision", href: "/vision" },
-      { label: "Swiss DNA", href: "/swiss-dna" },
+      { label: "Our vision", href: "/vision" },
+      { label: "Swiss dna", href: "/swiss-dna" },
       { label: "Team", href: "/team" },
       { label: "Contact", href: "/contact" },
     ],
@@ -110,7 +110,7 @@ const countries = [
     margin: "mt-0 mr-20",
   },
   {
-    name: "United Kingdom",
+    name: "United kingdom",
     image: UKFlag,
     margin: "mt-0 ml-8",
   },
@@ -139,7 +139,7 @@ const socialLinks = [
       "bg-gradient-to-br from-[#833ab4] via-[#fd1d1d] to-[#fcb045]",
   },
   {
-    label: "LinkedIn",
+    label: "Linkedin",
     href: "#",
     icon: LinkedInIcon,
     className: "bg-[#087aad]",
@@ -198,13 +198,13 @@ const FooterLogo = () => {
   return (
     <Link
       href="/"
-      aria-label="2Morrow Home"
+      aria-label="2morrow home"
       className="group inline-flex items-center"
     >
       
         <Image
           src={Logo}
-          alt="2Morrow"
+          alt="2morrow"
           width={230}
           height={80}
           className="object-contain"
@@ -291,15 +291,7 @@ const CountryBadge = ({
       ===================================================== */}
 
       <motion.div
-        className="
-          pointer-events-none
-          absolute
-          inset-[-10px]
-          rounded-full
-          bg-[#2780c3]/20
-          opacity-0
-          blur-xl
-        "
+        className=" pointer-events-none absolute inset-[-10px] rounded-full bg-[#2780c3]/20 opacity-0 blur-xl "
         whileHover={{
           opacity: 1,
           scale: 1.15,
@@ -314,18 +306,7 @@ const CountryBadge = ({
       ===================================================== */}
 
       <div
-        className="
-          relative
-          h-full
-          w-full
-          overflow-hidden
-          bg-white
-          shadow-[0_6px_20px_rgba(0,0,0,0.10)]
-          [clip-path:polygon(50%_0%,100%_25%,100%_75%,50%_100%,0%_75%,0%_25%)]
-          transition-shadow
-          duration-300
-          group-hover:shadow-[0_12px_30px_rgba(39,128,195,0.25)]
-        "
+        className=" relative h-full w-full overflow-hidden bg-white shadow-[0_6px_20px_rgba(0,0,0,0.10)] [clip-path:polygon(50%_0%,100%_25%,100%_75%,50%_100%,0%_75%,0%_25%)] transition-shadow duration-300 group-hover:shadow-[0_12px_30px_rgba(39,128,195,0.25)] "
       >
         {/* =================================================
             FLAG IMAGE
@@ -346,11 +327,7 @@ const CountryBadge = ({
             alt={`${country.name} flag`}
             fill
             sizes="96px"
-            className="
-              object-cover
-              transition-transform
-              duration-500
-            "
+            className=" object-cover transition-transform duration-500 "
             priority={index < 3}
           />
         </motion.div>
@@ -360,16 +337,7 @@ const CountryBadge = ({
         ================================================= */}
 
         <motion.div
-          className="
-            pointer-events-none
-            absolute
-            inset-0
-            bg-gradient-to-br
-            from-white/30
-            via-transparent
-            to-transparent
-            opacity-70
-          "
+          className=" pointer-events-none absolute inset-0 bg-gradient-to-br from-white/30 via-transparent to-transparent opacity-70 "
           whileHover={{
             opacity: 1,
           }}
@@ -383,19 +351,7 @@ const CountryBadge = ({
         ================================================= */}
 
         <motion.div
-          className="
-            pointer-events-none
-            absolute
-            -left-[120%]
-            top-0
-            h-full
-            w-[70%]
-            rotate-[20deg]
-            bg-gradient-to-r
-            from-transparent
-            via-white/50
-            to-transparent
-          "
+          className=" pointer-events-none absolute -left-[120%] top-0 h-full w-[70%] rotate-[20deg] bg-gradient-to-r from-transparent via-white/50 to-transparent "
           whileHover={{
             left: "140%",
           }}
@@ -411,18 +367,7 @@ const CountryBadge = ({
       ===================================================== */}
 
       <div
-        className="
-          pointer-events-none
-          absolute
-          inset-0
-          [clip-path:polygon(50%_0%,100%_25%,100%_75%,50%_100%,0%_75%,0%_25%)]
-          ring-1
-          ring-black/5
-          transition-all
-          duration-300
-          group-hover:ring-2
-          group-hover:ring-[#2780c3]/30
-        "
+        className=" pointer-events-none absolute inset-0 [clip-path:polygon(50%_0%,100%_25%,100%_75%,50%_100%,0%_75%,0%_25%)] ring-1 ring-black/5 transition-all duration-300 group-hover:ring-2 group-hover:ring-[#2780c3]/30 "
       />
 
       {/* =====================================================
@@ -441,16 +386,7 @@ const CountryBadge = ({
         transition={{
           duration: 0.2,
         }}
-        className="
-          absolute
-          -right-1
-          -top-1
-          h-3
-          w-3
-          rounded-full
-          bg-[#2780c3]
-          shadow-[0_0_12px_rgba(39,128,195,0.6)]
-        "
+        className=" absolute -right-1 -top-1 h-3 w-3 rounded-full bg-[#2780c3] shadow-[0_0_12px_rgba(39,128,195,0.6)] "
       />
     </motion.div>
   );
@@ -519,18 +455,7 @@ export default function Footer() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.15 }}
-        className="
-          relative
-          z-10
-          mx-auto
-          max-w-[1480px]
-          px-6
-          py-16
-          sm:px-8
-          lg:px-12
-          lg:py-20
-          xl:px-16
-        "
+        className=" relative z-10 mx-auto max-w-[1480px] px-6 py-16 sm:px-8 lg:px-12 lg:py-20 xl:px-16 "
       >
         <div className="grid gap-12 lg:grid-cols-[1.15fr_1fr_1fr_1fr_1fr_1.25fr] lg:gap-8 xl:gap-12">
           {/* ==================================================
@@ -542,7 +467,7 @@ export default function Footer() {
 
             <div className="mt-0">
               <h3 className="text-[20px] font-semibold tracking-[-0.02em] text-[#111111]">
-                Contact Info
+                Contact info
               </h3>
 
               <div className="mt-5 h-px w-24 bg-[#cfcfcf]" />
@@ -576,7 +501,7 @@ export default function Footer() {
                   </span>
 
                   <span className="text-[15px] text-[#333333] transition-colors group-hover:text-[#2780c3]">
-                    info@2morrow-re.ch
+                    Info@2morrow-re.ch
                   </span>
                 </motion.a>
               </div>
@@ -602,32 +527,12 @@ export default function Footer() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="
-                        group
-                        inline-flex
-                        items-center
-                        gap-1
-                        text-[16px]
-                        text-[#707070]
-                        transition-all
-                        duration-300
-                        hover:translate-x-1
-                        hover:text-[#2780c3]
-                      "
+                      className=" group inline-flex items-center gap-1 text-[16px] text-[#707070] transition-all duration-300 hover:translate-x-1 hover:text-[#2780c3] "
                     >
                       <span>{link.label}</span>
 
                       <ArrowUpRight
-                        className="
-                          h-3.5
-                          w-3.5
-                          -translate-y-0.5
-                          opacity-0
-                          transition-all
-                          duration-300
-                          group-hover:translate-x-0.5
-                          group-hover:opacity-100
-                        "
+                        className=" h-3.5 w-3.5 -translate-y-0.5 opacity-0 transition-all duration-300 group-hover:translate-x-0.5 group-hover:opacity-100 "
                       />
                     </Link>
                   </li>
@@ -734,8 +639,8 @@ export default function Footer() {
             className="text-center text-[15px] text-[#666666]"
           >
             ©2026{" "}
-            <span className="font-medium text-[#111111]">2MORROW</span>{" "}
-            All Rights Reserved.
+            <span className="font-medium text-[#111111]">2morrow</span>{" "}
+            all rights reserved.
           </motion.p>
         </div>
       </div>

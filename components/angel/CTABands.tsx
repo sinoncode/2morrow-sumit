@@ -10,7 +10,7 @@ export function BecomeAngel() {
           and enjoy sharing your local knowledge, we would love to hear from you.</p>
         </Reveal>
         <Reveal delay={0.18}>
-          <a href="#start" className="btn btn-primary">Become a 2Morrow Angel →</a>
+          <a href="#start" className="btn btn-primary">Become a 2morrow angel →</a>
         </Reveal>
       </div>
     </section>
@@ -27,8 +27,8 @@ export function FinalCTA() {
         </Reveal>
         <Reveal delay={0.18}>
           <div className="hero__cta" style={{ justifyContent: "center" }}>
-            <a href="#top" className="btn btn-primary">Start Your Life Project</a>
-            <a href="#destinations" className="btn btn-outline">Explore Destinations</a>
+            <a href="#top" className="btn btn-primary">Start your life project</a>
+            <a href="#destinations" className="btn btn-outline">Explore destinations</a>
           </div>
         </Reveal>
       </div>

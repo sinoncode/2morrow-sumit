@@ -11,10 +11,10 @@ interface SortDropdownProps {
 
 const sortOptions = [
   { value: "best-match", label: "Best match" },
-  { value: "price-low", label: "Price: Low to High" },
-  { value: "price-high", label: "Price: High to Low" },
-  { value: "area", label: "Area: Largest first" },
-  { value: "bedrooms", label: "Bedrooms: Most first" },
+  { value: "price-low", label: "Price: low to high" },
+  { value: "price-high", label: "Price: high to low" },
+  { value: "area", label: "Area: largest first" },
+  { value: "bedrooms", label: "Bedrooms: most first" },
 ];
 
 export default function SortDropdown({ sortBy, onSortChange }: SortDropdownProps) {

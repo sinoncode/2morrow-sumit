@@ -50,7 +50,7 @@ export default function MapView({ properties }: MapViewProps) {
           >
             <div className="relative">
               <div className="w-8 h-8 bg-sky-500 rounded-full flex items-center justify-center text-white text-xs font-bold shadow-lg group-hover:scale-110 transition-transform">
-                €{(property.price / 1000).toFixed(0)}k
+                €{(property.price / 1000).toFixed(0)}K
               </div>
               {/* Tooltip */}
               <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">

@@ -35,7 +35,7 @@ export default function ValueSection() {
   return (
     <section className="section" style={{ background: "var(--soft)" }}>
       <div className="container">
-        <Reveal><p className="eyebrow">The value of a local Angel</p></Reveal>
+        <Reveal><p className="eyebrow">The value of a local angel</p></Reveal>
         <Reveal delay={0.08}><h2 className="h2">More than information. A human perspective.</h2></Reveal>
         <div className="pillars">
           {pillars.map((p, i) => (
@@ -51,13 +51,13 @@ export default function ValueSection() {
         <div className="cando">
           <Reveal className="reveal-l" delay={0.1}>
             <div className="cando__col cando__col--yes">
-              <div className="cando__title"><span className="dot dot--yes">✓</span>What an Angel can do</div>
+              <div className="cando__title"><span className="dot dot--yes">✓</span>What an angel can do</div>
               <ul>{yes.map((t) => <li key={t}>{icons.check}{t}</li>)}</ul>
             </div>
           </Reveal>
           <Reveal className="reveal-r" delay={0.18}>
             <div className="cando__col cando__col--no">
-              <div className="cando__title"><span className="dot dot--no">✕</span>What an Angel does not do</div>
+              <div className="cando__title"><span className="dot dot--no">✕</span>What an angel does not do</div>
               <ul>{no.map((t) => <li key={t}>{icons.cross}{t}</li>)}</ul>
             </div>
           </Reveal>

@@ -19,19 +19,19 @@ export default function PropertyStats({
   const stats = [
     {
       icon: Home,
-      label: "Total Properties",
+      label: "Total properties",
       value: totalProperties,
       color: "bg-sky-500",
     },
     {
       icon: Euro,
-      label: "Average Price",
+      label: "Average price",
       value: `€${averagePrice.toLocaleString()}`,
       color: "bg-green-500",
     },
     {
       icon: TrendingUp,
-      label: "Average Area",
+      label: "Average area",
       value: `${averageArea} m²`,
       color: "bg-purple-500",
     },

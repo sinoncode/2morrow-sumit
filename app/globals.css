@@ -293,7 +293,6 @@ input, select, textarea{
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.14em;
-  text-transform: uppercase;
 }
 
 .h1,
@@ -378,7 +377,6 @@ input, select, textarea{
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.14em;
-  text-transform: uppercase;
 }
 
 .lead {
@@ -455,7 +453,6 @@ input, select, textarea{
 .tile__label span {
   color: rgba(255, 255, 255, 0.7);
   font-size: 0.68rem;
-  text-transform: uppercase;
   letter-spacing: 0.1em;
 }
 
@@ -580,7 +577,6 @@ input, select, textarea{
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.04em;
-  text-transform: uppercase;
   cursor: pointer;
 }
 
@@ -638,7 +634,6 @@ input, select, textarea{
   font-size: 0.67rem;
   font-weight: 800;
   letter-spacing: 0.08em;
-  text-transform: uppercase;
 }
 
 .badge--ok {
@@ -731,7 +726,6 @@ input, select, textarea{
   display: block;
   margin-bottom: 0.2rem;
   color: #fff;
-  text-transform: uppercase;
   font-size: 0.7rem;
   letter-spacing: 0.08em;
 }
@@ -820,7 +814,6 @@ input, select, textarea{
   color: #4d6a83;
   font-weight: 700;
   letter-spacing: 0.08em;
-  text-transform: uppercase;
   font-size: 0.72rem;
 }
 
@@ -992,7 +985,6 @@ input, select, textarea{
 .logo {
   font-weight: 800;
   letter-spacing: 0.14em;
-  text-transform: uppercase;
 }
 
 .footer__links {
