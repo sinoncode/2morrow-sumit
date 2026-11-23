@@ -2,6 +2,12 @@
 
 import { useEffect, useRef, useState } from "react";
 import type { ComponentType, FormEvent, ReactNode } from "react";
+
+import type { StaticImageData } from "next/image";
+import HeroImage from "@/public/images/contact/hero.png";
+import TownImage from "@/public/images/contact/town.png";
+import CtaImage from "@/public/images/contact/cta.png";
+
 import {
   AlertTriangle,
   ArrowRight,
@@ -29,6 +35,8 @@ import {
   Zap,
 } from "lucide-react";
 
+
+
 /* -------------------------------------------------------------------------- */
 /* Fonts                                                                      */
 /* -------------------------------------------------------------------------- */
@@ -37,13 +45,10 @@ import {
 /* Images (swap for your own assets)                                          */
 /* -------------------------------------------------------------------------- */
 
-const u = (id: string, w = 1600) =>
-  `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=85`;
-
 const IMG = {
-  hero: u("photo-1534445867742-43195f401b6c", 2000),
-  town: u("photo-1523906834658-6e24ef2386f9", 1200),
-  cta: u("photo-1516483638261-f4dbaf036963", 2000),
+  hero: HeroImage,
+  town: TownImage,
+  cta: CtaImage,
 };
 
 /* -------------------------------------------------------------------------- */
@@ -196,7 +201,7 @@ function Photo({
   className = "",
   imgClassName = "",
 }: {
-  src: string;
+  src: string | StaticImageData;
   alt?: string;
   className?: string;
   imgClassName?: string;
@@ -205,7 +210,7 @@ function Photo({
     <div className={`relative overflow-hidden bg-gradient-to-br from-sky-900 via-slate-800 to-amber-900/60 ${className}`}>
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src={src}
+        src={typeof src === "string" ? src : src.src}
         alt={alt}
         loading="lazy"
         onError={(e) => {
@@ -252,14 +257,14 @@ function Hero() {
           <Photo
             src={IMG.hero}
             alt=""
-            className="absolute inset-y-0 right-0 w-full md:w-[68%]"
+            className="absolute inset-y-0 right-0 w-full md:w-[100%]"
             imgClassName="ct-kenburns"
           />
         </div>
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#06294f] via-[#06294f]/90 to-[#06294f]/20 md:via-[#06294f]/80" />
         <div className="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-[#06294f]/50 to-transparent" />
 
-        <div className="mx-auto max-w-6xl px-5 pb-16 pt-20 sm:px-8 md:pb-24 md:pt-28">
+        <div className="mx-auto  max-w-7xl px-5 pb-16 pt-20 sm:px-8 md:pb-24 md:pt-28">
           <p className="ct-rise text-[9.5px] font-bold tracking-[0.22em] text-sky-200" style={{ animationDelay: "0ms" }}>
             Contact 2morrow
           </p>
@@ -270,7 +275,7 @@ function Hero() {
             The right conversation starts here.
           </h1>
           <p
-            className="ct-rise mt-5 max-w-[500px] text-[13.5px] leading-[1.65] text-sky-100/90"
+            className="ct-rise mt-5 max-w-[500px]   leading-[1.65] text-sky-100/90"
             style={{ animationDelay: "240ms" }}
           >
             Tell us where you are today, where you may want to go and what you
@@ -282,7 +287,7 @@ function Hero() {
             <button
               type="button"
               onClick={scrollToForm}
-              className="inline-flex h-11 items-center justify-center rounded-full bg-sky-500 px-6 text-[12.5px] font-semibold text-white shadow-[0_12px_30px_rgba(14,165,233,0.4)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-sky-400"
+              className="inline-flex h-11 items-center justify-center rounded-full bg-sky-500 px-6 text-[12.5px] font-semibold text-white  transition-all duration-300 hover:-translate-y-0.5 hover:bg-sky-400"
             >
               Tell us about your project
             </button>
@@ -299,7 +304,7 @@ function Hero() {
 
       {/* Process strip */}
       <div className="bg-white">
-        <div className="mx-auto max-w-6xl px-5 sm:px-8">
+        <div className="mx-auto  max-w-7xl px-5 sm:px-8">
           <ol className="flex flex-col gap-5 border-b border-slate-200 py-6 md:flex-row md:items-center md:justify-between md:gap-0">
             {processStrip.map(({ icon: Icon, title, text }, i) => (
               <li key={title} className="flex flex-1 items-center md:justify-center">
@@ -375,7 +380,7 @@ function HelpSection({
 }) {
   return (
     <section className="bg-white py-14 md:py-20">
-      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+      <div className="mx-auto  max-w-7xl px-5 sm:px-8">
         <Reveal>
           <SectionTitle>What can we help you with?</SectionTitle>
         </Reveal>
@@ -554,7 +559,7 @@ function FormSection({
 
   return (
     <section id="contact-form" className="scroll-mt-4 bg-sky-50 py-14 md:py-20">
-      <div className="mx-auto grid max-w-6xl gap-10 px-5 sm:px-8 lg:grid-cols-[0.78fr_1.6fr] lg:gap-14">
+      <div className="mx-auto grid  max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[0.78fr_1.6fr] lg:gap-14">
         {/* Left */}
         <div>
           <Reveal>
@@ -714,7 +719,7 @@ function FormSection({
 function ExpertiseSection() {
   return (
     <section className="bg-white py-14 md:py-20">
-      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+      <div className="mx-auto  max-w-7xl px-5 sm:px-8">
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="text-[9.5px] font-bold tracking-[0.22em] text-slate-400">
             Our expertise
@@ -749,7 +754,7 @@ function ExpertiseSection() {
 function NextSection() {
   return (
     <section className="bg-slate-50 py-12 md:py-16">
-      <div className="mx-auto grid max-w-6xl items-center gap-8 px-5 sm:px-8 lg:grid-cols-[1fr_1.05fr] lg:gap-12">
+      <div className="mx-auto grid  max-w-7xl items-center gap-8 px-5 sm:px-8 lg:grid-cols-[1fr_1.05fr] lg:gap-12">
         <Reveal from="left">
           <div className="group overflow-hidden rounded-xl shadow-[0_24px_60px_rgba(11,29,51,0.15)]">
             <Photo
@@ -822,7 +827,7 @@ function NextSection() {
 function DirectSection() {
   return (
     <section className="bg-white py-14 md:py-20">
-      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+      <div className="mx-auto  max-w-7xl px-5 sm:px-8">
         <Reveal>
           <SectionTitle>Prefer to get in touch directly?</SectionTitle>
         </Reveal>
@@ -898,7 +903,7 @@ function FaqItem({ q, a }: { q: string; a: string }) {
 function FaqSection() {
   return (
     <section className="bg-white pb-14 md:pb-20">
-      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+      <div className="mx-auto  max-w-7xl px-5 sm:px-8">
         <Reveal>
           <h2 className="text-[22px] font-bold tracking-[-0.03em] text-sky-600 sm:text-[24px]">
             Frequently asked questions
@@ -926,29 +931,34 @@ function FaqSection() {
 /* -------------------------------------------------------------------------- */
 /* Final CTA                                                                  */
 /* -------------------------------------------------------------------------- */
-
 function FinalCTA() {
   return (
-    <section className="relative isolate overflow-hidden bg-slate-900">
-      <Photo
-        src={IMG.cta}
-        className="absolute inset-0 -z-20"
-        imgClassName="ct-kenburns"
+    <section className="relative isolate min-h-[420px] overflow-hidden bg-slate-900 sm:min-h-[480px] lg:min-h-[520px]">
+      {/* Background image */}
+      <img
+        src={IMG.cta.src}
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 -z-20 h-full w-full object-cover object-center"
       />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-slate-950/85 via-slate-950/50 to-slate-950/20" />
+      {/* Dark gradient overlay */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-slate-950/90 via-slate-950/65 to-slate-950/25" />
 
-      <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 md:py-28">
+      {/* Content */}
+      <div className="relative mx-auto flex min-h-[420px] max-w-7xl items-center px-5 py-20 sm:min-h-[480px] sm:px-8 md:min-h-[520px] md:py-28">
         <Reveal>
           <p className="text-[9.5px] font-bold tracking-[0.22em] text-sky-300">
             Ready to take the next step?
           </p>
+
           <h2 className="mt-4 max-w-xl text-[32px] font-bold leading-[1.1] tracking-[-0.04em] text-white sm:text-[42px]">
             Let&rsquo;s talk about your project.
           </h2>
+
           <button
             type="button"
             onClick={scrollToForm}
-            className="group mt-7 inline-flex h-11 items-center justify-center gap-2 rounded-lg bg-sky-500 px-6 text-[12.5px] font-semibold text-white shadow-[0_14px_34px_rgba(14,165,233,0.4)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-sky-400"
+            className="group mt-7 inline-flex h-11 items-center justify-center gap-2 rounded-lg bg-sky-500 px-6 text-[12.5px] font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-sky-400"
           >
             Book a first conversation
             <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />

@@ -706,12 +706,12 @@ export default function HomePage() {
             </p>
           </motion.div>
 
-          <div className="flex flex-wrap justify-around mb-8 py-4 bg-[#878787] rounded-lg">
+          <div className="flex flex-wrap justify-around mb-8 p-4 bg-[#878787] rounded-lg">
             {destinations.map((dest) => (
               <button
                 key={dest}
                 onClick={() => setActiveDestination(dest)}
-                className={`px-6 py-3 rounded-lg font-semibold text-sm transition-all ${activeDestination === dest
+                className={`px-6 py-3 rounded-lg font-semibold mb-4 lg:mb-0 text-sm transition-all ${activeDestination === dest
                   ? "bg-sky-500 text-white shadow-lg shadow-gray-400"
                   : "bg-white text-gray-600 hover:bg-sky-50"
                   }`}
@@ -813,44 +813,96 @@ export default function HomePage() {
       </section>
 
       {/* Proof Section */}
-      <section className="relative overflow-hidden py-20" style={{ backgroundImage: `url(${proof.src})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-        {/* Right-side image */}
-        {/* <div className="absolute right-0 top-0 hidden h-full w-1/2 lg:block">
-          <div className="relative h-full w-full">
-            <img
-              src={proof.src}
-              alt="Proof"
-              className="h-full w-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#2780c3] via-[#2780c3]/90 to-transparent" />
-          </div>
-        </div> */}
+<section
+  className="relative flex min-h-[500px] items-center overflow-hidden bg-[#002b46] bg-cover bg-center bg-no-repeat py-16 sm:py-20 lg:py-24"
+  style={{
+    backgroundImage: `url(${proof.src})`,
+    backgroundPosition: "center center",
+  }}
+>
+  {/* Dark Blue Gradient Overlay */}
+  <div
+    className="
+      absolute inset-0 z-0
+      bg-gradient-to-r
+      from-[#002b46]
+      via-[#002b46]/95
+      to-[#002b46]/10
+    "
+  />
 
-        {/* Content */}
-        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="mb-12 max-w-3xl"
-          >
-            <h2 className="mb-6 text-4xl font-bold text-white sm:text-5xl">
-              Proof
-            </h2>
+  {/* Additional Gradient for Smooth Image Blending */}
+  <div
+    className="
+  pointer-events-none absolute inset-0 z-[1]
+  bg-[linear-gradient(90deg,#002b46_0%,rgba(0,43,70,0.97)_35%,rgba(0,43,70,0.78)_52%,rgba(0,43,70,0.28)_75%,rgba(0,43,70,0.08)_100%)]
 
-            <p className="leading-relaxed text-white/90">
-              A vision is only valuable when it works in real life. Trust should
-              never be built on slogans alone. As 2morrow develops, this section
-              should become the evidence layer of the homepage. It should
-              progressively accommodate client stories, properties sold and
-              purchased, countries and destinations covered, verified professional
-              partners, 2morrow angels, client satisfaction and, eventually,
-              readiness outcomes.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+    "
+  />
+
+  {/* Content */}
+  <div className="relative z-10 mx-auto w-full max-w-[1380px] px-5 sm:px-8 lg:px-10">
+
+    <motion.div
+      initial={{
+        opacity: 0,
+        y: 30,
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+      }}
+      viewport={{
+        once: true,
+        amount: 0.3,
+      }}
+      transition={{
+        duration: 0.8,
+        ease: "easeOut",
+      }}
+      className="max-w-[850px]"
+    >
+      {/* Heading */}
+      <h2
+        className="
+          mb-5
+          text-4xl
+          font-bold
+          tracking-tight
+          text-white
+          sm:text-5xl
+          lg:text-[50px]
+          lg:leading-[1.15]
+        "
+      >
+        Proof
+      </h2>
+
+      {/* Description */}
+      <p
+        className="
+          max-w-[850px]
+          text-[15px]
+          font-normal
+          leading-[1.8]
+          text-white/95
+          sm:text-base
+          lg:text-[18px]
+          lg:leading-[30px]
+        "
+      >
+        A vision is only valuable when it works in real life. Trust should
+        never be built on slogans alone. As 2Morrow develops, this section
+        should become the evidence layer of the homepage. It should
+        progressively accommodate client stories, properties sold and
+        purchased, countries and destinations covered, verified professional
+        partners, 2Morrow Angels, client satisfaction and, eventually,
+        Readiness outcomes.
+      </p>
+    </motion.div>
+
+  </div>
+</section>
 
 
 
@@ -908,7 +960,7 @@ export default function HomePage() {
                 <img
                   src={swissdna.src}
                   alt="Swiss dna"
-                  className="w-64 h-64 object-contain"
+                  className="w-full h-80 object-contain"
                 />
               </div>
             </motion.div>

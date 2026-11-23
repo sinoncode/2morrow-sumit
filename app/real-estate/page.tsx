@@ -11,28 +11,48 @@ import {
   Wallet,
 } from "lucide-react";
 
+
+import Image from "next/image";
+import type { StaticImageData } from "next/image";
+
+import HeroImage from "@/public/images/real-estate/hero.png";
+import VillaImage from "@/public/images/real-estate/Rectangle 3464725(3).png";
+import LivingImage from "@/public/images/real-estate/Rectangle 346472512.png";
+import InteriorImage from "@/public/images/real-estate/current.png";
+import TerraceImage from "@/public/images/real-estate/next.png";
+import GardenImage from "@/public/images/real-estate/future-open.png";
+import ModernImage from "@/public/images/real-estate/future-close.png";
+// import CoastImage from "@/public/images/real-estate/coast.jpg";
+import MountainImage from "@/public/images/real-estate/Rectangle 3464725(2).png";
+import PlansImage from "@/public/images/real-estate/Rectangle 3464725(1).png";
+import KeysImage from "@/public/images/real-estate/Rectangle 3464725(1).png";
+// import CalculatorImage from "@/public/images/real-estate/calculator.jpg";
+// import StreetImage from "@/public/images/real-estate/street.jpg";
+
+
+import { cn } from "@/lib/utils";
+
+
 /* -------------------------------------------------------------------------- */
 /* Image URLs (swap for your own assets)                                      */
 /* -------------------------------------------------------------------------- */
 
-const u = (id: string, w = 1200) =>
-  `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=85`;
-
 const IMG = {
-  hero: u("photo-1564013799919-ab600027ffc6"),
-  villa: u("photo-1512917774080-9991f1c4c750"),
-  living: u("photo-1560448204-e02f11c3d0e2"),
-  interior: u("photo-1502672260266-1c1ef2d93688"),
-  terrace: u("photo-1600585154340-be6161a56a0c"),
-  garden: u("photo-1600607687939-ce8a6c25118c"),
-  modern: u("photo-1600566753190-17f0baa2a6c3"),
-  coast: u("photo-1499793983690-e29da59ef1c2"),
-  mountain: u("photo-1464822759023-fed622ff2c3b"),
-  plans: u("photo-1503387762-592deb58ef4e"),
-  keys: u("photo-1560518883-ce09059eeffa"),
-  calc: u("photo-1554224155-6726b3ff858f"),
-  street: u("photo-1523217582562-09d0def993a6"),
+   hero: HeroImage,
+  villa: VillaImage,
+  living: LivingImage,
+  interior: InteriorImage,
+  terrace: TerraceImage,
+  garden: GardenImage,
+  modern: ModernImage,
+  // coast: CoastImage,
+  mountain: MountainImage,
+  plans: PlansImage,
+  keys: KeysImage,
+  // calc: CalculatorImage,
+  // street: StreetImage,
 };
+
 
 /* -------------------------------------------------------------------------- */
 /* Data                                                                       */
@@ -42,8 +62,8 @@ type IconType = ComponentType<{ className?: string; strokeWidth?: number }>;
 
 const heroTags = ["Person", "Lifestyle", "Current property", "Next chapter"];
 
-const roleCards: { title: string; text: string; image: string }[] = [
-  { title: "Capital", text: "Could the property release capital for your next home or life project?", image: IMG.keys },
+const roleCards: { title: string; text: string; image: StaticImageData }[] = [
+  { title: "Capital", text: "Could the property release capital for your next home or life project?", image: IMG.hero },
   { title: "Income", text: "Could it generate reliable income while remaining part of your assets?", image: IMG.living },
   { title: "Security", text: "Could keeping it preserve stability or a possible return to your home country?", image: IMG.villa },
   { title: "Potential", text: "Could renovation, development or densification create additional value?", image: IMG.plans },
@@ -65,7 +85,7 @@ type Option = {
   points: string[];
   primary: string;
   secondary?: string;
-  image: string;
+  image: StaticImageData;
 };
 
 const options: Option[] = [
@@ -77,7 +97,7 @@ const options: Option[] = [
     points: ["Current market value", "Property positioning and sale strategy", "Mortgage repayment or early-termination conditions", "Indicative sale costs", "Tax and legal questions", "Timing of the sale", "Temporary accommodation requirements", "Coordination with a purchase or rental abroad"],
     primary: "Request a property valuation",
     secondary: "Sell or rent? Compare my options",
-    image: IMG.terrace,
+    image: IMG.hero,
   },
   {
     tag: "Option 02 · keep",
@@ -86,7 +106,7 @@ const options: Option[] = [
     note: "However, retaining a property also means maintaining the financial, administrative and practical responsibilities attached to it.",
     points: ["Ongoing mortgage affordability", "Maintenance and renovation costs", "Vacancy and security", "Property management", "Tax and residency implications", "Insurance requirements", "Use by family members", "Compatibility with financing abroad"],
     primary: "Assess my keep option",
-    image: IMG.garden,
+    image: IMG. villa,
   },
   {
     tag: "Option 03 · rent",
@@ -96,7 +116,7 @@ const options: Option[] = [
     points: ["Realistic rental value", "Long, medium or short-term suitability", "Applicable local regulations", "Tenant law and contractual obligations", "Property management responsibilities", "Vacancy assumptions", "Maintenance and tenant costs", "Tax and insurance considerations"],
     primary: "Explore the rental option",
     secondary: "Request a rental assessment",
-    image: IMG.interior,
+    image: IMG.living,
   },
   {
     tag: "Option 04 · renovate",
@@ -105,7 +125,7 @@ const options: Option[] = [
     note: "Not every renovation creates equivalent value. The scope, budget and purpose should be clear before work begins.",
     points: ["Technical condition", "Energy performance", "Necessary versus optional work", "Estimated budget", "Planning and authorisation requirements", "Impact on rental potential", "Impact on market positioning", "Expected value in relation to cost"],
     primary: "Review my renovation potential",
-    image: IMG.living,
+    image: IMG.villa,
   },
   {
     tag: "Option 05 · develop or densify",
@@ -115,7 +135,7 @@ const options: Option[] = [
     points: ["Land and zoning rules", "Construction rights", "Extension or conversion potential", "Additional housing units", "Mortgage or environmental restrictions", "Access and infrastructure", "Technical feasibility", "Project cost and financing"],
     primary: "Explore the potential",
     secondary: "Request a potential review",
-    image: IMG.modern,
+    image: IMG.plans,
   },
   {
     tag: "Option 06 · refinance",
@@ -124,7 +144,7 @@ const options: Option[] = [
     note: "It is not automatically available or appropriate. Affordability, valuation, lender criteria, residency, income and the wider financial structure must be reviewed.",
     points: ["Current mortgage structure", "Renewal and termination dates", "Indicative property value", "Available equity", "Affordability", "Interest rate exposure", "Planned financing for a new stage of life", "Lender requirements"],
     primary: "Explore the refinance option",
-    image: IMG.calc,
+    image: IMG.mountain,
   },
 ];
 
@@ -295,24 +315,28 @@ function Photo({
   className = "",
   zoom = true,
 }: {
-  src: string;
+  src: StaticImageData;
   alt?: string;
   className?: string;
   zoom?: boolean;
 }) {
   return (
-    <div className={`relative overflow-hidden bg-gradient-to-br from-sky-100 via-slate-100 to-amber-50 ${className}`}>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
+    <div
+      className={cn(
+        "relative overflow-hidden bg-gradient-to-br from-sky-100 via-slate-100 to-amber-50",
+        className
+      )}
+    >
+      <Image
         src={src}
         alt={alt}
-        loading="lazy"
-        onError={(e) => {
-          e.currentTarget.style.opacity = "0";
-        }}
-        className={`h-full w-full object-cover ${
-          zoom ? "transition-transform duration-[1100ms] ease-out group-hover:scale-110" : ""
-        }`}
+        fill
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+        className={cn(
+          "object-cover",
+          zoom &&
+            "transition-transform duration-[1100ms] ease-out group-hover:scale-110"
+        )}
       />
     </div>
   );
@@ -418,13 +442,13 @@ function Hero() {
             <p className="mt-5 text-[15px] font-semibold text-slate-800">
               Selling is only one possibility.
             </p>
-            <p className="mt-2 max-w-[460px] text-[13.5px] leading-[1.7] text-slate-500">
+            <p className="mt-2 max-w-[460px]   leading-[1.7] text-slate-500">
               Your property may provide capital, generate income, preserve a
               future base or create additional value. The right decision
               depends on your property, your plans, your finances, your timing
               and the life you want to build next.
             </p>
-            <p className="mt-3 max-w-[460px] text-[13.5px] leading-[1.7] text-slate-500">
+            <p className="mt-3 max-w-[460px]   leading-[1.7] text-slate-500">
               2morrow helps you compare the options before committing to one.
             </p>
           </Reveal>
@@ -456,7 +480,7 @@ function Hero() {
           <div className="relative mx-auto max-w-[480px]">
             <div className="absolute -inset-4 -z-10 rounded-[36px] bg-gradient-to-br from-sky-200/50 via-amber-100/40 to-transparent blur-2xl" />
             <div className="re-float group overflow-hidden rounded-[28px] shadow-[0_30px_70px_rgba(11,29,51,0.22)] ring-1 ring-white">
-              <Photo src={IMG.hero} alt="Mediterranean house" className="aspect-[4/4.4] w-full" />
+              <Photo src={IMG.hero} alt="Mediterranean house" className="aspect-[6/5.8] w-full" />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/30 via-transparent to-transparent" />
               <div className="absolute bottom-5 left-5 rounded-xl bg-white/90 px-4 py-2.5 shadow-lg backdrop-blur">
                 <p className="text-[9px] font-bold tracking-[0.18em] text-sky-600">
@@ -708,13 +732,13 @@ function FinanceSection() {
     {
       title: "Your position in your current country",
       text: "Turn your current property into opportunities for what comes next.",
-      image: IMG.garden,
+      image: IMG.interior,
       chips: ["Sell", "Rent", "Renovate", "Develop"],
     },
     {
       title: "Your next chapter abroad",
       text: "Find and secure the right home for your lifestyle and long-term goals.",
-      image: IMG.coast,
+      image: IMG.terrace,
       chips: ["Capital", "Income", "Security", "Flexibility"],
     },
   ];
@@ -798,7 +822,7 @@ function PanelCard({
 }: {
   title: string;
   text: string;
-  image: string;
+  image: StaticImageData;
   chips: string[];
 }) {
   return (
@@ -835,12 +859,12 @@ function ReturnSection() {
         <div className="grid grid-cols-2 gap-4">
           <Reveal from="left">
             <div className="group overflow-hidden rounded-[22px] shadow-[0_20px_50px_rgba(11,29,51,0.14)]">
-              <Photo src={IMG.street} className="h-[260px] w-full sm:h-[420px]" />
+              <Photo src={IMG.garden} className="h-[260px] w-full sm:h-[420px]" />
             </div>
           </Reveal>
           <Reveal from="left" delay={150} className="pt-10">
             <div className="group overflow-hidden rounded-[22px] shadow-[0_20px_50px_rgba(11,29,51,0.14)]">
-              <Photo src={IMG.terrace} className="h-[260px] w-full sm:h-[420px]" />
+              <Photo src={IMG.modern} className="h-[260px] w-full sm:h-[420px]" />
             </div>
           </Reveal>
         </div>
@@ -1084,7 +1108,7 @@ function FinalCTA() {
             <Heading light className="mt-4 text-[30px] md:text-[46px]">
               Understand what your property could make possible.
             </Heading>
-            <p className="mt-4 max-w-[520px] text-[13.5px] leading-[1.7] text-sky-100">
+            <p className="mt-4 max-w-[520px]   leading-[1.7] text-sky-100">
               Start with your current position, compare realistic scenarios
               and connect your property decision with the life you want to
               build next.

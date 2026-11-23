@@ -25,6 +25,7 @@ import SwitzerlandFlag from "@/public/images/flags/images.png";
 import GermanyFlag from "@/public/images/flags/Flag-Germany.webp";
 import PolandFlag from "@/public/images/flags/Flag_of_Poland.svg";
 import UKFlag from "@/public/images/flags/Flag-United-Kingdom.webp";
+import USAFlag from "@/public/images/flags/Flag_of_the_United_States.webp";
 import NetherlandsFlag from "@/public/images/flags/Flag_of_the_Netherlands.svg.webp";
 import FranceFlag from "@/public/images/flags/Flag_of_France.svg.webp";
 
@@ -110,9 +111,14 @@ const countries = [
     margin: "mt-0 mr-20",
   },
   {
+    name: "United States",
+    image: USAFlag,
+    margin: "mt-0 mr-20",
+  },
+  {
     name: "United kingdom",
     image: UKFlag,
-    margin: "mt-0 ml-8",
+    margin: "mt-0 ml-10",
   },
   {
     name: "Netherlands",
@@ -124,6 +130,7 @@ const countries = [
     image: FranceFlag,
     margin: "mt-0 ml-10",
   },
+   
 ];
 
 // ============================================================
@@ -282,16 +289,13 @@ const CountryBadge = ({
         },
       }}
       className={cn(
-        "group relative h-[76px] w-[88px] cursor-pointer sm:h-[90px] sm:w-[96px]",
+        "group relative aspect-square w-full max-w-[76px] cursor-pointer sm:max-w-[84px] md:max-w-[90px] lg:max-w-[96px]",
         className
       )}
     >
-      {/* =====================================================
-          OUTER GLOW
-      ===================================================== */}
-
+      {/* Outer Glow */}
       <motion.div
-        className=" pointer-events-none absolute inset-[-10px] rounded-full bg-[#2780c3]/20 opacity-0 blur-xl "
+        className="pointer-events-none absolute inset-[-10px] rounded-full bg-[#2780c3]/20 opacity-0 blur-xl"
         whileHover={{
           opacity: 1,
           scale: 1.15,
@@ -301,17 +305,10 @@ const CountryBadge = ({
         }}
       />
 
-      {/* =====================================================
-          FLAG CONTAINER
-      ===================================================== */}
-
-      <div
-        className=" relative h-full w-full overflow-hidden bg-white shadow-[0_6px_20px_rgba(0,0,0,0.10)] [clip-path:polygon(50%_0%,100%_25%,100%_75%,50%_100%,0%_75%,0%_25%)] transition-shadow duration-300 group-hover:shadow-[0_12px_30px_rgba(39,128,195,0.25)] "
-      >
-        {/* =================================================
-            FLAG IMAGE
-        ================================================= */}
-
+      {/* Flag Container */}
+      <div className="relative h-full w-full overflow-hidden bg-white shadow-[0_6px_20px_rgba(0,0,0,0.10)] [clip-path:polygon(50%_0%,100%_25%,100%_75%,50%_100%,0%_75%,0%_25%)] transition-shadow duration-300 group-hover:shadow-[0_12px_30px_rgba(39,128,195,0.25)]">
+        
+        {/* Flag Image */}
         <motion.div
           className="absolute inset-0"
           whileHover={{
@@ -326,18 +323,15 @@ const CountryBadge = ({
             src={country.image}
             alt={`${country.name} flag`}
             fill
-            sizes="96px"
-            className=" object-cover transition-transform duration-500 "
+            sizes="(max-width: 640px) 76px, (max-width: 1024px) 90px, 96px"
+            className="object-cover transition-transform duration-500"
             priority={index < 3}
           />
         </motion.div>
 
-        {/* =================================================
-            SOFT WHITE SHINE
-        ================================================= */}
-
+        {/* Soft White Shine */}
         <motion.div
-          className=" pointer-events-none absolute inset-0 bg-gradient-to-br from-white/30 via-transparent to-transparent opacity-70 "
+          className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/30 via-transparent to-transparent opacity-70"
           whileHover={{
             opacity: 1,
           }}
@@ -346,12 +340,9 @@ const CountryBadge = ({
           }}
         />
 
-        {/* =================================================
-            HOVER LIGHT SWEEP
-        ================================================= */}
-
+        {/* Hover Light Sweep */}
         <motion.div
-          className=" pointer-events-none absolute -left-[120%] top-0 h-full w-[70%] rotate-[20deg] bg-gradient-to-r from-transparent via-white/50 to-transparent "
+          className="pointer-events-none absolute -left-[120%] top-0 h-full w-[70%] rotate-[20deg] bg-gradient-to-r from-transparent via-white/50 to-transparent"
           whileHover={{
             left: "140%",
           }}
@@ -362,18 +353,10 @@ const CountryBadge = ({
         />
       </div>
 
-      {/* =====================================================
-          OUTER BORDER
-      ===================================================== */}
+      {/* Outer Border */}
+      <div className="pointer-events-none absolute inset-0 [clip-path:polygon(50%_0%,100%_25%,100%_75%,50%_100%,0%_75%,0%_25%)] ring-1 ring-black/5 transition-all duration-300 group-hover:ring-2 group-hover:ring-[#2780c3]/30" />
 
-      <div
-        className=" pointer-events-none absolute inset-0 [clip-path:polygon(50%_0%,100%_25%,100%_75%,50%_100%,0%_75%,0%_25%)] ring-1 ring-black/5 transition-all duration-300 group-hover:ring-2 group-hover:ring-[#2780c3]/30 "
-      />
-
-      {/* =====================================================
-          SMALL HOVER DOT
-      ===================================================== */}
-
+      {/* Hover Dot */}
       <motion.span
         initial={{
           scale: 0,
@@ -386,12 +369,11 @@ const CountryBadge = ({
         transition={{
           duration: 0.2,
         }}
-        className=" absolute -right-1 -top-1 h-3 w-3 rounded-full bg-[#2780c3] shadow-[0_0_12px_rgba(39,128,195,0.6)] "
+        className="absolute -right-1 -top-1 h-3 w-3 rounded-full bg-[#2780c3] shadow-[0_0_12px_rgba(39,128,195,0.6)]"
       />
     </motion.div>
   );
 };
-
 // ============================================================
 // MAIN FOOTER
 // ============================================================
@@ -551,16 +533,16 @@ export default function Footer() {
           >
             {/* Country flags */}
 
-           <div className="grid w-full max-w-[280px] grid-cols-3 place-items-center gap-x-25 gap-y-0">
+           <div className="grid w-full max-w-[280px] grid-cols-4 place-items-center gap-x-25 gap-y-0">
   {countries.map((country, index) => (
     <CountryBadge
     className={`
   group
   relative
-  h-[76px]
-  w-[88px]
+  h-[96px]
+  w-[78px]
   cursor-pointer
-  sm:h-[84px]
+  sm:h-[105px]
   sm:w-[96px]
   ${country.margin}
 `}

@@ -37,11 +37,12 @@ interface NavDropdownItem {
 // ============================================
 
 const navItems: NavItem[] = [
-    { label: 'Buy', href: '/buy' },
-    { label: 'Sell', href: '/sell' },
+    { label: 'Your life project', href: '/life-project' },
+    // { label: 'Buy', href: '/buy' },
+    // { label: 'Sell', href: '/sell' },
     {
         label: 'Destinations',
-        href: '/destinations',
+        href: '/destinations/new-york',
         dropdown: [
             { label: 'New york', href: '/destinations/new-york', description: 'Luxury apartments & penthouses' },
             { label: 'Los angeles', href: '/destinations/los-angeles', description: 'Modern villas & beach houses' },
@@ -50,8 +51,8 @@ const navItems: NavItem[] = [
             { label: 'Dubai', href: '/destinations/dubai', description: 'Ultra-luxury residences' },
         ],
     },
-    { label: 'Your life project', href: '/life-project' },
-    { label: 'Invest', href: '/invest' },
+    
+    { label: 'Real Estate', href: '/real-estate' },
     { label: 'Angels', href: '/angels' },
     { label: 'Insights', href: '/insights' },
     { label: 'About', href: '/about' },
