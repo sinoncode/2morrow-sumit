@@ -313,7 +313,7 @@ const defaultFilters: Filters = {
   search: "",
   destination: "",
   propertyType: "",
-  priceRange: [0, 500000],
+  priceRange: [0, Infinity],
   bedrooms: "",
   lifestyle: [],
   moreFilters: {
@@ -321,7 +321,7 @@ const defaultFilters: Filters = {
     availableOnly: false,
     hasDocuments: false,
     minArea: 0,
-    maxArea: 300,
+    maxArea: Infinity,
   },
 };
 
@@ -481,12 +481,12 @@ export default function PropertyListingPage() {
       filters.bedrooms !== "" ||
       filters.lifestyle.length > 0 ||
       filters.priceRange[0] !== 0 ||
-      filters.priceRange[1] !== 500000 ||
+      filters.priceRange[1] !== Infinity ||
       filters.moreFilters.verifiedOnly ||
       filters.moreFilters.availableOnly ||
       filters.moreFilters.hasDocuments ||
       filters.moreFilters.minArea !== 0 ||
-      filters.moreFilters.maxArea !== 300
+      filters.moreFilters.maxArea !== Infinity
     );
   }, [filters]);
 
@@ -643,13 +643,14 @@ export default function PropertyListingPage() {
                         <input
                           type="number"
                           placeholder="Max"
-                          value={filters.priceRange[1] || ""}
-                          onChange={(e) =>
+                          value={Number.isFinite(filters.priceRange[1]) ? filters.priceRange[1] : ""}
+                          onChange={(e) => {
+                            const value = e.target.value;
                             setFilters((prev) => ({
                               ...prev,
-                              priceRange: [prev.priceRange[0], parseInt(e.target.value) || 500000],
-                            }))
-                          }
+                              priceRange: [prev.priceRange[0], value === "" ? Infinity : Number(value)],
+                            }));
+                          }}
                           className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500"
                         />
                       </div>
@@ -680,16 +681,17 @@ export default function PropertyListingPage() {
                         <input
                           type="number"
                           placeholder="Max"
-                          value={filters.moreFilters.maxArea || ""}
-                          onChange={(e) =>
+                          value={Number.isFinite(filters.moreFilters.maxArea) ? filters.moreFilters.maxArea : ""}
+                          onChange={(e) => {
+                            const value = e.target.value;
                             setFilters((prev) => ({
                               ...prev,
                               moreFilters: {
                                 ...prev.moreFilters,
-                                maxArea: parseInt(e.target.value) || 300,
+                                maxArea: value === "" ? Infinity : Number(value),
                               },
-                            }))
-                          }
+                            }));
+                          }}
                           className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500"
                         />
                       </div>
