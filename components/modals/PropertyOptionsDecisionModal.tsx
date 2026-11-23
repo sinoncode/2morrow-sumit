@@ -405,6 +405,7 @@ export default function PropertyOptionsDecisionModal({
                 <div className="flex items-center gap-3">
                   <Image 
                src={ModalLogo}
+               alt=""
                sizes="(max-width: 76px) 10vw, 34vw"
                className="h-15 w-auto sm:h-15"
                />
