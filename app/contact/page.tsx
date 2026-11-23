@@ -6,7 +6,7 @@ import type { ComponentType, FormEvent, ReactNode } from "react";
 import type { StaticImageData } from "next/image";
 import HeroImage from "@/public/images/contact/hero.png";
 import TownImage from "@/public/images/contact/town.png";
-import CtaImage from "@/public/images/contact/cta.png";
+import CtaImage from "@/public/images/contact/9daba3cd7d13346dbfa2d38b4abe0a3b66de2eee.png";
 
 import {
   AlertTriangle,

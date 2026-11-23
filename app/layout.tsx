@@ -8,6 +8,15 @@ export const metadata: Metadata = {
   title: {
     default: `${siteConfig.name}`,
     template: `%s | ${siteConfig.name}`,
+
+    
+  },
+
+
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/2morrow_re_embleme_rond_vectorisé.png',
   },
   description: siteConfig.description,
   keywords: [

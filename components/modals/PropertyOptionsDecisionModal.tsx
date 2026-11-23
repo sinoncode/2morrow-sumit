@@ -26,6 +26,10 @@ import {
   X,
 } from "lucide-react";
 
+
+import ModalLogo from "@/public/images/logo/modal-logo.png";
+import Image from "next/image";
+
 export interface PropertyDecisionAnswers {
   property_type: string;
   country_code: string;
@@ -397,12 +401,14 @@ export default function PropertyOptionsDecisionModal({
               />
               <div className="absolute inset-0 bg-gradient-to-b from-[#061a30]/85 via-[#061a30]/35 to-[#061a30]/100" />
               <div className="relative z-10 flex items-center gap-2.5 px-8 pt-8">
-                <div className="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/25 bg-white/10 backdrop-blur-md">
-                  <Compass size={19} />
-                </div>
-                <div>
-                  <p className="text-[11px] font-bold tracking-[0.2em]">2morrow</p>
-                  <p className="mt-0.5 text-[11px] text-white/65">Property options</p>
+                
+                <div className="flex items-center gap-3">
+                  <Image 
+               src={ModalLogo}
+               sizes="(max-width: 76px) 10vw, 34vw"
+               className="h-15 w-auto sm:h-15"
+               />
+                  <p className="mt-0.5 text-[16px] font-bold text-white/65">Property options</p>
                 </div>
               </div>
 
