@@ -630,14 +630,15 @@ function FormSection({
             ) : (
               <form onSubmit={onSubmit} noValidate className="space-y-4">
                 <div className="grid gap-4 sm:grid-cols-2">
-                  <SelectField label="Current or home country" placeholder="Select a country" options={countries} value={form.homeCountry} onChange={(v) => set("homeCountry", v)} />
-                  <SelectField label="Destination country or countries" placeholder="Select a country or countries" options={countries} value={form.destination} onChange={(v) => set("destination", v)} />
-                  <SelectField label="Type of request" placeholder="Select an option" options={requestTypes} value={form.requestType} onChange={(v) => set("requestType", v)} />
-                  <SelectField label="Preferred language" placeholder="Select a language" options={languages} value={form.language} onChange={(v) => set("language", v)} />
+                
                   <TextField label="First name" required placeholder="John" value={form.firstName} onChange={(e) => set("firstName", e.target.value)} error={errors.firstName} autoComplete="given-name" />
                   <TextField label="Last name" required placeholder="Doe" value={form.lastName} onChange={(e) => set("lastName", e.target.value)} error={errors.lastName} autoComplete="family-name" />
                   <TextField label="Email" required type="email" placeholder="you@example.com" value={form.email} onChange={(e) => set("email", e.target.value)} error={errors.email} autoComplete="email" />
                   <TextField label="Phone" type="tel" placeholder="+1 234 567 890" value={form.phone} onChange={(e) => set("phone", e.target.value)} autoComplete="tel" />
+                      <SelectField label="Current or home country" placeholder="Select a country" options={countries} value={form.homeCountry} onChange={(v) => set("homeCountry", v)} />
+                  <SelectField label="Destination country or countries" placeholder="Select a country or countries" options={countries} value={form.destination} onChange={(v) => set("destination", v)} />
+                  <SelectField label="Type of request" placeholder="Select an option" options={requestTypes} value={form.requestType} onChange={(v) => set("requestType", v)} />
+                  <SelectField label="Preferred language" placeholder="Select a language" options={languages} value={form.language} onChange={(v) => set("language", v)} />
                   <SelectField label="Preferred contact method" placeholder="Select an option" options={contactMethods} value={form.contactMethod} onChange={(v) => set("contactMethod", v)} />
                   <SelectField label="Preferred time" placeholder="Select an option" options={contactTimes} value={form.contactTime} onChange={(v) => set("contactTime", v)} />
                 </div>

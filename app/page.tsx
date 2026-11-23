@@ -114,7 +114,7 @@ export default function HomePage() {
     "Thailand",
   ];
 
-  const propertyTabs = ["Sell", "Rent", "Keep", "Optimize"];
+  const propertyTabs = ["Sell", "Rent", "Optimize", "Keep"];
 
   const journeySteps = [
     {
