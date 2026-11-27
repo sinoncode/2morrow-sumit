@@ -54,7 +54,7 @@ const navItems: NavItem[] = [
     
     { label: 'Real Estate', href: '/real-estate' },
     { label: 'Angels', href: '/angels' },
-    { label: 'Insights', href: '/insights' },
+    { label: 'Articles', href: '/articles' },
     { label: 'About', href: '/about' },
 ];
 

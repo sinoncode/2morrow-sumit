@@ -74,7 +74,8 @@ const footerColumns: FooterColumn[] = [
       { label: "2morrow angels", href: "/angels" },
       { label: "Become an angel", href: "/become-an-angel" },
       { label: "Partners", href: "/partners" },
-      { label: "Insights", href: "/insights" },
+      { label: "Articles", href: "/articles" },
+      { label: "Featured article", href: "/articles/article-details" },
     ],
   },
   {
