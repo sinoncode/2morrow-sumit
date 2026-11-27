@@ -35,6 +35,23 @@ import {
   Zap,
 } from "lucide-react";
 
+import { getNames } from "country-list";
+
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+
+import {
+  Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+} from "@/components/ui/command";
+
 
 
 /* -------------------------------------------------------------------------- */
@@ -74,10 +91,9 @@ const helpCards: { icon: IconType; title: string; text: string; value: string }[
 
 const requestTypes = helpCards.map((c) => c.value);
 
-const countries = [
-  "Switzerland", "Italy", "France", "Spain", "Portugal", "Greece", "Germany",
-  "United kingdom", "United states", "United arab emirates", "Other",
-];
+const countries = getNames().sort((a, b) =>
+  a.localeCompare(b)
+);
 const languages = ["English", "French", "German", "Italian", "Spanish", "Portuguese"];
 const contactMethods = ["Email", "Phone", "Whatsapp", "Video call"];
 const contactTimes = ["Morning", "Afternoon", "Evening", "No preference"];
@@ -135,6 +151,83 @@ const faqs = [
 /* -------------------------------------------------------------------------- */
 /* Hooks and primitives                                                       */
 /* -------------------------------------------------------------------------- */
+function CountrySelectField({
+  label,
+  placeholder,
+  value,
+  onChange,
+}: {
+  label: string;
+  placeholder: string;
+  value: string;
+  onChange: (value: string) => void;
+}) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <label className="block">
+      <span className={labelCls}>{label}</span>
+
+      <Popover open={open} onOpenChange={setOpen}>
+        <PopoverTrigger asChild>
+          <button
+            type="button"
+            role="combobox"
+            aria-expanded={open}
+            className={`${fieldCls} flex items-center justify-between text-left`}
+          >
+            <span className={value ? "text-slate-800" : "text-slate-400"}>
+              {value || placeholder}
+            </span>
+
+            <ChevronDown className="h-3.5 w-3.5 shrink-0 text-slate-400" />
+          </button>
+        </PopoverTrigger>
+
+        <PopoverContent
+          align="start"
+          className="w-[var(--radix-popover-trigger-width)] bg-white p-0"
+        >
+          <Command>
+            <CommandInput placeholder="Search country..." className="border-0 outline-none" />
+
+            <CommandList className="max-h-60">
+              <CommandEmpty>
+                No country found.
+              </CommandEmpty>
+
+              <CommandGroup>
+                {countries.map((country) => (
+                  <CommandItem
+                    key={country}
+                    value={country}
+                    onSelect={() => {
+                      onChange(country);
+                      setOpen(false);
+                    }}
+                    className="cursor-pointer"
+                  >
+                    <Check
+                      className={`mr-2 h-4 w-4 ${
+                        value === country
+                          ? "opacity-100"
+                          : "opacity-0"
+                      }`}
+                    />
+
+                    {country}
+                  </CommandItem>
+                ))}
+              </CommandGroup>
+            </CommandList>
+          </Command>
+        </PopoverContent>
+      </Popover>
+    </label>
+  );
+}
+
+
 
 function useInView<T extends HTMLElement>(threshold = 0.15) {
   const ref = useRef<T | null>(null);
@@ -635,8 +728,19 @@ function FormSection({
                   <TextField label="Last name" required placeholder="Doe" value={form.lastName} onChange={(e) => set("lastName", e.target.value)} error={errors.lastName} autoComplete="family-name" />
                   <TextField label="Email" required type="email" placeholder="you@example.com" value={form.email} onChange={(e) => set("email", e.target.value)} error={errors.email} autoComplete="email" />
                   <TextField label="Phone" type="tel" placeholder="+1 234 567 890" value={form.phone} onChange={(e) => set("phone", e.target.value)} autoComplete="tel" />
-                      <SelectField label="Current or home country" placeholder="Select a country" options={countries} value={form.homeCountry} onChange={(v) => set("homeCountry", v)} />
-                  <SelectField label="Destination country or countries" placeholder="Select a country or countries" options={countries} value={form.destination} onChange={(v) => set("destination", v)} />
+                      <CountrySelectField
+  label="Current or home country"
+  placeholder="Select your country"
+  value={form.homeCountry}
+  onChange={(v) => set("homeCountry", v)}
+/>
+
+<CountrySelectField
+  label="Destination country or countries"
+  placeholder="Search and select a destination"
+  value={form.destination}
+  onChange={(v) => set("destination", v)}
+/>
                   <SelectField label="Type of request" placeholder="Select an option" options={requestTypes} value={form.requestType} onChange={(v) => set("requestType", v)} />
                   <SelectField label="Preferred language" placeholder="Select a language" options={languages} value={form.language} onChange={(v) => set("language", v)} />
                   <SelectField label="Preferred contact method" placeholder="Select an option" options={contactMethods} value={form.contactMethod} onChange={(v) => set("contactMethod", v)} />
